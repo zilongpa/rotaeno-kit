@@ -1,5 +1,3 @@
-'use client'
-
 import { Button } from '@/components/ui/button'
 import { useCallback, useEffect, useState } from 'react'
 import { useLocalStorage } from 'react-use'

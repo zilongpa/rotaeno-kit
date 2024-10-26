@@ -20,7 +20,8 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    
+    "types": ["unplugin-icons/types/react"],
+
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
