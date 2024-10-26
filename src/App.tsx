@@ -54,13 +54,17 @@ const addChartRecordFormSchema = z.object({
 type AddChartRecordForm = z.infer<typeof addChartRecordFormSchema>
 
 const useFuse = () => {
-  return useMemo(
-    () =>
-      new Fuse(songs, {
-        keys: ['name', 'category'],
-      }),
-    []
-  )
+  return useMemo(() => {
+    return new Fuse(songs, {
+      keys: ['name', 'category'],
+      shouldSort: true,
+      sortFn: (a, b) => {
+        // Sort descending
+        return a.score < b.score ? 1 : -1
+      },
+      threshold: 0.6,
+    })
+  }, [])
 }
 
 const SearchSongAutocomplete: FC<{
