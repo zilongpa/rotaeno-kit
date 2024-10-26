@@ -1,0 +1,3971 @@
+[
+  {
+    "categoryName": "轨迹：梦想萌芽的那一天",
+    "defaultIndex": 73,
+    "updateIndex": 192,
+    "version": "1.8.0",
+    "name": "9876734123",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.6
+  },
+  {
+    "categoryName": "轨迹：梦想萌芽的那一天",
+    "defaultIndex": 292,
+    "updateIndex": 200,
+    "version": "1.8.0",
+    "name": "9876734123",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.4
+  },
+  {
+    "categoryName": "自未来的歌",
+    "defaultIndex": 143,
+    "updateIndex": 217,
+    "version": "1.9.0",
+    "name": "1/100 の アイ",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.6
+  },
+  {
+    "categoryName": "自未来的歌",
+    "defaultIndex": 362,
+    "updateIndex": 225,
+    "version": "1.9.0",
+    "name": "1/100 の アイ",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.5
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 16,
+    "updateIndex": 3,
+    "version": "1.0.0",
+    "name": "A Clock",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 10.8
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 235,
+    "updateIndex": 91,
+    "version": "1.0.0",
+    "name": "A Clock",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 7.5
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 204,
+    "updateIndex": 69,
+    "version": "1.0.0",
+    "name": "A Philosophical Wanderer",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.6
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 423,
+    "updateIndex": 157,
+    "version": "1.0.0",
+    "name": "A Philosophical Wanderer",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.7
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 6,
+    "updateIndex": 4,
+    "version": "1.0.0",
+    "name": "A Time for Everything",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 10.2
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 225,
+    "updateIndex": 92,
+    "version": "1.0.0",
+    "name": "A Time for Everything",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 7
+  },
+  {
+    "categoryName": "Arcaea联动",
+    "defaultIndex": 125,
+    "updateIndex": 418,
+    "version": "2.2.0",
+    "name": "Abstruse Dilemma",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "Arcaea联动",
+    "defaultIndex": 344,
+    "updateIndex": 424,
+    "version": "2.2.0",
+    "name": "Abstruse Dilemma",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.9
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 4,
+    "updateIndex": 1,
+    "version": "1.0.0",
+    "name": "After Rain",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 10.8
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 223,
+    "updateIndex": 89,
+    "version": "1.0.0",
+    "name": "After Rain",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.2
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 1,
+    "updateIndex": 348,
+    "version": "2.0.0",
+    "name": "Alfheim's faith",
+    "difficultyLevel": "IV-α",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 64,
+    "updateIndex": 391,
+    "version": "2.1.0",
+    "name": "Alfheim's faith",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 283,
+    "updateIndex": 368,
+    "version": "2.0.0",
+    "name": "Alfheim's faith",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.5
+  },
+  {
+    "categoryName": "钢琴人生",
+    "defaultIndex": 177,
+    "updateIndex": 49,
+    "version": "1.2.0",
+    "name": "Alice in a xxxxxxxx",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "钢琴人生",
+    "defaultIndex": 396,
+    "updateIndex": 137,
+    "version": "1.2.0",
+    "name": "Alice in a xxxxxxxx",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.9
+  },
+  {
+    "categoryName": "第二章-灾难与希望",
+    "defaultIndex": 61,
+    "updateIndex": 79,
+    "version": "1.6.0",
+    "name": "Alive",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.6
+  },
+  {
+    "categoryName": "第二章-灾难与希望",
+    "defaultIndex": 280,
+    "updateIndex": 167,
+    "version": "1.6.0",
+    "name": "Alive",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.7
+  },
+  {
+    "categoryName": "透明色",
+    "defaultIndex": 183,
+    "updateIndex": 67,
+    "version": "1.5.0",
+    "name": "amethyst",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.8
+  },
+  {
+    "categoryName": "透明色",
+    "defaultIndex": 402,
+    "updateIndex": 155,
+    "version": "1.5.0",
+    "name": "amethyst",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.4
+  },
+  {
+    "categoryName": "Lanota联动",
+    "defaultIndex": 115,
+    "updateIndex": 335,
+    "version": "1.16.0",
+    "name": "Androgynos",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "Lanota联动",
+    "defaultIndex": 334,
+    "updateIndex": 343,
+    "version": "1.16.0",
+    "name": "Androgynos",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.1
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 213,
+    "updateIndex": 277,
+    "version": "1.13.0",
+    "name": "Angel dust",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 432,
+    "updateIndex": 287,
+    "version": "1.13.0",
+    "name": "Angel dust",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.8
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 218,
+    "updateIndex": 360,
+    "version": "2.0.0",
+    "name": "Anökumene",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 437,
+    "updateIndex": 380,
+    "version": "2.0.0",
+    "name": "Anökumene",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.6
+  },
+  {
+    "categoryName": "巷角餐馆",
+    "defaultIndex": 166,
+    "updateIndex": 38,
+    "version": "1.0.0",
+    "name": "Another Me (Rotaeno Edit)",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12
+  },
+  {
+    "categoryName": "巷角餐馆",
+    "defaultIndex": 385,
+    "updateIndex": 126,
+    "version": "1.0.0",
+    "name": "Another Me (Rotaeno Edit)",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.8
+  },
+  {
+    "categoryName": "Arcaea联动",
+    "defaultIndex": 124,
+    "updateIndex": 415,
+    "version": "2.2.0",
+    "name": "Antagonism",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "Arcaea联动",
+    "defaultIndex": 343,
+    "updateIndex": 421,
+    "version": "2.2.0",
+    "name": "Antagonism",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.4
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 29,
+    "updateIndex": 14,
+    "version": "1.0.0",
+    "name": "Anthem",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.6
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 248,
+    "updateIndex": 102,
+    "version": "1.0.0",
+    "name": "Anthem",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.5
+  },
+  {
+    "categoryName": "第二章-灾难与希望",
+    "defaultIndex": 60,
+    "updateIndex": 78,
+    "version": "1.6.0",
+    "name": "Aorist Hallucination",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12
+  },
+  {
+    "categoryName": "第二章-灾难与希望",
+    "defaultIndex": 279,
+    "updateIndex": 166,
+    "version": "1.6.0",
+    "name": "Aorist Hallucination",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 7
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 36,
+    "updateIndex": 331,
+    "version": "1.16.0",
+    "name": "Apocalypse",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.1
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 255,
+    "updateIndex": 339,
+    "version": "1.16.0",
+    "name": "Apocalypse",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.3
+  },
+  {
+    "categoryName": "第一章-旅程的开始",
+    "defaultIndex": 56,
+    "updateIndex": 27,
+    "version": "1.0.0",
+    "name": "Aqua Stars",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "第一章-旅程的开始",
+    "defaultIndex": 275,
+    "updateIndex": 115,
+    "version": "1.0.0",
+    "name": "Aqua Stars",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.7
+  },
+  {
+    "categoryName": "第一章-旅程的开始",
+    "defaultIndex": 52,
+    "updateIndex": 408,
+    "version": "2.1.1",
+    "name": "Aqua Theme",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 10.6
+  },
+  {
+    "categoryName": "第一章-旅程的开始",
+    "defaultIndex": 271,
+    "updateIndex": 411,
+    "version": "2.1.1",
+    "name": "Aqua Theme",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 65,
+    "updateIndex": 351,
+    "version": "2.0.0",
+    "name": "Arbitration",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 284,
+    "updateIndex": 371,
+    "version": "2.0.0",
+    "name": "Arbitration",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 23,
+    "updateIndex": 2,
+    "version": "1.0.0",
+    "name": "Aurora",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.3
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 242,
+    "updateIndex": 90,
+    "version": "1.0.0",
+    "name": "Aurora",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.3
+  },
+  {
+    "categoryName": "深夏清梦",
+    "defaultIndex": 136,
+    "updateIndex": 54,
+    "version": "1.3.0",
+    "name": "Autumn Breeze",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 9
+  },
+  {
+    "categoryName": "深夏清梦",
+    "defaultIndex": 355,
+    "updateIndex": 142,
+    "version": "1.3.0",
+    "name": "Autumn Breeze",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 6
+  },
+  {
+    "categoryName": "KALPA联动",
+    "defaultIndex": 95,
+    "updateIndex": 240,
+    "version": "1.10.0",
+    "name": "Avataar ∽Reincarnation of Kalpa∽",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.8
+  },
+  {
+    "categoryName": "KALPA联动",
+    "defaultIndex": 314,
+    "updateIndex": 233,
+    "version": "1.10.0",
+    "name": "Avataar ∽Reincarnation of Kalpa∽",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.9
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 39,
+    "updateIndex": 426,
+    "version": "2.3.0",
+    "name": "Awaken In Ruins",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.5
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 258,
+    "updateIndex": 434,
+    "version": "2.3.0",
+    "name": "Awaken In Ruins",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9
+  },
+  {
+    "categoryName": "轨迹：梦想萌芽的那一天",
+    "defaultIndex": 75,
+    "updateIndex": 194,
+    "version": "1.8.0",
+    "name": "Awaking Beat -From the next generation-",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "轨迹：梦想萌芽的那一天",
+    "defaultIndex": 294,
+    "updateIndex": 202,
+    "version": "1.8.0",
+    "name": "Awaking Beat -From the next generation-",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.2
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 42,
+    "updateIndex": 241,
+    "version": "1.11.0",
+    "name": "Azure Sky",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 261,
+    "updateIndex": 248,
+    "version": "1.11.0",
+    "name": "Azure Sky",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 7.5
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 22,
+    "updateIndex": 183,
+    "version": "1.7.0",
+    "name": "BATTLE NO.1",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 241,
+    "updateIndex": 185,
+    "version": "1.7.0",
+    "name": "BATTLE NO.1",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.7
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 14,
+    "updateIndex": 357,
+    "version": "2.0.0",
+    "name": "Beautiful Days",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 10.8
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 233,
+    "updateIndex": 377,
+    "version": "2.0.0",
+    "name": "Beautiful Days",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.2
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 II",
+    "defaultIndex": 109,
+    "updateIndex": 319,
+    "version": "1.15.0",
+    "name": "Becouse of You",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 II",
+    "defaultIndex": 328,
+    "updateIndex": 327,
+    "version": "1.15.0",
+    "name": "Becouse of You",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.5
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 219,
+    "updateIndex": 359,
+    "version": "2.0.0",
+    "name": "Black Lair",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 438,
+    "updateIndex": 379,
+    "version": "2.0.0",
+    "name": "Black Lair",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.3
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 30,
+    "updateIndex": 197,
+    "version": "1.8.0",
+    "name": "Blastrick",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 249,
+    "updateIndex": 205,
+    "version": "1.8.0",
+    "name": "Blastrick",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.8
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 26,
+    "updateIndex": 20,
+    "version": "1.0.0",
+    "name": "Bouquet colore",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 245,
+    "updateIndex": 108,
+    "version": "1.0.0",
+    "name": "Bouquet colore",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.3
+  },
+  {
+    "categoryName": "机械都市",
+    "defaultIndex": 157,
+    "updateIndex": 29,
+    "version": "1.0.0",
+    "name": "Brain Crusher",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.6
+  },
+  {
+    "categoryName": "机械都市",
+    "defaultIndex": 376,
+    "updateIndex": 117,
+    "version": "1.0.0",
+    "name": "Brain Crusher",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.3
+  },
+  {
+    "categoryName": "轨迹：梦想萌芽的那一天",
+    "defaultIndex": 74,
+    "updateIndex": 193,
+    "version": "1.8.0",
+    "name": "Brave My Soul",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "轨迹：梦想萌芽的那一天",
+    "defaultIndex": 293,
+    "updateIndex": 201,
+    "version": "1.8.0",
+    "name": "Brave My Soul",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.7
+  },
+  {
+    "categoryName": "Phigros联动",
+    "defaultIndex": 96,
+    "updateIndex": 270,
+    "version": "1.13.0",
+    "name": "Break Over",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.9
+  },
+  {
+    "categoryName": "Phigros联动",
+    "defaultIndex": 315,
+    "updateIndex": 280,
+    "version": "1.13.0",
+    "name": "Break Over",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.8
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 46,
+    "updateIndex": 316,
+    "version": "1.15.0",
+    "name": "Break Through Myself feat. Risa Yuzuki",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 265,
+    "updateIndex": 324,
+    "version": "1.15.0",
+    "name": "Break Through Myself feat. Risa Yuzuki",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.1
+  },
+  {
+    "categoryName": "机械都市",
+    "defaultIndex": 162,
+    "updateIndex": 34,
+    "version": "1.0.0",
+    "name": "Bystander Knife",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.6
+  },
+  {
+    "categoryName": "机械都市",
+    "defaultIndex": 381,
+    "updateIndex": 122,
+    "version": "1.0.0",
+    "name": "Bystander Knife",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.4
+  },
+  {
+    "categoryName": "几何律动",
+    "defaultIndex": 169,
+    "updateIndex": 41,
+    "version": "1.1.0",
+    "name": "c.s.q.n.",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "几何律动",
+    "defaultIndex": 388,
+    "updateIndex": 129,
+    "version": "1.1.0",
+    "name": "c.s.q.n.",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.1
+  },
+  {
+    "categoryName": "奥比之声",
+    "defaultIndex": 189,
+    "updateIndex": 87,
+    "version": "1.6.0",
+    "name": "Calorific Refract",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "奥比之声",
+    "defaultIndex": 408,
+    "updateIndex": 175,
+    "version": "1.6.0",
+    "name": "Calorific Refract",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.3
+  },
+  {
+    "categoryName": "跨次元之约",
+    "defaultIndex": 154,
+    "updateIndex": 397,
+    "version": "2.1.0",
+    "name": "Chantして!!!!!",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "跨次元之约",
+    "defaultIndex": 373,
+    "updateIndex": 405,
+    "version": "2.1.0",
+    "name": "Chantして!!!!!",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 28,
+    "updateIndex": 13,
+    "version": "1.0.0",
+    "name": "Chrysanthemum",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.5
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 247,
+    "updateIndex": 101,
+    "version": "1.0.0",
+    "name": "Chrysanthemum",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.3
+  },
+  {
+    "categoryName": "紫夜狂欢",
+    "defaultIndex": 201,
+    "updateIndex": 296,
+    "version": "1.14.0",
+    "name": "CO5M1C R4ILR0AD",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.8
+  },
+  {
+    "categoryName": "紫夜狂欢",
+    "defaultIndex": 420,
+    "updateIndex": 303,
+    "version": "1.14.0",
+    "name": "CO5M1C R4ILR0AD",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.3
+  },
+  {
+    "categoryName": "机械都市",
+    "defaultIndex": 161,
+    "updateIndex": 33,
+    "version": "1.0.0",
+    "name": "Commotion",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.9
+  },
+  {
+    "categoryName": "机械都市",
+    "defaultIndex": 380,
+    "updateIndex": 121,
+    "version": "1.0.0",
+    "name": "Commotion",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.1
+  },
+  {
+    "categoryName": "紫夜狂欢",
+    "defaultIndex": 199,
+    "updateIndex": 294,
+    "version": "1.14.0",
+    "name": "conflict",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.6
+  },
+  {
+    "categoryName": "紫夜狂欢",
+    "defaultIndex": 418,
+    "updateIndex": 301,
+    "version": "1.14.0",
+    "name": "conflict",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.7
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 20,
+    "updateIndex": 17,
+    "version": "1.1.2",
+    "name": "Converge",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.6
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 239,
+    "updateIndex": 105,
+    "version": "1.1.2",
+    "name": "Converge",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.3
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 50,
+    "updateIndex": 414,
+    "version": "2.2.0",
+    "name": "corps-sans-organes",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 269,
+    "updateIndex": 420,
+    "version": "2.2.0",
+    "name": "corps-sans-organes",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.9
+  },
+  {
+    "categoryName": "轨迹：梦想萌芽的那一天",
+    "defaultIndex": 76,
+    "updateIndex": 195,
+    "version": "1.8.0",
+    "name": "Cosmic Starter",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.1
+  },
+  {
+    "categoryName": "轨迹：梦想萌芽的那一天",
+    "defaultIndex": 295,
+    "updateIndex": 203,
+    "version": "1.8.0",
+    "name": "Cosmic Starter",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.5
+  },
+  {
+    "categoryName": "深夏清梦",
+    "defaultIndex": 138,
+    "updateIndex": 56,
+    "version": "1.3.0",
+    "name": "Cross † Genocide",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "深夏清梦",
+    "defaultIndex": 357,
+    "updateIndex": 144,
+    "version": "1.3.0",
+    "name": "Cross † Genocide",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11
+  },
+  {
+    "categoryName": "巷角餐馆",
+    "defaultIndex": 163,
+    "updateIndex": 35,
+    "version": "1.0.0",
+    "name": "Cross † Soul",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.8
+  },
+  {
+    "categoryName": "巷角餐馆",
+    "defaultIndex": 382,
+    "updateIndex": 123,
+    "version": "1.0.0",
+    "name": "Cross † Soul",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.3
+  },
+  {
+    "categoryName": "Lanota联动",
+    "defaultIndex": 114,
+    "updateIndex": 334,
+    "version": "1.16.0",
+    "name": "cyanine",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "Lanota联动",
+    "defaultIndex": 333,
+    "updateIndex": 342,
+    "version": "1.16.0",
+    "name": "cyanine",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.2
+  },
+  {
+    "categoryName": "范式：起源联动",
+    "defaultIndex": 132,
+    "updateIndex": 433,
+    "version": "2.3.0",
+    "name": "Cybernetic Vampire",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13.3
+  },
+  {
+    "categoryName": "范式：起源联动",
+    "defaultIndex": 351,
+    "updateIndex": 441,
+    "version": "2.3.0",
+    "name": "Cybernetic Vampire",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 12
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 38,
+    "updateIndex": 356,
+    "version": "2.0.0",
+    "name": "Cynthia",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.6
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 257,
+    "updateIndex": 376,
+    "version": "2.0.0",
+    "name": "Cynthia",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.4
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 214,
+    "updateIndex": 278,
+    "version": "1.13.0",
+    "name": "Daydream",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 433,
+    "updateIndex": 288,
+    "version": "1.13.0",
+    "name": "Daydream",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.7
+  },
+  {
+    "categoryName": "奥比之声",
+    "defaultIndex": 185,
+    "updateIndex": 83,
+    "version": "1.6.0",
+    "name": "Dear my memories.",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "奥比之声",
+    "defaultIndex": 404,
+    "updateIndex": 171,
+    "version": "1.6.0",
+    "name": "Dear my memories.",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10
+  },
+  {
+    "categoryName": "跨次元之约",
+    "defaultIndex": 153,
+    "updateIndex": 396,
+    "version": "2.1.0",
+    "name": "devil¿la6ue",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "跨次元之约",
+    "defaultIndex": 372,
+    "updateIndex": 404,
+    "version": "2.1.0",
+    "name": "devil¿la6ue",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.8
+  },
+  {
+    "categoryName": "钢琴人生",
+    "defaultIndex": 178,
+    "updateIndex": 50,
+    "version": "1.2.0",
+    "name": "Disorder",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.6
+  },
+  {
+    "categoryName": "钢琴人生",
+    "defaultIndex": 397,
+    "updateIndex": 138,
+    "version": "1.2.0",
+    "name": "Disorder",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.3
+  },
+  {
+    "categoryName": "Phigros联动",
+    "defaultIndex": 98,
+    "updateIndex": 272,
+    "version": "1.13.0",
+    "name": "Distorted Fate",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.8
+  },
+  {
+    "categoryName": "Phigros联动",
+    "defaultIndex": 317,
+    "updateIndex": 282,
+    "version": "1.13.0",
+    "name": "Distorted Fate",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.2
+  },
+  {
+    "categoryName": "KALPA联动",
+    "defaultIndex": 91,
+    "updateIndex": 236,
+    "version": "1.10.0",
+    "name": "Don't Never Around",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12
+  },
+  {
+    "categoryName": "KALPA联动",
+    "defaultIndex": 310,
+    "updateIndex": 229,
+    "version": "1.10.0",
+    "name": "Don't Never Around",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.4
+  },
+  {
+    "categoryName": "WACCA联动",
+    "defaultIndex": 87,
+    "updateIndex": 60,
+    "version": "1.4.0",
+    "name": "DUAL BREAKER XX",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "WACCA联动",
+    "defaultIndex": 306,
+    "updateIndex": 148,
+    "version": "1.4.0",
+    "name": "DUAL BREAKER XX",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.1
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 II",
+    "defaultIndex": 111,
+    "updateIndex": 321,
+    "version": "1.15.0",
+    "name": "Dual Doom Deathmatch",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 II",
+    "defaultIndex": 330,
+    "updateIndex": 329,
+    "version": "1.15.0",
+    "name": "Dual Doom Deathmatch",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.5
+  },
+  {
+    "categoryName": "范式：起源联动",
+    "defaultIndex": 130,
+    "updateIndex": 431,
+    "version": "2.3.0",
+    "name": "Echoes of the Forest",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.6
+  },
+  {
+    "categoryName": "范式：起源联动",
+    "defaultIndex": 349,
+    "updateIndex": 439,
+    "version": "2.3.0",
+    "name": "Echoes of the Forest",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.1
+  },
+  {
+    "categoryName": "自未来的歌",
+    "defaultIndex": 144,
+    "updateIndex": 218,
+    "version": "1.9.0",
+    "name": "Edge of bravery",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "自未来的歌",
+    "defaultIndex": 363,
+    "updateIndex": 226,
+    "version": "1.9.0",
+    "name": "Edge of bravery",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.4
+  },
+  {
+    "categoryName": "巷角餐馆",
+    "defaultIndex": 165,
+    "updateIndex": 37,
+    "version": "1.0.0",
+    "name": "EF4123",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "巷角餐馆",
+    "defaultIndex": 384,
+    "updateIndex": 125,
+    "version": "1.0.0",
+    "name": "EF4123",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.5
+  },
+  {
+    "categoryName": "Arcaea联动",
+    "defaultIndex": 122,
+    "updateIndex": 416,
+    "version": "2.2.0",
+    "name": "Ego Eimi",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "Arcaea联动",
+    "defaultIndex": 341,
+    "updateIndex": 422,
+    "version": "2.2.0",
+    "name": "Ego Eimi",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 69,
+    "updateIndex": 353,
+    "version": "2.0.0",
+    "name": "epitaxy",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 288,
+    "updateIndex": 373,
+    "version": "2.0.0",
+    "name": "epitaxy",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11
+  },
+  {
+    "categoryName": "KALPA联动",
+    "defaultIndex": 93,
+    "updateIndex": 238,
+    "version": "1.10.0",
+    "name": "Eschatology",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13
+  },
+  {
+    "categoryName": "KALPA联动",
+    "defaultIndex": 312,
+    "updateIndex": 231,
+    "version": "1.10.0",
+    "name": "Eschatology",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.3
+  },
+  {
+    "categoryName": "巷角餐馆",
+    "defaultIndex": 164,
+    "updateIndex": 36,
+    "version": "1.0.0",
+    "name": "Estaminet",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.7
+  },
+  {
+    "categoryName": "巷角餐馆",
+    "defaultIndex": 383,
+    "updateIndex": 124,
+    "version": "1.0.0",
+    "name": "Estaminet",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10
+  },
+  {
+    "categoryName": "我们的相遇",
+    "defaultIndex": 79,
+    "updateIndex": 245,
+    "version": "1.11.0",
+    "name": "Eternal calm",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.4
+  },
+  {
+    "categoryName": "我们的相遇",
+    "defaultIndex": 298,
+    "updateIndex": 252,
+    "version": "1.11.0",
+    "name": "Eternal calm",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 7.5
+  },
+  {
+    "categoryName": "KALPA联动",
+    "defaultIndex": 92,
+    "updateIndex": 237,
+    "version": "1.10.0",
+    "name": "Ēvocator",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "KALPA联动",
+    "defaultIndex": 311,
+    "updateIndex": 230,
+    "version": "1.10.0",
+    "name": "Ēvocator",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.3
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 41,
+    "updateIndex": 234,
+    "version": "1.10.0",
+    "name": "fallin' fallin' (prod. INFX, Ella Jung, Limpid)",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 260,
+    "updateIndex": 227,
+    "version": "1.10.0",
+    "name": "fallin' fallin' (prod. INFX, Ella Jung, Limpid)",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.4
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 222,
+    "updateIndex": 410,
+    "version": "2.1.1",
+    "name": "Fantasia Sonata God Dance",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 441,
+    "updateIndex": 413,
+    "version": "2.1.1",
+    "name": "Fantasia Sonata God Dance",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.9
+  },
+  {
+    "categoryName": "我们的相遇",
+    "defaultIndex": 83,
+    "updateIndex": 247,
+    "version": "1.11.0",
+    "name": "Fate of Aria",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "我们的相遇",
+    "defaultIndex": 302,
+    "updateIndex": 254,
+    "version": "1.11.0",
+    "name": "Fate of Aria",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.8
+  },
+  {
+    "categoryName": "Phigros联动",
+    "defaultIndex": 97,
+    "updateIndex": 271,
+    "version": "1.13.0",
+    "name": "Feast远东之宴",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "Phigros联动",
+    "defaultIndex": 316,
+    "updateIndex": 281,
+    "version": "1.13.0",
+    "name": "Feast远东之宴",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.5
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 II",
+    "defaultIndex": 112,
+    "updateIndex": 322,
+    "version": "1.15.0",
+    "name": "Flashback Flicker",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13.2
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 II",
+    "defaultIndex": 331,
+    "updateIndex": 330,
+    "version": "1.15.0",
+    "name": "Flashback Flicker",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11
+  },
+  {
+    "categoryName": "奥比之声",
+    "defaultIndex": 187,
+    "updateIndex": 85,
+    "version": "1.6.0",
+    "name": "Fly Again",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "奥比之声",
+    "defaultIndex": 406,
+    "updateIndex": 173,
+    "version": "1.6.0",
+    "name": "Fly Again",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.5
+  },
+  {
+    "categoryName": "Lanota联动",
+    "defaultIndex": 118,
+    "updateIndex": 338,
+    "version": "1.16.0",
+    "name": "Frey's Philosophy",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13.1
+  },
+  {
+    "categoryName": "Lanota联动",
+    "defaultIndex": 340,
+    "updateIndex": 346,
+    "version": "1.16.0",
+    "name": "Frey's Philosophy",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.4
+  },
+  {
+    "categoryName": "第二章-灾难与希望",
+    "defaultIndex": 63,
+    "updateIndex": 81,
+    "version": "1.6.0",
+    "name": "GALACTIC WARZONE",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13.3
+  },
+  {
+    "categoryName": "第二章-灾难与希望",
+    "defaultIndex": 282,
+    "updateIndex": 169,
+    "version": "1.6.0",
+    "name": "GALACTIC WARZONE",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.6
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 216,
+    "updateIndex": 308,
+    "version": "1.14.1",
+    "name": "Galaxy Striker",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 435,
+    "updateIndex": 313,
+    "version": "1.14.1",
+    "name": "Galaxy Striker",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.6
+  },
+  {
+    "categoryName": "几何律动",
+    "defaultIndex": 172,
+    "updateIndex": 44,
+    "version": "1.1.0",
+    "name": "Gecko",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "几何律动",
+    "defaultIndex": 391,
+    "updateIndex": 132,
+    "version": "1.1.0",
+    "name": "Gecko",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.9
+  },
+  {
+    "categoryName": "放克派对",
+    "defaultIndex": 192,
+    "updateIndex": 257,
+    "version": "1.12.0",
+    "name": "Giselle",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.6
+  },
+  {
+    "categoryName": "放克派对",
+    "defaultIndex": 411,
+    "updateIndex": 264,
+    "version": "1.12.0",
+    "name": "Giselle",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.7
+  },
+  {
+    "categoryName": "透明色",
+    "defaultIndex": 179,
+    "updateIndex": 63,
+    "version": "1.5.0",
+    "name": "GRAND-i-FLORA",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.8
+  },
+  {
+    "categoryName": "透明色",
+    "defaultIndex": 398,
+    "updateIndex": 151,
+    "version": "1.5.0",
+    "name": "GRAND-i-FLORA",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.4
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 2,
+    "updateIndex": 350,
+    "version": "2.0.0",
+    "name": "Heaven's Cage",
+    "difficultyLevel": "IV-α",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 66,
+    "updateIndex": 390,
+    "version": "2.1.0",
+    "name": "Heaven's Cage",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 285,
+    "updateIndex": 370,
+    "version": "2.0.0",
+    "name": "Heaven's Cage",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.4
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 I",
+    "defaultIndex": 103,
+    "updateIndex": 179,
+    "version": "1.7.0",
+    "name": "HiGHER",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.1
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 I",
+    "defaultIndex": 322,
+    "updateIndex": 188,
+    "version": "1.7.0",
+    "name": "HiGHER",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.1
+  },
+  {
+    "categoryName": "第一章-旅程的开始",
+    "defaultIndex": 53,
+    "updateIndex": 24,
+    "version": "1.0.0",
+    "name": "huggy wuggy",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.8
+  },
+  {
+    "categoryName": "第一章-旅程的开始",
+    "defaultIndex": 272,
+    "updateIndex": 112,
+    "version": "1.0.0",
+    "name": "huggy wuggy",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.4
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 21,
+    "updateIndex": 23,
+    "version": "1.5.1",
+    "name": "Ice Festival",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.7
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 240,
+    "updateIndex": 111,
+    "version": "1.5.1",
+    "name": "Ice Festival",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.4
+  },
+  {
+    "categoryName": "Phigros联动",
+    "defaultIndex": 100,
+    "updateIndex": 274,
+    "version": "1.13.0",
+    "name": "Igallta",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13.1
+  },
+  {
+    "categoryName": "Phigros联动",
+    "defaultIndex": 319,
+    "updateIndex": 284,
+    "version": "1.13.0",
+    "name": "Igallta",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.4
+  },
+  {
+    "categoryName": "几何律动",
+    "defaultIndex": 173,
+    "updateIndex": 45,
+    "version": "1.1.0",
+    "name": "IN",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.9
+  },
+  {
+    "categoryName": "几何律动",
+    "defaultIndex": 392,
+    "updateIndex": 133,
+    "version": "1.1.0",
+    "name": "IN",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.2
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 32,
+    "updateIndex": 22,
+    "version": "1.0.0",
+    "name": "In a Diabolic Manner",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.8
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 251,
+    "updateIndex": 110,
+    "version": "1.0.0",
+    "name": "In a Diabolic Manner",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.3
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 9,
+    "updateIndex": 15,
+    "version": "1.0.0",
+    "name": "Infinity Heaven",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.5
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 228,
+    "updateIndex": 103,
+    "version": "1.0.0",
+    "name": "Infinity Heaven",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.6
+  },
+  {
+    "categoryName": "范式：起源联动",
+    "defaultIndex": 129,
+    "updateIndex": 430,
+    "version": "2.3.0",
+    "name": "Inner Norm",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "范式：起源联动",
+    "defaultIndex": 348,
+    "updateIndex": 438,
+    "version": "2.3.0",
+    "name": "Inner Norm",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.2
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 215,
+    "updateIndex": 289,
+    "version": "1.13.3",
+    "name": "INTERNET OVERDOSE",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.1
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 434,
+    "updateIndex": 290,
+    "version": "1.13.3",
+    "name": "INTERNET OVERDOSE",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.9
+  },
+  {
+    "categoryName": "机械都市",
+    "defaultIndex": 159,
+    "updateIndex": 31,
+    "version": "1.0.0",
+    "name": "Invader",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "机械都市",
+    "defaultIndex": 378,
+    "updateIndex": 119,
+    "version": "1.0.0",
+    "name": "Invader",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.6
+  },
+  {
+    "categoryName": "第一章-旅程的开始",
+    "defaultIndex": 57,
+    "updateIndex": 28,
+    "version": "1.0.0",
+    "name": "Inverted World",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13
+  },
+  {
+    "categoryName": "第一章-旅程的开始",
+    "defaultIndex": 276,
+    "updateIndex": 116,
+    "version": "1.0.0",
+    "name": "Inverted World",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.4
+  },
+  {
+    "categoryName": "WACCA联动",
+    "defaultIndex": 89,
+    "updateIndex": 62,
+    "version": "1.4.0",
+    "name": "Invisible Frenzy",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13
+  },
+  {
+    "categoryName": "WACCA联动",
+    "defaultIndex": 308,
+    "updateIndex": 150,
+    "version": "1.4.0",
+    "name": "Invisible Frenzy",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 17,
+    "updateIndex": 18,
+    "version": "1.5.0",
+    "name": "Is This Real?",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.7
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 236,
+    "updateIndex": 106,
+    "version": "1.5.0",
+    "name": "Is This Real?",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.7
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 40,
+    "updateIndex": 212,
+    "version": "1.9.0",
+    "name": "Journey with You",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.2
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 259,
+    "updateIndex": 220,
+    "version": "1.9.0",
+    "name": "Journey with You",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.8
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 25,
+    "updateIndex": 6,
+    "version": "1.0.0",
+    "name": "K.moe (VIP)",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.1
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 244,
+    "updateIndex": 94,
+    "version": "1.0.0",
+    "name": "K.moe (VIP)",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.7
+  },
+  {
+    "categoryName": "范式：起源联动",
+    "defaultIndex": 131,
+    "updateIndex": 432,
+    "version": "2.3.0",
+    "name": "Kakuriyo",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.8
+  },
+  {
+    "categoryName": "范式：起源联动",
+    "defaultIndex": 350,
+    "updateIndex": 440,
+    "version": "2.3.0",
+    "name": "Kakuriyo",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 206,
+    "updateIndex": 71,
+    "version": "1.0.7",
+    "name": "KING",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.7
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 425,
+    "updateIndex": 159,
+    "version": "1.0.7",
+    "name": "KING",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.1
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 13,
+    "updateIndex": 8,
+    "version": "1.0.0",
+    "name": "Last Paradise",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 10.9
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 232,
+    "updateIndex": 96,
+    "version": "1.0.0",
+    "name": "Last Paradise",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.4
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 15,
+    "updateIndex": 73,
+    "version": "1.4.0",
+    "name": "Let you DIVE!",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.9
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 234,
+    "updateIndex": 161,
+    "version": "1.4.0",
+    "name": "Let you DIVE!",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.9
+  },
+  {
+    "categoryName": "奥比之声",
+    "defaultIndex": 186,
+    "updateIndex": 84,
+    "version": "1.6.0",
+    "name": "life flashes before weeb eyes",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "奥比之声",
+    "defaultIndex": 405,
+    "updateIndex": 172,
+    "version": "1.6.0",
+    "name": "life flashes before weeb eyes",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9
+  },
+  {
+    "categoryName": "钢琴人生",
+    "defaultIndex": 174,
+    "updateIndex": 46,
+    "version": "1.2.0",
+    "name": "Life is PIANO",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "钢琴人生",
+    "defaultIndex": 393,
+    "updateIndex": 134,
+    "version": "1.2.0",
+    "name": "Life is PIANO",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.9
+  },
+  {
+    "categoryName": "几何律动",
+    "defaultIndex": 171,
+    "updateIndex": 43,
+    "version": "1.1.0",
+    "name": "Light Into Scheelite",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "几何律动",
+    "defaultIndex": 390,
+    "updateIndex": 131,
+    "version": "1.1.0",
+    "name": "Light Into Scheelite",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.9
+  },
+  {
+    "categoryName": "Lanota联动",
+    "defaultIndex": 116,
+    "updateIndex": 336,
+    "version": "1.16.0",
+    "name": "Lonely departure",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.8
+  },
+  {
+    "categoryName": "Lanota联动",
+    "defaultIndex": 335,
+    "updateIndex": 344,
+    "version": "1.16.0",
+    "name": "Lonely departure",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.6
+  },
+  {
+    "categoryName": "我们的相遇",
+    "defaultIndex": 82,
+    "updateIndex": 246,
+    "version": "1.11.0",
+    "name": "Looking for Stella",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "我们的相遇",
+    "defaultIndex": 301,
+    "updateIndex": 253,
+    "version": "1.11.0",
+    "name": "Looking for Stella",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.4
+  },
+  {
+    "categoryName": "透明色",
+    "defaultIndex": 180,
+    "updateIndex": 64,
+    "version": "1.5.0",
+    "name": "Lost In Farside",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "透明色",
+    "defaultIndex": 399,
+    "updateIndex": 152,
+    "version": "1.5.0",
+    "name": "Lost In Farside",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.2
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 8,
+    "updateIndex": 16,
+    "version": "1.0.0",
+    "name": "LostPuppet",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 10.8
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 227,
+    "updateIndex": 104,
+    "version": "1.0.0",
+    "name": "LostPuppet",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.8
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 37,
+    "updateIndex": 358,
+    "version": "2.0.0",
+    "name": "Lullaby For an Android",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.1
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 256,
+    "updateIndex": 378,
+    "version": "2.0.0",
+    "name": "Lullaby For an Android",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 7.5
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 II",
+    "defaultIndex": 110,
+    "updateIndex": 320,
+    "version": "1.15.0",
+    "name": "Luminosity (Don't you worry)",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 II",
+    "defaultIndex": 329,
+    "updateIndex": 328,
+    "version": "1.15.0",
+    "name": "Luminosity (Don't you worry)",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.4
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 I",
+    "defaultIndex": 106,
+    "updateIndex": 182,
+    "version": "1.7.0",
+    "name": "Lunàtixxx Gear",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13.2
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 I",
+    "defaultIndex": 325,
+    "updateIndex": 184,
+    "version": "1.7.0",
+    "name": "Lunàtixxx Gear",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.5
+  },
+  {
+    "categoryName": "自未来的歌",
+    "defaultIndex": 142,
+    "updateIndex": 216,
+    "version": "1.9.0",
+    "name": "Machine Gun",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "自未来的歌",
+    "defaultIndex": 361,
+    "updateIndex": 224,
+    "version": "1.9.0",
+    "name": "Machine Gun",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.6
+  },
+  {
+    "categoryName": "我们的相遇",
+    "defaultIndex": 80,
+    "updateIndex": 243,
+    "version": "1.11.0",
+    "name": "MAGENTA POTION",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.6
+  },
+  {
+    "categoryName": "我们的相遇",
+    "defaultIndex": 299,
+    "updateIndex": 250,
+    "version": "1.11.0",
+    "name": "MAGENTA POTION",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.2
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 I",
+    "defaultIndex": 104,
+    "updateIndex": 180,
+    "version": "1.7.0",
+    "name": "Maholova",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 I",
+    "defaultIndex": 323,
+    "updateIndex": 189,
+    "version": "1.7.0",
+    "name": "Maholova",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.2
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 35,
+    "updateIndex": 315,
+    "version": "1.15.0",
+    "name": "Make Up Your World feat. キョンシーのCiちゃん & らっぷびと",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.9
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 254,
+    "updateIndex": 323,
+    "version": "1.15.0",
+    "name": "Make Up Your World feat. キョンシーのCiちゃん & らっぷびと",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.3
+  },
+  {
+    "categoryName": "第二章-灾难与希望",
+    "defaultIndex": 59,
+    "updateIndex": 77,
+    "version": "1.6.0",
+    "name": "Manifold Hypothesis",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "第二章-灾难与希望",
+    "defaultIndex": 278,
+    "updateIndex": 165,
+    "version": "1.6.0",
+    "name": "Manifold Hypothesis",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.1
+  },
+  {
+    "categoryName": "放克派对",
+    "defaultIndex": 195,
+    "updateIndex": 260,
+    "version": "1.12.0",
+    "name": "Marble Joker",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "放克派对",
+    "defaultIndex": 414,
+    "updateIndex": 267,
+    "version": "1.12.0",
+    "name": "Marble Joker",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.3
+  },
+  {
+    "categoryName": "透明色",
+    "defaultIndex": 181,
+    "updateIndex": 65,
+    "version": "1.5.0",
+    "name": "Meltdown",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "透明色",
+    "defaultIndex": 400,
+    "updateIndex": 153,
+    "version": "1.5.0",
+    "name": "Meltdown",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.3
+  },
+  {
+    "categoryName": "深夏清梦",
+    "defaultIndex": 137,
+    "updateIndex": 55,
+    "version": "1.3.0",
+    "name": "Memories of the Past feat.メトロミュー",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.9
+  },
+  {
+    "categoryName": "深夏清梦",
+    "defaultIndex": 356,
+    "updateIndex": 143,
+    "version": "1.3.0",
+    "name": "Memories of the Past feat.メトロミュー",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.2
+  },
+  {
+    "categoryName": "几何律动",
+    "defaultIndex": 170,
+    "updateIndex": 42,
+    "version": "1.1.0",
+    "name": "Memory Of Sunrise",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "几何律动",
+    "defaultIndex": 389,
+    "updateIndex": 130,
+    "version": "1.1.0",
+    "name": "Memory Of Sunrise",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.7
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 210,
+    "updateIndex": 208,
+    "version": "1.8.2",
+    "name": "Milk",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 429,
+    "updateIndex": 210,
+    "version": "1.8.2",
+    "name": "Milk",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.2
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 211,
+    "updateIndex": 275,
+    "version": "1.13.0",
+    "name": "Mistilteinn",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 430,
+    "updateIndex": 285,
+    "version": "1.13.0",
+    "name": "Mistilteinn",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.9
+  },
+  {
+    "categoryName": "紫夜狂欢",
+    "defaultIndex": 202,
+    "updateIndex": 297,
+    "version": "1.14.0",
+    "name": "MVURBD",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13.2
+  },
+  {
+    "categoryName": "紫夜狂欢",
+    "defaultIndex": 421,
+    "updateIndex": 304,
+    "version": "1.14.0",
+    "name": "MVURBD",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.5
+  },
+  {
+    "categoryName": "KALPA联动",
+    "defaultIndex": 94,
+    "updateIndex": 239,
+    "version": "1.10.0",
+    "name": "My Heaven (Magical Mix) feat. Kuripurin",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "KALPA联动",
+    "defaultIndex": 313,
+    "updateIndex": 232,
+    "version": "1.10.0",
+    "name": "My Heaven (Magical Mix) feat. Kuripurin",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.2
+  },
+  {
+    "categoryName": "深夏清梦",
+    "defaultIndex": 133,
+    "updateIndex": 51,
+    "version": "1.3.0",
+    "name": "My Story! feat.柚子花",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "深夏清梦",
+    "defaultIndex": 352,
+    "updateIndex": 139,
+    "version": "1.3.0",
+    "name": "My Story! feat.柚子花",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.5
+  },
+  {
+    "categoryName": "放克派对",
+    "defaultIndex": 191,
+    "updateIndex": 256,
+    "version": "1.12.0",
+    "name": "NightTheater",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "放克派对",
+    "defaultIndex": 410,
+    "updateIndex": 263,
+    "version": "1.12.0",
+    "name": "NightTheater",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 7.5
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 44,
+    "updateIndex": 269,
+    "version": "1.13.0",
+    "name": "NO ONE YES MAN",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.9
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 263,
+    "updateIndex": 279,
+    "version": "1.13.0",
+    "name": "NO ONE YES MAN",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.8
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 221,
+    "updateIndex": 409,
+    "version": "2.1.1",
+    "name": "NULCTRL",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 440,
+    "updateIndex": 412,
+    "version": "2.1.1",
+    "name": "NULCTRL",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.6
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 43,
+    "updateIndex": 255,
+    "version": "1.12.0",
+    "name": "Nyarlathotep's Dreamland",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 262,
+    "updateIndex": 262,
+    "version": "1.12.0",
+    "name": "Nyarlathotep's Dreamland",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.9
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 209,
+    "updateIndex": 75,
+    "version": "1.5.1",
+    "name": "Obsidian(Short Ver.)",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.1
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 428,
+    "updateIndex": 163,
+    "version": "1.5.1",
+    "name": "Obsidian(Short Ver.)",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 7
+  },
+  {
+    "categoryName": "轨迹：梦想萌芽的那一天",
+    "defaultIndex": 77,
+    "updateIndex": 196,
+    "version": "1.8.0",
+    "name": "On And On!!",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "轨迹：梦想萌芽的那一天",
+    "defaultIndex": 296,
+    "updateIndex": 204,
+    "version": "1.8.0",
+    "name": "On And On!!",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10
+  },
+  {
+    "categoryName": "第二章-灾难与希望",
+    "defaultIndex": 62,
+    "updateIndex": 80,
+    "version": "1.6.0",
+    "name": "Our Message",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "第二章-灾难与希望",
+    "defaultIndex": 281,
+    "updateIndex": 168,
+    "version": "1.6.0",
+    "name": "Our Message",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.6
+  },
+  {
+    "categoryName": "WACCA联动",
+    "defaultIndex": 85,
+    "updateIndex": 58,
+    "version": "1.4.0",
+    "name": "Ouvertüre",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "WACCA联动",
+    "defaultIndex": 304,
+    "updateIndex": 146,
+    "version": "1.4.0",
+    "name": "Ouvertüre",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.2
+  },
+  {
+    "categoryName": "放克派对",
+    "defaultIndex": 196,
+    "updateIndex": 261,
+    "version": "1.12.0",
+    "name": "Phantago",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13.1
+  },
+  {
+    "categoryName": "放克派对",
+    "defaultIndex": 415,
+    "updateIndex": 268,
+    "version": "1.12.0",
+    "name": "Phantago",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.3
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 34,
+    "updateIndex": 307,
+    "version": "1.14.1",
+    "name": "Provison",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 253,
+    "updateIndex": 312,
+    "version": "1.14.1",
+    "name": "Provison",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 7.5
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 205,
+    "updateIndex": 70,
+    "version": "1.0.0",
+    "name": "PUPA",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 424,
+    "updateIndex": 158,
+    "version": "1.0.0",
+    "name": "PUPA",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.1
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 12,
+    "updateIndex": 7,
+    "version": "1.0.0",
+    "name": "Pure White: Tale of Serissa",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 10.8
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 231,
+    "updateIndex": 95,
+    "version": "1.0.0",
+    "name": "Pure White: Tale of Serissa",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.3
+  },
+  {
+    "categoryName": "透明色",
+    "defaultIndex": 182,
+    "updateIndex": 66,
+    "version": "1.5.0",
+    "name": "Quaoar",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "透明色",
+    "defaultIndex": 401,
+    "updateIndex": 154,
+    "version": "1.5.0",
+    "name": "Quaoar",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.1
+  },
+  {
+    "categoryName": "WACCA联动",
+    "defaultIndex": 88,
+    "updateIndex": 61,
+    "version": "1.4.0",
+    "name": "Quon",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.8
+  },
+  {
+    "categoryName": "WACCA联动",
+    "defaultIndex": 307,
+    "updateIndex": 149,
+    "version": "1.4.0",
+    "name": "Quon",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.4
+  },
+  {
+    "categoryName": "钢琴人生",
+    "defaultIndex": 175,
+    "updateIndex": 47,
+    "version": "1.2.0",
+    "name": "R.I.P.",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.6
+  },
+  {
+    "categoryName": "钢琴人生",
+    "defaultIndex": 394,
+    "updateIndex": 135,
+    "version": "1.2.0",
+    "name": "R.I.P.",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.7
+  },
+  {
+    "categoryName": "第一章-旅程的开始",
+    "defaultIndex": 54,
+    "updateIndex": 25,
+    "version": "1.0.0",
+    "name": "Re-waked from Abyss",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "第一章-旅程的开始",
+    "defaultIndex": 273,
+    "updateIndex": 113,
+    "version": "1.0.0",
+    "name": "Re-waked from Abyss",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.8
+  },
+  {
+    "categoryName": "巷角餐馆",
+    "defaultIndex": 168,
+    "updateIndex": 40,
+    "version": "1.0.0",
+    "name": "Re:prosperitás",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "巷角餐馆",
+    "defaultIndex": 387,
+    "updateIndex": 128,
+    "version": "1.0.0",
+    "name": "Re:prosperitás",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 I",
+    "defaultIndex": 105,
+    "updateIndex": 181,
+    "version": "1.7.0",
+    "name": "Recollection",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 I",
+    "defaultIndex": 324,
+    "updateIndex": 190,
+    "version": "1.7.0",
+    "name": "Recollection",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.3
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 45,
+    "updateIndex": 291,
+    "version": "1.14.0",
+    "name": "reveL",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 264,
+    "updateIndex": 298,
+    "version": "1.14.0",
+    "name": "reveL",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.4
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 5,
+    "updateIndex": 12,
+    "version": "1.0.0",
+    "name": "Reverie",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.4
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 224,
+    "updateIndex": 100,
+    "version": "1.0.0",
+    "name": "Reverie",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.1
+  },
+  {
+    "categoryName": "KALPA联动",
+    "defaultIndex": 90,
+    "updateIndex": 235,
+    "version": "1.10.0",
+    "name": "REVΘCATE",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "KALPA联动",
+    "defaultIndex": 309,
+    "updateIndex": 228,
+    "version": "1.10.0",
+    "name": "REVΘCATE",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.4
+  },
+  {
+    "categoryName": "Phigros联动",
+    "defaultIndex": 99,
+    "updateIndex": 273,
+    "version": "1.13.0",
+    "name": "Rrhar'il",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "Phigros联动",
+    "defaultIndex": 318,
+    "updateIndex": 283,
+    "version": "1.13.0",
+    "name": "Rrhar'il",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.5
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 33,
+    "updateIndex": 211,
+    "version": "1.9.0",
+    "name": "Rush E",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.8
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 252,
+    "updateIndex": 219,
+    "version": "1.9.0",
+    "name": "Rush E",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.6
+  },
+  {
+    "categoryName": "第二章-灾难与希望",
+    "defaultIndex": 58,
+    "updateIndex": 76,
+    "version": "1.6.0",
+    "name": "Secret Illumination",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "第二章-灾难与希望",
+    "defaultIndex": 277,
+    "updateIndex": 164,
+    "version": "1.6.0",
+    "name": "Secret Illumination",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.9
+  },
+  {
+    "categoryName": "我们的相遇",
+    "defaultIndex": 81,
+    "updateIndex": 244,
+    "version": "1.11.0",
+    "name": "Sense",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "我们的相遇",
+    "defaultIndex": 300,
+    "updateIndex": 251,
+    "version": "1.11.0",
+    "name": "Sense",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.4
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 I",
+    "defaultIndex": 102,
+    "updateIndex": 178,
+    "version": "1.7.0",
+    "name": "Shooting☆Stars",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.8
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 I",
+    "defaultIndex": 321,
+    "updateIndex": 187,
+    "version": "1.7.0",
+    "name": "Shooting☆Stars",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.8
+  },
+  {
+    "categoryName": "WACCA联动",
+    "defaultIndex": 86,
+    "updateIndex": 59,
+    "version": "1.4.0",
+    "name": "Silentphobia",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "WACCA联动",
+    "defaultIndex": 305,
+    "updateIndex": 147,
+    "version": "1.4.0",
+    "name": "Silentphobia",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.2
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 217,
+    "updateIndex": 309,
+    "version": "1.14.1",
+    "name": "Silver Town",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 436,
+    "updateIndex": 314,
+    "version": "1.14.1",
+    "name": "Silver Town",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.4
+  },
+  {
+    "categoryName": "轨迹：梦想萌芽的那一天",
+    "defaultIndex": 72,
+    "updateIndex": 191,
+    "version": "1.8.0",
+    "name": "Snapdragon",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12
+  },
+  {
+    "categoryName": "轨迹：梦想萌芽的那一天",
+    "defaultIndex": 291,
+    "updateIndex": 199,
+    "version": "1.8.0",
+    "name": "Snapdragon",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.1
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 24,
+    "updateIndex": 10,
+    "version": "1.0.0",
+    "name": "Snow Magic",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 243,
+    "updateIndex": 98,
+    "version": "1.0.0",
+    "name": "Snow Magic",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.5
+  },
+  {
+    "categoryName": "Lanota联动",
+    "defaultIndex": 113,
+    "updateIndex": 333,
+    "version": "1.16.0",
+    "name": "Song for Sprites",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "Lanota联动",
+    "defaultIndex": 332,
+    "updateIndex": 341,
+    "version": "1.16.0",
+    "name": "Song for Sprites",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8
+  },
+  {
+    "categoryName": "音波狂潮",
+    "defaultIndex": 121,
+    "updateIndex": 393,
+    "version": "2.1.0",
+    "name": "SONIC SURGE",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "音波狂潮",
+    "defaultIndex": 339,
+    "updateIndex": 401,
+    "version": "2.1.0",
+    "name": "SONIC SURGE",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.5
+  },
+  {
+    "categoryName": "奥比之声",
+    "defaultIndex": 188,
+    "updateIndex": 86,
+    "version": "1.6.0",
+    "name": "Spinel",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "奥比之声",
+    "defaultIndex": 407,
+    "updateIndex": 174,
+    "version": "1.6.0",
+    "name": "Spinel",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10
+  },
+  {
+    "categoryName": "钢琴人生",
+    "defaultIndex": 176,
+    "updateIndex": 48,
+    "version": "1.2.0",
+    "name": "Star Cape",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.5
+  },
+  {
+    "categoryName": "钢琴人生",
+    "defaultIndex": 395,
+    "updateIndex": 136,
+    "version": "1.2.0",
+    "name": "Star Cape",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.4
+  },
+  {
+    "categoryName": "Lanota联动",
+    "defaultIndex": 117,
+    "updateIndex": 337,
+    "version": "1.16.0",
+    "name": "Stasis",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "Lanota联动",
+    "defaultIndex": 336,
+    "updateIndex": 345,
+    "version": "1.16.0",
+    "name": "Stasis",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.7
+  },
+  {
+    "categoryName": "机械都市",
+    "defaultIndex": 160,
+    "updateIndex": 32,
+    "version": "1.0.0",
+    "name": "Sterelogue",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12
+  },
+  {
+    "categoryName": "机械都市",
+    "defaultIndex": 379,
+    "updateIndex": 120,
+    "version": "1.0.0",
+    "name": "Sterelogue",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 II",
+    "defaultIndex": 107,
+    "updateIndex": 317,
+    "version": "1.15.0",
+    "name": "Strange Bar",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 II",
+    "defaultIndex": 326,
+    "updateIndex": 325,
+    "version": "1.15.0",
+    "name": "Strange Bar",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.1
+  },
+  {
+    "categoryName": "深夏清梦",
+    "defaultIndex": 134,
+    "updateIndex": 52,
+    "version": "1.3.0",
+    "name": "Sweet Dreams(Short ver.)",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.7
+  },
+  {
+    "categoryName": "深夏清梦",
+    "defaultIndex": 353,
+    "updateIndex": 140,
+    "version": "1.3.0",
+    "name": "Sweet Dreams(Short ver.)",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.7
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 212,
+    "updateIndex": 276,
+    "version": "1.13.0",
+    "name": "Swirling Blue",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.8
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 431,
+    "updateIndex": 286,
+    "version": "1.13.0",
+    "name": "Swirling Blue",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.2
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 7,
+    "updateIndex": 207,
+    "version": "1.8.2",
+    "name": "The Formula",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.1
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 226,
+    "updateIndex": 209,
+    "version": "1.8.2",
+    "name": "The Formula",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.3
+  },
+  {
+    "categoryName": "第一章-旅程的开始",
+    "defaultIndex": 55,
+    "updateIndex": 26,
+    "version": "1.0.0",
+    "name": "The Promised Land",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.6
+  },
+  {
+    "categoryName": "第一章-旅程的开始",
+    "defaultIndex": 274,
+    "updateIndex": 114,
+    "version": "1.0.0",
+    "name": "The Promised Land",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.1
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 70,
+    "updateIndex": 354,
+    "version": "2.0.0",
+    "name": "Triad of Dryad",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13.1
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 289,
+    "updateIndex": 374,
+    "version": "2.0.0",
+    "name": "Triad of Dryad",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.7
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 51,
+    "updateIndex": 427,
+    "version": "2.3.0",
+    "name": "Turning POINT",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 270,
+    "updateIndex": 435,
+    "version": "2.3.0",
+    "name": "Turning POINT",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 II",
+    "defaultIndex": 108,
+    "updateIndex": 318,
+    "version": "1.15.0",
+    "name": "UN1TE feat.YUC'e",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.6
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 II",
+    "defaultIndex": 327,
+    "updateIndex": 326,
+    "version": "1.15.0",
+    "name": "UN1TE feat.YUC'e",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.7
+  },
+  {
+    "categoryName": "范式：起源联动",
+    "defaultIndex": 128,
+    "updateIndex": 429,
+    "version": "2.3.0",
+    "name": "Veil of Summer",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "范式：起源联动",
+    "defaultIndex": 347,
+    "updateIndex": 437,
+    "version": "2.3.0",
+    "name": "Veil of Summer",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.1
+  },
+  {
+    "categoryName": "机械都市",
+    "defaultIndex": 158,
+    "updateIndex": 30,
+    "version": "1.0.0",
+    "name": "Velocity",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.5
+  },
+  {
+    "categoryName": "机械都市",
+    "defaultIndex": 377,
+    "updateIndex": 118,
+    "version": "1.0.0",
+    "name": "Velocity",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.6
+  },
+  {
+    "categoryName": "紫夜狂欢",
+    "defaultIndex": 198,
+    "updateIndex": 293,
+    "version": "1.14.0",
+    "name": "Vesta",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "紫夜狂欢",
+    "defaultIndex": 417,
+    "updateIndex": 300,
+    "version": "1.14.0",
+    "name": "Vesta",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.6
+  },
+  {
+    "categoryName": "Arcaea联动",
+    "defaultIndex": 126,
+    "updateIndex": 419,
+    "version": "2.2.0",
+    "name": "Vulcānus",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13.4
+  },
+  {
+    "categoryName": "Arcaea联动",
+    "defaultIndex": 345,
+    "updateIndex": 425,
+    "version": "2.2.0",
+    "name": "Vulcānus",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 48,
+    "updateIndex": 347,
+    "version": "2.0.0",
+    "name": "Waltz for Lorelei",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 267,
+    "updateIndex": 367,
+    "version": "2.0.0",
+    "name": "Waltz for Lorelei",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.6
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 208,
+    "updateIndex": 74,
+    "version": "1.4.0",
+    "name": "Welcome, SSSpooky!!!",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 427,
+    "updateIndex": 162,
+    "version": "1.4.0",
+    "name": "Welcome, SSSpooky!!!",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.4
+  },
+  {
+    "categoryName": "紫夜狂欢",
+    "defaultIndex": 197,
+    "updateIndex": 292,
+    "version": "1.14.0",
+    "name": "Wish Upon Vivid Stars",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.3
+  },
+  {
+    "categoryName": "紫夜狂欢",
+    "defaultIndex": 416,
+    "updateIndex": 299,
+    "version": "1.14.0",
+    "name": "Wish Upon Vivid Stars",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.3
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 27,
+    "updateIndex": 11,
+    "version": "1.0.0",
+    "name": "Witches' Party",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.2
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 246,
+    "updateIndex": 99,
+    "version": "1.0.0",
+    "name": "Witches' Party",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.5
+  },
+  {
+    "categoryName": "WACCA联动",
+    "defaultIndex": 84,
+    "updateIndex": 57,
+    "version": "1.4.0",
+    "name": "with U",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "WACCA联动",
+    "defaultIndex": 303,
+    "updateIndex": 145,
+    "version": "1.4.0",
+    "name": "with U",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.9
+  },
+  {
+    "categoryName": "紫夜狂欢",
+    "defaultIndex": 200,
+    "updateIndex": 295,
+    "version": "1.14.0",
+    "name": "YInMn Blue",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "紫夜狂欢",
+    "defaultIndex": 419,
+    "updateIndex": 302,
+    "version": "1.14.0",
+    "name": "YInMn Blue",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.7
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 I",
+    "defaultIndex": 101,
+    "updateIndex": 177,
+    "version": "1.7.0",
+    "name": "You & DIE",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.1
+  },
+  {
+    "categoryName": "HARDCORE TANO*C联动 I",
+    "defaultIndex": 320,
+    "updateIndex": 186,
+    "version": "1.7.0",
+    "name": "You & DIE",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.5
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 47,
+    "updateIndex": 332,
+    "version": "1.16.0",
+    "name": "Yukianesa",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 266,
+    "updateIndex": 340,
+    "version": "1.16.0",
+    "name": "Yukianesa",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.6
+  },
+  {
+    "categoryName": "奥比之声",
+    "defaultIndex": 190,
+    "updateIndex": 88,
+    "version": "1.6.0",
+    "name": "εxceζ",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.8
+  },
+  {
+    "categoryName": "奥比之声",
+    "defaultIndex": 409,
+    "updateIndex": 176,
+    "version": "1.6.0",
+    "name": "εxceζ",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11.1
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 10,
+    "updateIndex": 5,
+    "version": "1.0.0",
+    "name": "심장병",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 9.5
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 229,
+    "updateIndex": 93,
+    "version": "1.0.0",
+    "name": "심장병",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.2
+  },
+  {
+    "categoryName": "自未来的歌",
+    "defaultIndex": 141,
+    "updateIndex": 215,
+    "version": "1.9.0",
+    "name": "アイロニ",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12
+  },
+  {
+    "categoryName": "自未来的歌",
+    "defaultIndex": 360,
+    "updateIndex": 223,
+    "version": "1.9.0",
+    "name": "アイロニ",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 7
+  },
+  {
+    "categoryName": "DECO*27联动",
+    "defaultIndex": 148,
+    "updateIndex": 362,
+    "version": "2.0.0",
+    "name": "アンドロイドガール",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "DECO*27联动",
+    "defaultIndex": 367,
+    "updateIndex": 382,
+    "version": "2.0.0",
+    "name": "アンドロイドガール",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.7
+  },
+  {
+    "categoryName": "深夏清梦",
+    "defaultIndex": 135,
+    "updateIndex": 53,
+    "version": "1.3.0",
+    "name": "インドア系ならトラックメイカー",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "深夏清梦",
+    "defaultIndex": 354,
+    "updateIndex": 141,
+    "version": "1.3.0",
+    "name": "インドア系ならトラックメイカー",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.6
+  },
+  {
+    "categoryName": "DECO*27联动",
+    "defaultIndex": 149,
+    "updateIndex": 361,
+    "version": "2.0.0",
+    "name": "ヴァンパイア",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "DECO*27联动",
+    "defaultIndex": 369,
+    "updateIndex": 381,
+    "version": "2.0.0",
+    "name": "ヴァンパイア",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.4
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 68,
+    "updateIndex": 352,
+    "version": "2.0.0",
+    "name": "シークレット・プラネット",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.1
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 287,
+    "updateIndex": 372,
+    "version": "2.0.0",
+    "name": "シークレット・プラネット",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.2
+  },
+  {
+    "categoryName": "自未来的歌",
+    "defaultIndex": 139,
+    "updateIndex": 213,
+    "version": "1.9.0",
+    "name": "ジャンキーナイトタウンオーケストラ",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.6
+  },
+  {
+    "categoryName": "自未来的歌",
+    "defaultIndex": 358,
+    "updateIndex": 221,
+    "version": "1.9.0",
+    "name": "ジャンキーナイトタウンオーケストラ",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.8
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 31,
+    "updateIndex": 198,
+    "version": "1.8.0",
+    "name": "ストレイソウル・アラウンド",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 250,
+    "updateIndex": 206,
+    "version": "1.8.0",
+    "name": "ストレイソウル・アラウンド",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.6
+  },
+  {
+    "categoryName": "放克派对",
+    "defaultIndex": 194,
+    "updateIndex": 259,
+    "version": "1.12.0",
+    "name": "スプーキィダンスパーティ",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.9
+  },
+  {
+    "categoryName": "放克派对",
+    "defaultIndex": 413,
+    "updateIndex": 266,
+    "version": "1.12.0",
+    "name": "スプーキィダンスパーティ",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 11
+  },
+  {
+    "categoryName": "跨次元之约",
+    "defaultIndex": 151,
+    "updateIndex": 394,
+    "version": "2.1.0",
+    "name": "トリコロール・ステップ",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.4
+  },
+  {
+    "categoryName": "跨次元之约",
+    "defaultIndex": 370,
+    "updateIndex": 402,
+    "version": "2.1.0",
+    "name": "トリコロール・ステップ",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.5
+  },
+  {
+    "categoryName": "巷角餐馆",
+    "defaultIndex": 167,
+    "updateIndex": 39,
+    "version": "1.0.0",
+    "name": "ニニ -邇々-",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "巷角餐馆",
+    "defaultIndex": 386,
+    "updateIndex": 127,
+    "version": "1.0.0",
+    "name": "ニニ -邇々-",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.8
+  },
+  {
+    "categoryName": "PinocchioP联动",
+    "defaultIndex": 145,
+    "updateIndex": 365,
+    "version": "2.0.0",
+    "name": "ねぇねぇねぇ。",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.1
+  },
+  {
+    "categoryName": "PinocchioP联动",
+    "defaultIndex": 364,
+    "updateIndex": 385,
+    "version": "2.0.0",
+    "name": "ねぇねぇねぇ。",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.5
+  },
+  {
+    "categoryName": "PinocchioP联动",
+    "defaultIndex": 147,
+    "updateIndex": 366,
+    "version": "2.0.0",
+    "name": "ノンブレス・オブリージュ",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "PinocchioP联动",
+    "defaultIndex": 366,
+    "updateIndex": 386,
+    "version": "2.0.0",
+    "name": "ノンブレス・オブリージュ",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.9
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 220,
+    "updateIndex": 387,
+    "version": "2.0.2",
+    "name": "ベースラインやってる？笑",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.5
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 439,
+    "updateIndex": 388,
+    "version": "2.0.2",
+    "name": "ベースラインやってる？笑",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.5
+  },
+  {
+    "categoryName": "自未来的歌",
+    "defaultIndex": 140,
+    "updateIndex": 214,
+    "version": "1.9.0",
+    "name": "ラグトレイン",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.8
+  },
+  {
+    "categoryName": "自未来的歌",
+    "defaultIndex": 359,
+    "updateIndex": 222,
+    "version": "1.9.0",
+    "name": "ラグトレイン",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.7
+  },
+  {
+    "categoryName": "DECO*27联动",
+    "defaultIndex": 150,
+    "updateIndex": 363,
+    "version": "2.0.0",
+    "name": "乙女解剖",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "DECO*27联动",
+    "defaultIndex": 368,
+    "updateIndex": 383,
+    "version": "2.0.0",
+    "name": "乙女解剖",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.2
+  },
+  {
+    "categoryName": "音波狂潮",
+    "defaultIndex": 119,
+    "updateIndex": 306,
+    "version": "1.14.1",
+    "name": "今天不是明天",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.3
+  },
+  {
+    "categoryName": "音波狂潮",
+    "defaultIndex": 337,
+    "updateIndex": 311,
+    "version": "1.14.1",
+    "name": "今天不是明天",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.3
+  },
+  {
+    "categoryName": "Arcaea联动",
+    "defaultIndex": 123,
+    "updateIndex": 417,
+    "version": "2.2.0",
+    "name": "光速神授説 - Divine Light of Myriad -",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.7
+  },
+  {
+    "categoryName": "Arcaea联动",
+    "defaultIndex": 342,
+    "updateIndex": 423,
+    "version": "2.2.0",
+    "name": "光速神授説 - Divine Light of Myriad -",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.7
+  },
+  {
+    "categoryName": "放克派对",
+    "defaultIndex": 193,
+    "updateIndex": 258,
+    "version": "1.12.0",
+    "name": "分かってるけど",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "放克派对",
+    "defaultIndex": 412,
+    "updateIndex": 265,
+    "version": "1.12.0",
+    "name": "分かってるけど",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 7
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 11,
+    "updateIndex": 9,
+    "version": "1.3.0",
+    "name": "别れの序曲",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 9
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 230,
+    "updateIndex": 97,
+    "version": "1.3.0",
+    "name": "别れの序曲",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 5
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 3,
+    "updateIndex": 349,
+    "version": "2.0.0",
+    "name": "咲く星々",
+    "difficultyLevel": "IV-α",
+    "difficultyDecimal": 12.6
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 67,
+    "updateIndex": 389,
+    "version": "2.1.0",
+    "name": "咲く星々",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 286,
+    "updateIndex": 369,
+    "version": "2.0.0",
+    "name": "咲く星々",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.7
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 49,
+    "updateIndex": 392,
+    "version": "2.1.0",
+    "name": "天Q.",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.6
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 268,
+    "updateIndex": 400,
+    "version": "2.1.0",
+    "name": "天Q.",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.8
+  },
+  {
+    "categoryName": "跨次元之约",
+    "defaultIndex": 152,
+    "updateIndex": 395,
+    "version": "2.1.0",
+    "name": "天使であれたら",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.1
+  },
+  {
+    "categoryName": "跨次元之约",
+    "defaultIndex": 371,
+    "updateIndex": 403,
+    "version": "2.1.0",
+    "name": "天使であれたら",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.8
+  },
+  {
+    "categoryName": "跨次元之约",
+    "defaultIndex": 156,
+    "updateIndex": 399,
+    "version": "2.1.0",
+    "name": "席替えやったー！",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.8
+  },
+  {
+    "categoryName": "跨次元之约",
+    "defaultIndex": 375,
+    "updateIndex": 407,
+    "version": "2.1.0",
+    "name": "席替えやったー！",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.7
+  },
+  {
+    "categoryName": "奥比之声",
+    "defaultIndex": 184,
+    "updateIndex": 82,
+    "version": "1.6.0",
+    "name": "幻影",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.2
+  },
+  {
+    "categoryName": "奥比之声",
+    "defaultIndex": 403,
+    "updateIndex": 170,
+    "version": "1.6.0",
+    "name": "幻影",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.5
+  },
+  {
+    "categoryName": "我们的相遇",
+    "defaultIndex": 78,
+    "updateIndex": 242,
+    "version": "1.11.0",
+    "name": "星降る夜と一輪の花",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.1
+  },
+  {
+    "categoryName": "我们的相遇",
+    "defaultIndex": 297,
+    "updateIndex": 249,
+    "version": "1.11.0",
+    "name": "星降る夜と一輪の花",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.1
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 203,
+    "updateIndex": 68,
+    "version": "1.0.0",
+    "name": "極彩色のユートピア",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.8
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 422,
+    "updateIndex": 156,
+    "version": "1.0.0",
+    "name": "極彩色のユートピア",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 207,
+    "updateIndex": 72,
+    "version": "1.1.2",
+    "name": "死んでしまった季節のかけら",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.1
+  },
+  {
+    "categoryName": "星际之声",
+    "defaultIndex": 426,
+    "updateIndex": 160,
+    "version": "1.1.2",
+    "name": "死んでしまった季節のかけら",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.7
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 19,
+    "updateIndex": 21,
+    "version": "1.0.0",
+    "name": "無彩色のディストピア",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.8
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 238,
+    "updateIndex": 109,
+    "version": "1.0.0",
+    "name": "無彩色のディストピア",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.6
+  },
+  {
+    "categoryName": "音波狂潮",
+    "defaultIndex": 120,
+    "updateIndex": 305,
+    "version": "1.14.1",
+    "name": "爱上想象的你",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "音波狂潮",
+    "defaultIndex": 338,
+    "updateIndex": 310,
+    "version": "1.14.1",
+    "name": "爱上想象的你",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.4
+  },
+  {
+    "categoryName": "PinocchioP联动",
+    "defaultIndex": 146,
+    "updateIndex": 364,
+    "version": "2.0.0",
+    "name": "神っぽいな",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.4
+  },
+  {
+    "categoryName": "PinocchioP联动",
+    "defaultIndex": 365,
+    "updateIndex": 384,
+    "version": "2.0.0",
+    "name": "神っぽいな",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 9.6
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 18,
+    "updateIndex": 19,
+    "version": "1.0.0",
+    "name": "終焉から命を救う",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.8
+  },
+  {
+    "categoryName": "基础歌曲",
+    "defaultIndex": 237,
+    "updateIndex": 107,
+    "version": "1.0.0",
+    "name": "終焉から命を救う",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 10.6
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 71,
+    "updateIndex": 355,
+    "version": "2.0.0",
+    "name": "翠杜",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 13.5
+  },
+  {
+    "categoryName": "第三章-泾渭分明之地",
+    "defaultIndex": 290,
+    "updateIndex": 375,
+    "version": "2.0.0",
+    "name": "翠杜",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 12.2
+  },
+  {
+    "categoryName": "范式：起源联动",
+    "defaultIndex": 127,
+    "updateIndex": 428,
+    "version": "2.3.0",
+    "name": "静寂に憂う",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 11.7
+  },
+  {
+    "categoryName": "范式：起源联动",
+    "defaultIndex": 346,
+    "updateIndex": 436,
+    "version": "2.3.0",
+    "name": "静寂に憂う",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.4
+  },
+  {
+    "categoryName": "跨次元之约",
+    "defaultIndex": 155,
+    "updateIndex": 398,
+    "version": "2.1.0",
+    "name": "魔法少女引退宣言（仮）feat.星宮とと",
+    "difficultyLevel": "IV",
+    "difficultyDecimal": 12.3
+  },
+  {
+    "categoryName": "跨次元之约",
+    "defaultIndex": 374,
+    "updateIndex": 406,
+    "version": "2.1.0",
+    "name": "魔法少女引退宣言（仮）feat.星宮とと",
+    "difficultyLevel": "III",
+    "difficultyDecimal": 8.3
+  }
+]
