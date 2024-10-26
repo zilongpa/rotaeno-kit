@@ -93,7 +93,7 @@ const SearchSongAutocomplete: FC<{
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-full p-0">
+      <PopoverContent className="w-[300px] max-w-[100vw] p-0">
         <Command>
           <CommandInput
             placeholder="Search song..."
@@ -112,6 +112,7 @@ const SearchSongAutocomplete: FC<{
                     onValueChange(currentValue)
                     setOpen(false)
                   }}
+                  className="overflow-hidden text-ellipsis whitespace-nowrap"
                 >
                   <Check
                     className={cn(
@@ -119,7 +120,9 @@ const SearchSongAutocomplete: FC<{
                       value === song.slug ? 'opacity-100' : 'opacity-0'
                     )}
                   />
-                  {song.name}
+                  <span className="overflow-hidden text-ellipsis whitespace-nowrap">
+                    {song.name}
+                  </span>
                 </CommandItem>
               ))}
             </CommandGroup>
@@ -243,7 +246,7 @@ const AddChartRecord: FC = () => {
                       className="font-mono"
                       {...field}
                       min={0}
-                      max={1000000}
+                      max={1010000}
                       placeholder="0995223"
                       onChange={(e) => {
                         field.onChange(Number(e.target.value))
@@ -305,11 +308,9 @@ function App() {
       <div className="flex size-full flex-col items-center gap-8 p-4 md:p-8">
         <ColorSchemeSwitcher />
 
-        <div className="mt-16 flex flex-col items-start justify-center gap-2 py-32">
+        <div className="mt-16 flex flex-col items-start justify-center gap-2 py-16 lg:py-32">
           <h1 className="text-4xl font-bold">Rotaeno Kit</h1>
-          <p className="text-lg text-muted-foreground">
-            A tool for Rotaeno players to track their progress.
-          </p>
+          <p className="text-lg text-muted-foreground">Tools for fellow Rotaeno players.</p>
         </div>
 
         <AddChartRecord />
