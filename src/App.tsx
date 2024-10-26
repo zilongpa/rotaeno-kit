@@ -3,12 +3,14 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Form, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import Fuse from 'fuse.js'
-import { FC, useMemo, useState } from 'react'
+import { createContext, FC, ReactNode, useContext, useEffect, useMemo, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import invariant from 'tiny-invariant'
 import { z } from 'zod'
 
-import { Check, ChevronsUpDown, PlusIcon } from 'lucide-react'
+import { Check, ChevronsUpDown, PlusIcon, Slash } from 'lucide-react'
 
+import { ColorSchemeSwitcher } from '@/components/ColorSchemeSwitcher'
 import { Button } from '@/components/ui/button'
 import {
   Command,
@@ -27,7 +29,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import { calculateSongRating } from '@/lib/rating'
 import { cn } from '@/lib/utils'
+import { useList, useLocalStorage } from 'react-use'
+import { ListActions } from 'react-use/lib/useList'
 
 const songs = rawSongs.filter((song) => {
   if (!song.slug) {
@@ -125,7 +130,34 @@ const SearchSongAutocomplete: FC<{
   )
 }
 
+const ChartRecordsContext = createContext<
+  Readonly<[AddChartRecordForm[], ListActions<AddChartRecordForm>]>
+>(undefined as never)
+
+const ChartRecordsProvider: FC<{ children: ReactNode }> = ({ children }) => {
+  const [storedRecords, setStoredRecords] = useLocalStorage<AddChartRecordForm[]>(
+    'rotaeno-kit-chart-records',
+    []
+  )
+
+  const [records, modifyRecords] = useList<AddChartRecordForm>(storedRecords)
+
+  useEffect(() => {
+    setStoredRecords(records)
+  }, [records])
+
+  const value = useMemo(() => [records, modifyRecords] as const, [records, modifyRecords])
+
+  return <ChartRecordsContext.Provider value={value}>{children}</ChartRecordsContext.Provider>
+}
+
+const useChartRecords = () => {
+  return useContext(ChartRecordsContext)
+}
+
 const AddChartRecord: FC = () => {
+  const [, modifyRecords] = useChartRecords()
+
   const form = useForm<AddChartRecordForm>({
     resolver: zodResolver(addChartRecordFormSchema),
     defaultValues: {
@@ -140,13 +172,18 @@ const AddChartRecord: FC = () => {
   }, [chartSlug])
 
   const onSubmit = (data: AddChartRecordForm) => {
-    console.log(data)
+    modifyRecords.push(data)
+    form.reset()
   }
 
   return (
     <Card className="w-full max-w-2xl">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)}>
+        <form
+          onSubmit={(e) => {
+            void form.handleSubmit(onSubmit)(e)
+          }}
+        >
           <CardHeader>
             <CardTitle>Add Chart Record</CardTitle>
           </CardHeader>
@@ -184,7 +221,7 @@ const AddChartRecord: FC = () => {
                         <SelectContent>
                           {song?.charts.map((chart) => (
                             <SelectItem key={chart.defaultIndex} value={chart.difficultyLevel}>
-                              {chart.difficultyLevel}
+                              {chart.difficultyLevel} ({chart.difficultyDecimal})
                             </SelectItem>
                           ))}
                         </SelectContent>
@@ -234,18 +271,52 @@ const AddChartRecord: FC = () => {
   )
 }
 
+const ChartRecords: FC = () => {
+  const [records] = useChartRecords()
+
+  return (
+    <div className="flex flex-col gap-2">
+      {records.length === 0 && (
+        <div className="flex flex-col items-center gap-2 py-8 text-muted-foreground">
+          <Slash className="size-5" />
+          <span>No records</span>
+        </div>
+      )}
+      {records.map((record) => {
+        const song = songs.find((song) => song.slug === record.chartSlug)
+        invariant(song, 'song not found')
+        const chart = song.charts.find((chart) => chart.difficultyLevel === record.difficultyLevel)
+        invariant(chart, 'chart not found')
+        const rating = calculateSongRating(chart.difficultyDecimal, record.achievementRate)
+
+        return (
+          <div key={record.chartSlug}>
+            {`${song.name} - ${chart.difficultyLevel} (${chart.difficultyDecimal}) @ ${record.achievementRate}: Song Rating = ${rating}`}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 function App() {
   return (
-    <div className="flex size-full flex-col items-center p-8">
-      <div className="flex flex-col items-center justify-center py-32">
-        <h1 className="text-4xl font-bold">Rotaeno Kit</h1>
-        <p className="text-lg text-muted-foreground">
-          A tool for Rotaeno players to track their progress.
-        </p>
-      </div>
+    <ChartRecordsProvider>
+      <div className="flex size-full flex-col items-center gap-8 p-4 md:p-8">
+        <ColorSchemeSwitcher />
 
-      <AddChartRecord />
-    </div>
+        <div className="mt-16 flex flex-col items-start justify-center gap-2 py-32">
+          <h1 className="text-4xl font-bold">Rotaeno Kit</h1>
+          <p className="text-lg text-muted-foreground">
+            A tool for Rotaeno players to track their progress.
+          </p>
+        </div>
+
+        <AddChartRecord />
+
+        <ChartRecords />
+      </div>
+    </ChartRecordsProvider>
   )
 }
 
