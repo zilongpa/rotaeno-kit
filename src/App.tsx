@@ -1,6 +1,7 @@
 import { AddChartRecord } from '@/components/AddChartRecord'
 import { ChartRecords } from '@/components/ChartRecords'
 import { ColorSchemeSwitcher } from '@/components/ColorSchemeSwitcher'
+import { RecordsSummary } from '@/components/RecordsSummary'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Toaster } from '@/components/ui/sonner'
 import { ChartRecordsProvider } from '@/contexts/ChartRecordsContext'
@@ -76,6 +77,8 @@ function App() {
 
           <About />
         </div>
+
+        <RecordsSummary />
 
         <AddChartRecord />
 

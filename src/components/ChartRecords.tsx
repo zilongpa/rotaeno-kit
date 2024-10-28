@@ -9,9 +9,12 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
-import { ChartRecord, isSameChart, useChartRecords } from '@/contexts/ChartRecordsContext'
+import {
+  isSameChart,
+  useCalculatedChartRecords,
+  useChartRecords,
+} from '@/contexts/ChartRecordsContext'
 import { songs } from '@/data/songs'
-import { calculateSongRating } from '@/lib/rating'
 import {
   Column,
   ColumnDef,
@@ -21,13 +24,21 @@ import {
   SortingState,
   useReactTable,
 } from '@tanstack/react-table'
-import { CheckIcon, MinusIcon, SlashIcon, SortAscIcon, SortDescIcon, TrashIcon } from 'lucide-react'
-import { ReactNode, useMemo, useState } from 'react'
+import {
+  ArrowDown10Icon,
+  ArrowUp01Icon,
+  ArrowUpDownIcon,
+  CheckIcon,
+  DownloadIcon,
+  MinusIcon,
+  SlashIcon,
+  SortAscIcon,
+  SortDescIcon,
+  TrashIcon,
+} from 'lucide-react'
+import { ReactNode, useState } from 'react'
 
-interface TableRow extends ChartRecord {
-  rating: number
-  ratingEligibility: 'b30' | false
-}
+type TableRow = ReturnType<typeof useCalculatedChartRecords>[number]
 
 const ChartRecordActions = ({ record }: { record: TableRow }) => {
   const [, { filter }] = useChartRecords()
@@ -45,22 +56,31 @@ const ChartRecordActions = ({ record }: { record: TableRow }) => {
   )
 }
 
-const PadZeroCell = ({ value, threshold }: { value: number; threshold: number }) => {
+const PadZeroCell = ({ value, digits }: { value: number; digits: number }) => {
+  const [whole, decimal] = value.toString().split('.')
+  const needsPadding = whole === '0' ? digits : whole.length < digits
+
   return (
     <span className="text-base tabular-nums">
-      {value < threshold && <span className="opacity-20">0</span>}
-      {value.toString()}
+      {needsPadding && <span className="opacity-20">{'0'.repeat(digits - whole.length)}</span>}
+      {whole}
+      {decimal ? `.${decimal}` : ''}
     </span>
   )
 }
 
 const SortableColumnHeaderCell = ({
   column,
+  sortStyle,
   children,
 }: {
   column: Column<TableRow>
+  sortStyle: 'numerical' | 'logical'
   children: ReactNode
 }) => {
+  const AscIcon = sortStyle === 'numerical' ? ArrowUp01Icon : SortAscIcon
+  const DescIcon = sortStyle === 'numerical' ? ArrowDown10Icon : SortDescIcon
+
   return (
     <button
       className="flex h-10 w-full items-center justify-between gap-2 px-2 hover:bg-muted/50"
@@ -69,11 +89,11 @@ const SortableColumnHeaderCell = ({
       {children}
 
       {column.getIsSorted() === 'asc' ? (
-        <SortAscIcon className="size-4" />
+        <AscIcon className="size-4" />
       ) : column.getIsSorted() === 'desc' ? (
-        <SortDescIcon className="size-4" />
+        <DescIcon className="size-4" />
       ) : (
-        <div className="size-4" />
+        <ArrowUpDownIcon className="size-4 opacity-20" />
       )}
     </button>
   )
@@ -90,31 +110,68 @@ const chartRecordsColumns: ColumnDef<TableRow>[] = [
     },
   },
   {
-    accessorKey: 'difficultyLevel',
+    id: 'difficulty',
     header: 'Difficulty',
-  },
-  {
-    accessorKey: 'ratingEligibility',
-    header: (props) => <SortableColumnHeaderCell {...props}>B30?</SortableColumnHeaderCell>,
     cell: ({ row }) => {
-      return row.original.ratingEligibility ? (
-        <CheckIcon className="size-4" />
-      ) : (
-        <MinusIcon className="size-4 opacity-20" />
+      return (
+        <div className="flex items-center justify-between gap-0.5">
+          <div>{row.original.chart.difficultyLevel}</div>
+          <div className="tabular-nums text-muted-foreground">
+            {row.original.chart.difficultyDecimal.toFixed(1)}
+          </div>
+        </div>
       )
     },
+  },
+  {
+    accessorKey: 'ratingIndex',
+    header: (props) => (
+      <SortableColumnHeaderCell {...props} sortStyle="logical">
+        B30?
+      </SortableColumnHeaderCell>
+    ),
+    cell: ({ row }) => {
+      return (
+        <div className="flex items-center justify-start gap-2">
+          {row.original.ratingIndex !== -1 ? (
+            <CheckIcon className="size-4" />
+          ) : (
+            <MinusIcon className="size-4 opacity-20" />
+          )}
+
+          {row.original.ratingIndex !== -1 && (
+            <div className="text-sm tabular-nums leading-none">#{row.original.ratingIndex + 1}</div>
+          )}
+        </div>
+      )
+    },
+    // if sort by descending, it should be 0, 1, 2, ..., 30, -1
+    sortingFn: (a, b) => {
+      if (a.original.ratingIndex === -1) return 1
+      if (b.original.ratingIndex === -1) return -1
+      return a.original.ratingIndex - b.original.ratingIndex
+    },
+    invertSorting: true,
     meta: { header: { inset: true } },
   },
   {
     accessorKey: 'achievementRate',
-    header: (props) => <SortableColumnHeaderCell {...props}>%</SortableColumnHeaderCell>,
-    cell: ({ row }) => <PadZeroCell value={row.original.achievementRate} threshold={1_000_000} />,
+    header: (props) => (
+      <SortableColumnHeaderCell {...props} sortStyle="numerical">
+        %
+      </SortableColumnHeaderCell>
+    ),
+    cell: ({ row }) => <PadZeroCell value={row.original.achievementRate} digits={7} />,
     meta: { header: { inset: true } },
   },
   {
     accessorKey: 'rating',
-    header: (props) => <SortableColumnHeaderCell {...props}>Rating</SortableColumnHeaderCell>,
-    cell: ({ row }) => <PadZeroCell value={row.original.rating} threshold={10} />,
+    header: (props) => (
+      <SortableColumnHeaderCell {...props} sortStyle="numerical">
+        Rating
+      </SortableColumnHeaderCell>
+    ),
+    cell: ({ row }) => <PadZeroCell value={row.original.rating} digits={2} />,
     meta: { header: { inset: true } },
   },
   {
@@ -129,33 +186,7 @@ const chartRecordsColumns: ColumnDef<TableRow>[] = [
 export const ChartRecords = () => {
   const [records, modifyRecords] = useChartRecords()
   const [sorting, setSorting] = useState<SortingState>([])
-
-  const data = useMemo(() => {
-    const enriched = records.map((record) => {
-      const song = songs.find((song) => song.id === record.songSlug)
-      invariant(song, `song not found: ${record.songSlug}`)
-      const chart = song.charts.find((chart) => chart.difficultyLevel === record.difficultyLevel)
-      invariant(chart, `chart not found: ${record.songSlug} ${record.difficultyLevel}`)
-      return {
-        ...record,
-        rating: calculateSongRating(chart.difficultyDecimal, record.achievementRate),
-        ratingEligibility: false,
-      }
-    })
-
-    const sorted = enriched.slice().sort((a, b) => {
-      return b.rating - a.rating
-    })
-
-    const first30 = sorted.slice(0, 30)
-
-    return enriched.map((record) => {
-      return {
-        ...record,
-        ratingEligibility: first30.includes(record) ? ('b30' as const) : (false as const),
-      }
-    })
-  }, [records])
+  const data = useCalculatedChartRecords()
 
   const table = useReactTable({
     data,
@@ -168,15 +199,37 @@ export const ChartRecords = () => {
     },
   })
 
+  const handleDownloadCSV = () => {
+    const csv = data
+      .map((record) => {
+        return `${JSON.stringify(songs.find((song) => song.id === record.songSlug)?.title_localized.default)},${record.difficultyLevel},${record.achievementRate},${record.rating}`
+      })
+      .join('\n')
+    const blob = new Blob([csv], { type: 'text/csv' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = 'chart-records.csv'
+    a.click()
+  }
+
   return (
     <div className="flex w-full flex-col gap-2 pb-16">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-center gap-2">
         <h2 className="text-lg font-semibold">Chart Records</h2>
 
+        <div className="flex-1" />
+
         {records.length > 0 && (
-          <Button variant="destructive" size="sm" onClick={() => modifyRecords.clear()}>
-            Clear All
-          </Button>
+          <>
+            <Button variant="destructive" size="sm" onClick={() => modifyRecords.clear()}>
+              Clear All
+            </Button>
+
+            <Button variant="outline" size="icon" onClick={handleDownloadCSV}>
+              <DownloadIcon className="size-4" />
+            </Button>
+          </>
         )}
       </div>
 

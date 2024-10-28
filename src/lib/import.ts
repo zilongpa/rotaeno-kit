@@ -47,10 +47,16 @@ const remoteSocialDataSchema = z.object({
 })
 
 const DIFFICULTY_LEVEL_MAP = {
+  i: 'I',
+  ii: 'II',
   iii: 'III',
   iv: 'IV',
+  iv_alpha: 'IV-α',
+  I: 'I',
+  II: 'II',
   III: 'III',
   IV: 'IV',
+  IV_Alpha: 'IV-α',
 }
 export const safeParseImport = (content: string): Result<ChartRecord[], string> => {
   const object = Result.fromThrowable(JSON.parse)(content)
@@ -71,7 +77,13 @@ export const safeParseImport = (content: string): Result<ChartRecord[], string> 
         }))
       )
       .flat()
-      .filter((record) => record.difficultyLevel !== undefined)
+      .filter((record) => {
+        const filter = record.difficultyLevel !== undefined
+        if (!filter) {
+          console.warn(`Invalid difficulty level: ${record.difficultyLevel}`)
+        }
+        return filter
+      })
     return ok(chartRecords)
   }
 
@@ -88,7 +100,13 @@ export const safeParseImport = (content: string): Result<ChartRecord[], string> 
         }))
       )
       .flat()
-      .filter((record) => record.difficultyLevel !== undefined)
+      .filter((record) => {
+        const filter = record.difficultyLevel !== undefined
+        if (!filter) {
+          console.warn(`Invalid difficulty level: ${record.difficultyLevel}`)
+        }
+        return filter
+      })
     return ok(chartRecords)
   }
 

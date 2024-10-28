@@ -222,7 +222,7 @@ export const AddChartRecord: FC = () => {
                                 const chart = song?.charts.find(
                                   (chart) => chart.difficultyLevel === field.value
                                 )
-                                return `${chart?.difficultyLevel} (${chart?.difficultyDecimal})`
+                                return `${chart?.difficultyLevel} (${chart?.difficultyDecimal.toFixed(1)})`
                               })()}
                             </SelectValue>
                           </SelectTrigger>
@@ -240,7 +240,7 @@ export const AddChartRecord: FC = () => {
                                   </div>
                                 </SelectItemText>
                                 <div className="flex w-full items-center justify-between text-xs tabular-nums text-muted-foreground">
-                                  <div>{chart.difficultyDecimal}</div>
+                                  <div>{chart.difficultyDecimal.toFixed(1)}</div>
 
                                   <div className="text-xs text-muted-foreground">
                                     Chart by {chart.chartDesigner}
@@ -300,7 +300,7 @@ export const AddChartRecord: FC = () => {
 
 const ChartRecordImportForm: FC = () => {
   const [open, setOpen] = useState(false)
-  const [records, modifyRecords] = useChartRecords()
+  const [, modifyRecords] = useChartRecords()
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   const onImport = () => {
@@ -317,10 +317,7 @@ const ChartRecordImportForm: FC = () => {
     }
 
     const filtered = parsed.value.filter((record) => {
-      if (record.achievementRate === 0) return false
-
-      const existing = records.find((r) => isSameChart(r, record))
-      return !existing || existing.achievementRate < record.achievementRate
+      return record.achievementRate !== 0
     })
 
     modifyRecords.set(filtered)
@@ -336,8 +333,7 @@ const ChartRecordImportForm: FC = () => {
             <DialogDescription>
               Paste the JSON content of <code>CloudSave</code> or{' '}
               <code>GetAllFolloweeSocialData</code> (currently only will import the data of your
-              first friend) api response here. Your current records will be merged with the new
-              ones.
+              first friend) api response here. Your current records will be overwritten.
             </DialogDescription>
           </DialogHeader>
 
