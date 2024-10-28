@@ -312,7 +312,7 @@ export const AddChartRecord: FC = () => {
 const ChartRecordImportForm: FC = () => {
   const [open, setOpen] = useState(false)
   const [content, setContent] = useState('')
-  const [, modifyRecords] = useChartRecords()
+  const [records, modifyRecords] = useChartRecords()
 
   const onImport = () => {
     const parsed = safeParseImport(content)
@@ -321,7 +321,14 @@ const ChartRecordImportForm: FC = () => {
       return
     }
 
-    modifyRecords.set(parsed.value)
+    const filtered = parsed.value.filter((record) => {
+      if (record.achievementRate === 0) return false
+
+      const existing = records.find((r) => isSameChart(r, record))
+      return !existing || existing.achievementRate < record.achievementRate
+    })
+
+    modifyRecords.set(filtered)
     setOpen(false)
   }
 
@@ -334,7 +341,8 @@ const ChartRecordImportForm: FC = () => {
             <DialogDescription>
               Paste the JSON content of <code>CloudSave</code> or{' '}
               <code>GetAllFolloweeSocialData</code> (currently only will import the data of your
-              first friend) api response here. Your current records will be overwritten.
+              first friend) api response here. Your current records will be merged with the new
+              ones.
             </DialogDescription>
           </DialogHeader>
 
