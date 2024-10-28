@@ -103,7 +103,7 @@ const SortableColumnHeaderCell = ({
 const chartRecordsColumns: ColumnDef<TableRow>[] = [
   {
     accessorKey: 'songSlug',
-    header: 'Song',
+    header: () => <div className="min-w-[250px]">Song</div>,
     cell: ({ row }) => {
       const song = songs.find((song) => song.id === row.original.songSlug)
       invariant(song, 'song not found')
@@ -112,7 +112,7 @@ const chartRecordsColumns: ColumnDef<TableRow>[] = [
           <SongJacket
             song={song}
             difficultyLevel={row.original.chart.difficultyLevel}
-            className="size-8 rounded-sm"
+            pictureClassName="shrink-0"
           />
           <div>{song.title_localized.default}</div>
         </div>

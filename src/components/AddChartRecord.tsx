@@ -136,9 +136,13 @@ const SearchSongAutocomplete: FC<{
                 >
                   {value === song.id && <Check className="size-4" />}
 
-                  <SongJacket song={song} className="size-4 rounded-[1px]" />
+                  <SongJacket
+                    song={song}
+                    className="size-4 rounded-[1px]"
+                    pictureClassName="shrink-0"
+                  />
 
-                  <span className="overflow-hidden text-ellipsis whitespace-nowrap">
+                  <span className="shrink overflow-hidden text-ellipsis whitespace-nowrap">
                     {song.title_localized.default}
                   </span>
                 </CommandItem>
