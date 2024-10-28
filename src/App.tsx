@@ -6,6 +6,64 @@ import { Toaster } from '@/components/ui/sonner'
 import { ChartRecordsProvider } from '@/contexts/ChartRecordsContext'
 import { InfoIcon } from 'lucide-react'
 
+const About = () => {
+  return (
+    <Alert className="mt-4">
+      <InfoIcon className="size-4" />
+      <AlertTitle>About</AlertTitle>
+      <AlertDescription>
+        <ul className="list-inside list-disc space-y-1">
+          <li>
+            This project is not affiliated with Rotaeno or its developers. All rights are reserved
+            to their respective owners.
+          </li>
+
+          <li>
+            Initial data comes from &quot;Rotaeno 次世代Rating分析表for rotaeno ver2.3.0&quot; by
+            Team Rhythematics. A friend sent me this and I didn&apos;t found any public link via
+            Google so there&apos;s currently missing link. Feel free to contact me if you have a
+            link that I could attribute to.
+          </li>
+
+          <li>
+            Rating calculation is based on the work of Kown & Kiei & Eastown with{' '}
+            <a
+              className="underline"
+              href="https://docs.qq.com/doc/DYnRienFUbG9NQmVh"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Rotaeno Rating推分参考公式（B30）
+            </a>
+            {'.'}
+          </li>
+
+          <li>
+            Songs and charts data are now automatically fetched from the{' '}
+            <a
+              className="underline"
+              href="https://wiki.rotaeno.cn/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Rotaeno Wiki
+            </a>
+            {'.'}
+          </li>
+
+          <li>
+            This project is open source and free to use. Feel free to collaborate on{' '}
+            <a className="underline" href="https://github.com/GalvinGao/rotaeno-kit">
+              GitHub (GalvinGao/rotaeno-kit)
+            </a>
+            {'.'}
+          </li>
+        </ul>
+      </AlertDescription>
+    </Alert>
+  )
+}
+
 function App() {
   return (
     <ChartRecordsProvider>
@@ -16,62 +74,7 @@ function App() {
           <h1 className="text-4xl font-bold">Rotaeno Kit</h1>
           <p className="text-lg text-muted-foreground">Tools for fellow Rotaeno players.</p>
 
-          {/* credits */}
-          <div className="flex flex-col">
-            <Alert>
-              <InfoIcon className="size-4" />
-              <AlertTitle>About</AlertTitle>
-              <AlertDescription>
-                <ul className="list-inside list-disc space-y-1">
-                  <li>
-                    This project is not affiliated with Rotaeno or its developers. All rights are
-                    reserved to their respective owners.
-                  </li>
-
-                  <li>
-                    Initial data comes from &quot;Rotaeno 次世代Rating分析表for rotaeno
-                    ver2.3.0&quot; by Team Rhythematics. A friend sent me this and I didn&apos;t
-                    found any public link via Google so there&apos;s currently missing link. Feel
-                    free to contact me if you have a link that I could attribute to.
-                  </li>
-
-                  <li>
-                    Rating calculation is based on the work of Kown & Kiei & Eastown with{' '}
-                    <a
-                      className="underline"
-                      href="https://docs.qq.com/doc/DYnRienFUbG9NQmVh"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Rotaeno Rating推分参考公式（B30）
-                    </a>
-                    {'.'}
-                  </li>
-
-                  <li>
-                    Songs and charts data are now automatically fetched from the{' '}
-                    <a
-                      className="underline"
-                      href="https://wiki.rotaeno.cn/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Rotaeno Wiki
-                    </a>
-                    {'.'}
-                  </li>
-
-                  <li>
-                    This project is open source and free to use. Feel free to collaborate on{' '}
-                    <a className="underline" href="https://github.com/GalvinGao/rotaeno-kit">
-                      GitHub (GalvinGao/rotaeno-kit)
-                    </a>
-                    .
-                  </li>
-                </ul>
-              </AlertDescription>
-            </Alert>
-          </div>
+          <About />
         </div>
 
         <AddChartRecord />
