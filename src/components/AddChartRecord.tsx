@@ -39,10 +39,9 @@ import { safeParseImport } from '@/lib/import'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { CaretSortIcon } from '@radix-ui/react-icons'
 import clsx from 'clsx'
-import { CommandLoading } from 'cmdk'
 import Fuse from 'fuse.js'
 import { Check, PlusIcon } from 'lucide-react'
-import { FC, Suspense, useMemo, useState, useTransition } from 'react'
+import { FC, useMemo, useRef, useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 
@@ -51,19 +50,15 @@ const useFuse = () => {
     return new Fuse(songs, {
       keys: [
         {
-          name: 'name',
-          weight: 1,
+          name: 'title_localized.default',
+          weight: 1.5,
         },
         {
-          name: 'category',
-          weight: 0.5,
+          name: 'artist',
+          weight: 1,
         },
       ],
       shouldSort: true,
-      sortFn: (a, b) => {
-        // Sort descending
-        return a.score < b.score ? 1 : -1
-      },
       threshold: 0.6,
     })
   }, [])
@@ -74,7 +69,7 @@ const SearchSongAutocomplete: FC<{
   onValueChange: (value: string) => void
 }> = ({ value, onValueChange }) => {
   const [open, setOpen] = useState(false)
-  const [isPending, startTransition] = useTransition()
+  const [, startTransition] = useTransition()
   const [query, setQuery] = useState('')
   const fuse = useFuse()
 
@@ -106,13 +101,15 @@ const SearchSongAutocomplete: FC<{
           className="w-full shrink justify-between"
         >
           <span className="overflow-hidden text-ellipsis whitespace-nowrap">
-            {value ? songs.find((song) => song.slug === value)?.name : 'Select song...'}
+            {value
+              ? songs.find((song) => song.id === value)?.title_localized.default
+              : 'Select song...'}
           </span>
           <CaretSortIcon className="ml-2 size-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[300px] max-w-[100vw] p-0">
-        <Command>
+        <Command shouldFilter={false}>
           <CommandInput
             placeholder="Search song..."
             onValueChange={(value) => {
@@ -121,38 +118,28 @@ const SearchSongAutocomplete: FC<{
           />
           <CommandList>
             <CommandEmpty>No chart found.</CommandEmpty>
-            <CommandGroup className="scroll-pb-2">
-              <Suspense fallback={<CommandLoading />}>
-                {isPending ? (
-                  <CommandLoading />
-                ) : (
-                  searchResults.map((song) => (
-                    <CommandItem
-                      key={song.slug}
-                      value={song.slug}
-                      onSelect={(currentValue) => {
-                        onValueChange(currentValue)
-                        setOpen(false)
-                      }}
-                      className={clsx(
-                        'flex items-center overflow-hidden text-ellipsis whitespace-nowrap',
-                        value === song.slug &&
-                          'bg-foreground text-background data-[selected=true]:bg-foreground/80 data-[selected=true]:text-background/80'
-                      )}
-                    >
-                      {value === song.slug && <Check className="size-4" />}
+            <CommandGroup>
+              {searchResults.map((song) => (
+                <CommandItem
+                  key={song.id}
+                  value={song.id}
+                  onSelect={(currentValue) => {
+                    onValueChange(currentValue)
+                    setOpen(false)
+                  }}
+                  className={clsx(
+                    'flex items-center overflow-hidden text-ellipsis whitespace-nowrap',
+                    value === song.id &&
+                      'bg-foreground text-background data-[selected=true]:bg-foreground/80 data-[selected=true]:text-background/80'
+                  )}
+                >
+                  {value === song.id && <Check className="size-4" />}
 
-                      <span className="overflow-hidden text-ellipsis whitespace-nowrap">
-                        {song.name}
-                      </span>
-
-                      <span className="ml-auto max-w-16 overflow-hidden text-ellipsis whitespace-nowrap text-right text-xs text-muted-foreground">
-                        {song.category}
-                      </span>
-                    </CommandItem>
-                  ))
-                )}
-              </Suspense>
+                  <span className="overflow-hidden text-ellipsis whitespace-nowrap">
+                    {song.title_localized.default}
+                  </span>
+                </CommandItem>
+              ))}
             </CommandGroup>
           </CommandList>
         </Command>
@@ -174,7 +161,7 @@ export const AddChartRecord: FC = () => {
 
   const songSlug = form.watch('songSlug')
   const song = useMemo(() => {
-    return songs.find((song) => song.slug === songSlug)
+    return songs.find((song) => song.id === songSlug)
   }, [songSlug])
 
   const onSubmit = (data: AddChartRecordForm) => {
@@ -242,19 +229,21 @@ export const AddChartRecord: FC = () => {
                           <SelectContent>
                             {song?.charts.map((chart) => (
                               <SelectItem
-                                key={chart.defaultIndex}
+                                key={chart.difficultyLevel}
                                 value={chart.difficultyLevel}
-                                className="flex w-full flex-1 flex-col items-start"
+                                className="flex w-full flex-1 flex-col items-start gap-1"
                                 textValue={chart.difficultyLevel}
                               >
-                                <SelectItemText className="font-mono text-sm tracking-tight">
-                                  {chart.difficultyLevel}
+                                <SelectItemText asChild>
+                                  <div className="text-base leading-none tracking-tight">
+                                    {chart.difficultyLevel}
+                                  </div>
                                 </SelectItemText>
                                 <div className="flex w-full items-center justify-between text-xs tabular-nums text-muted-foreground">
                                   <div>{chart.difficultyDecimal}</div>
 
                                   <div className="text-xs text-muted-foreground">
-                                    Added in {chart.version}
+                                    Chart by {chart.chartDesigner}
                                   </div>
                                 </div>
                               </SelectItem>
@@ -311,10 +300,16 @@ export const AddChartRecord: FC = () => {
 
 const ChartRecordImportForm: FC = () => {
   const [open, setOpen] = useState(false)
-  const [content, setContent] = useState('')
   const [records, modifyRecords] = useChartRecords()
+  const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   const onImport = () => {
+    const content = textareaRef.current?.value
+    if (!content) {
+      toast.error('No content to import')
+      return
+    }
+
     const parsed = safeParseImport(content)
     if (parsed.isErr()) {
       toast.error(`Failed to parse import: ${parsed.error}`)
@@ -347,10 +342,14 @@ const ChartRecordImportForm: FC = () => {
           </DialogHeader>
 
           <Textarea
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            className="scroll-pb-2 font-mono"
-            rows={10}
+            ref={textareaRef}
+            className="scroll-pb-2 font-mono text-xs"
+            rows={15}
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck={false}
+            placeholder={`{\n  ...\n}`}
           />
 
           <DialogFooter>

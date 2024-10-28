@@ -1,26 +1,30 @@
 import rawSongs from '@/data/songs.json'
 
-type DifficultyLevel = 'III' | 'IV' | 'IV-α'
+type DifficultyLevel = 'I' | 'II' | 'III' | 'IV' | 'IV-α'
+
+export interface LocalizedString {
+  default: string
+  en?: string
+  'zh-Hans'?: string
+  'zh-Hant'?: string
+  ja?: string
+  ko?: string
+}
 
 interface Chart {
-  defaultIndex: number
-  updateIndex: number
-  version: string
   difficultyLevel: DifficultyLevel
   difficultyDecimal: number
+  chartDesigner: string
+  jacketDesigner: string
 }
 
 interface Song {
-  name: string
-  slug: string
-  category: string
+  id: string
+  artist: string
+  releaseVersion: string
+  title_localized: LocalizedString
+  source_localized?: LocalizedString
   charts: Chart[]
 }
 
-export const songs: Song[] = rawSongs.filter((song) => {
-  if (!song.slug) {
-    console.warn('song has no slug', song)
-    return false
-  }
-  return true
-}) as Song[]
+export const songs = rawSongs as Song[]

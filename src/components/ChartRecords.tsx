@@ -18,7 +18,6 @@ import {
   flexRender,
   getCoreRowModel,
   getSortedRowModel,
-  Row,
   SortingState,
   useReactTable,
 } from '@tanstack/react-table'
@@ -46,11 +45,11 @@ const ChartRecordActions = ({ record }: { record: TableRow }) => {
   )
 }
 
-const AchievementRateCell = ({ row }: { row: Row<TableRow> }) => {
+const PadZeroCell = ({ value, threshold }: { value: number; threshold: number }) => {
   return (
-    <span className="tabular-nums">
-      {row.original.achievementRate < 1_000_000 && <span className="opacity-20">0</span>}
-      {row.original.achievementRate.toString()}
+    <span className="text-base tabular-nums">
+      {value < threshold && <span className="opacity-20">0</span>}
+      {value.toString()}
     </span>
   )
 }
@@ -85,9 +84,9 @@ const chartRecordsColumns: ColumnDef<TableRow>[] = [
     accessorKey: 'songSlug',
     header: 'Song',
     cell: ({ row }) => {
-      const song = songs.find((song) => song.slug === row.original.songSlug)
+      const song = songs.find((song) => song.id === row.original.songSlug)
       invariant(song, 'song not found')
-      return song.name
+      return song.title_localized.default
     },
   },
   {
@@ -109,15 +108,13 @@ const chartRecordsColumns: ColumnDef<TableRow>[] = [
   {
     accessorKey: 'achievementRate',
     header: (props) => <SortableColumnHeaderCell {...props}>%</SortableColumnHeaderCell>,
-    cell: AchievementRateCell,
+    cell: ({ row }) => <PadZeroCell value={row.original.achievementRate} threshold={1_000_000} />,
     meta: { header: { inset: true } },
   },
   {
     accessorKey: 'rating',
     header: (props) => <SortableColumnHeaderCell {...props}>Rating</SortableColumnHeaderCell>,
-    cell: ({ row }) => {
-      return <span className="tabular-nums">{row.original.rating.toString()}</span>
-    },
+    cell: ({ row }) => <PadZeroCell value={row.original.rating} threshold={10} />,
     meta: { header: { inset: true } },
   },
   {
@@ -135,10 +132,10 @@ export const ChartRecords = () => {
 
   const data = useMemo(() => {
     const enriched = records.map((record) => {
-      const song = songs.find((song) => song.slug === record.songSlug)
-      invariant(song, 'song not found')
+      const song = songs.find((song) => song.id === record.songSlug)
+      invariant(song, `song not found: ${record.songSlug}`)
       const chart = song.charts.find((chart) => chart.difficultyLevel === record.difficultyLevel)
-      invariant(chart, 'chart not found')
+      invariant(chart, `chart not found: ${record.songSlug} ${record.difficultyLevel}`)
       return {
         ...record,
         rating: calculateSongRating(chart.difficultyDecimal, record.achievementRate),
@@ -172,7 +169,7 @@ export const ChartRecords = () => {
   })
 
   return (
-    <div className="flex w-full flex-col gap-2">
+    <div className="flex w-full flex-col gap-2 pb-16">
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold">Chart Records</h2>
 

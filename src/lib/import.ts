@@ -13,19 +13,21 @@ const remoteCloudSaveSchema = z.object({
             //     [difficultyLevel: string]: { score: number }
             //   }
             // }
-            songs: z.record(
-              z.string(),
-              z.object({
-                levels: z.record(
-                  z.string(),
-                  z.object({
-                    Flag: z.string(),
-                    IsCleared: z.boolean(),
-                    Score: z.number(),
-                  })
-                ),
-              })
-            ),
+            songs: z.object({
+              songs: z.record(
+                z.string(),
+                z.object({
+                  levels: z.record(
+                    z.string(),
+                    z.object({
+                      Flag: z.string(),
+                      IsCleared: z.boolean(),
+                      Score: z.number(),
+                    })
+                  ),
+                })
+              ),
+            }),
           }),
         }),
       }),
@@ -44,16 +46,11 @@ const remoteSocialDataSchema = z.object({
   }),
 })
 
-// type ChartRecord = {
-//     songSlug: string;
-//     difficultyLevel: string;
-//     achievementRate: number;
-// }
 const DIFFICULTY_LEVEL_MAP = {
   iii: 'III',
   iv: 'IV',
-  Iii: 'III',
-  Iv: 'IV',
+  III: 'III',
+  IV: 'IV',
 }
 export const safeParseImport = (content: string): Result<ChartRecord[], string> => {
   const object = Result.fromThrowable(JSON.parse)(content)
@@ -63,7 +60,7 @@ export const safeParseImport = (content: string): Result<ChartRecord[], string> 
 
   const parsedCloudSave = remoteCloudSaveSchema.safeParse(object.value)
   if (parsedCloudSave.success) {
-    const songs = parsedCloudSave.data.results[0].cloudSave.data.data.songs
+    const songs = parsedCloudSave.data.results[0].cloudSave.data.data.songs.songs
     const chartRecords = Object.entries(songs)
       .map(([songSlug, song]) =>
         Object.entries(song.levels).map(([difficultyLevel, level]) => ({
