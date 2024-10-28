@@ -112,7 +112,7 @@ const chartRecordsColumns: ColumnDef<TableRow>[] = [
           <SongJacket
             song={song}
             difficultyLevel={row.original.chart.difficultyLevel}
-            pictureClassName="shrink-0"
+            pictureClassName="shrink-0 sticky left-2"
           />
           <div>{song.title_localized.default}</div>
         </div>
