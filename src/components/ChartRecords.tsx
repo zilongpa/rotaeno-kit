@@ -109,7 +109,11 @@ const chartRecordsColumns: ColumnDef<TableRow>[] = [
       invariant(song, 'song not found')
       return (
         <div className="flex items-center gap-2">
-          <SongJacket song={song} className="size-8 rounded-sm" />
+          <SongJacket
+            song={song}
+            difficultyLevel={row.original.chart.difficultyLevel}
+            className="size-8 rounded-sm"
+          />
           <div>{song.title_localized.default}</div>
         </div>
       )

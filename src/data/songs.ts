@@ -1,6 +1,6 @@
 import rawSongs from '@/data/songs.json'
 
-type DifficultyLevel = 'I' | 'II' | 'III' | 'IV' | 'IV-α'
+export type DifficultyLevel = 'I' | 'II' | 'III' | 'IV' | 'IV-α'
 
 export interface LocalizedString {
   default: string
@@ -11,9 +11,10 @@ export interface LocalizedString {
   ko?: string
 }
 
-interface Chart {
+export interface Chart {
   difficultyLevel: DifficultyLevel
   difficultyDecimal: number
+  overrideJacketId?: string
   chartDesigner: string
   jacketDesigner: string
 }

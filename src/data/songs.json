@@ -2615,6 +2615,7 @@
       {
         "difficultyLevel": "IV",
         "difficultyDecimal": 12.8,
+        "overrideJacketId": "rush-e_IV",
         "chartDesigner": "AngrierB",
         "jacketDesigner": "Tsukimi Kaya"
       }
@@ -6648,6 +6649,7 @@
       {
         "difficultyLevel": "IV",
         "difficultyDecimal": 12.9,
+        "overrideJacketId": "epitaxy_IV",
         "chartDesigner": "TangScend",
         "jacketDesigner": "唯莎"
       }

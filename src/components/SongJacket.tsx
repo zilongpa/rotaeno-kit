@@ -1,12 +1,16 @@
-import { Song } from '@/data/songs'
+import { DifficultyLevel, Song } from '@/data/songs'
 import { FC, HTMLAttributes } from 'react'
 
-export const SongJacket: FC<HTMLAttributes<HTMLImageElement> & { song: Song }> = ({
-  song,
-  ...props
-}) => {
-  const jpgSrc = `https://rotaenokit-assets.imgg.dev/images/jackets/thumbnail/${song.id}.jpg`
-  const webpSrc = `https://rotaenokit-assets.imgg.dev/images/jackets/thumbnail/${song.id}.webp`
+export const SongJacket: FC<
+  HTMLAttributes<HTMLImageElement> & { song: Song; difficultyLevel?: DifficultyLevel }
+> = ({ song, difficultyLevel, ...props }) => {
+  const jacketId = difficultyLevel
+    ? (song.charts.find((chart) => chart.difficultyLevel === difficultyLevel)?.overrideJacketId ??
+      song.id)
+    : song.id
+
+  const jpgSrc = `https://rotaenokit-assets.imgg.dev/images/jackets/thumbnail/${jacketId}.jpg`
+  const webpSrc = `https://rotaenokit-assets.imgg.dev/images/jackets/thumbnail/${jacketId}.webp`
 
   return (
     <picture>

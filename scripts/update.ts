@@ -57,6 +57,11 @@ const RATING_CLASS_TO_DIFFICULTY_LEVEL = {
   200: 'IV-α',
 }
 
+const IV_JACKET_ID_OVERRIDE: Record<string, string> = {
+  'rush-e': 'rush-e_IV',
+  epitaxy: 'epitaxy_IV',
+}
+
 const mappedSongs = (await fetchWikiTemplate()).songs.map((song) => {
   return {
     id: song.id,
@@ -65,12 +70,14 @@ const mappedSongs = (await fetchWikiTemplate()).songs.map((song) => {
     title_localized: song.title_localized,
     source_localized: song.source_localized,
     charts: song.difficulties.map((difficulty) => {
+      const difficultyLevel =
+        RATING_CLASS_TO_DIFFICULTY_LEVEL[
+          difficulty.ratingClass as keyof typeof RATING_CLASS_TO_DIFFICULTY_LEVEL
+        ]
       return {
-        difficultyLevel:
-          RATING_CLASS_TO_DIFFICULTY_LEVEL[
-            difficulty.ratingClass as keyof typeof RATING_CLASS_TO_DIFFICULTY_LEVEL
-          ],
+        difficultyLevel,
         difficultyDecimal: difficulty.ratingReal,
+        overrideJacketId: difficultyLevel === 'IV' ? IV_JACKET_ID_OVERRIDE[song.id] : undefined,
         chartDesigner: difficulty.chartDesigner,
         jacketDesigner: difficulty.jacketDesigner,
       }
