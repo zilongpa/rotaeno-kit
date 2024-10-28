@@ -20,7 +20,7 @@ function App() {
           <div className="flex flex-col">
             <Alert>
               <InfoIcon className="size-4" />
-              <AlertTitle>Credits and Acknowledgements</AlertTitle>
+              <AlertTitle>About</AlertTitle>
               <AlertDescription>
                 <ul className="list-inside list-disc space-y-1">
                   <li>
@@ -30,7 +30,9 @@ function App() {
 
                   <li>
                     Initial data comes from &quot;Rotaeno 次世代Rating分析表for rotaeno
-                    ver2.3.0&quot; by Team Rhythematics.
+                    ver2.3.0&quot; by Team Rhythematics. A friend sent me this and I didn&apos;t
+                    found any public link via Google so there&apos;s currently missing link. Feel
+                    free to contact me if you have a link that I could attribute to.
                   </li>
 
                   <li>
@@ -57,6 +59,14 @@ function App() {
                       Rotaeno Wiki
                     </a>
                     {'.'}
+                  </li>
+
+                  <li>
+                    This project is open source and free to use. Feel free to collaborate on{' '}
+                    <a className="underline" href="https://github.com/GalvinGao/rotaeno-kit">
+                      GitHub (GalvinGao/rotaeno-kit)
+                    </a>
+                    .
                   </li>
                 </ul>
               </AlertDescription>
