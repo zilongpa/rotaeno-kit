@@ -43,7 +43,7 @@ async function main() {
     })
   }
 
-  await fs.writeFile('./songs.json', JSON.stringify(songs, null, 2))
+  await fs.writeFile('../data/songs.json', JSON.stringify(songs, null, 2))
 }
 
 main()
