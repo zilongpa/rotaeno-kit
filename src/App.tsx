@@ -1,17 +1,7 @@
 import rawSongs from '@/assets/songs.json'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { Form, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import Fuse from 'fuse.js'
-import { createContext, FC, ReactNode, useContext, useEffect, useMemo, useState } from 'react'
-import { useForm } from 'react-hook-form'
-import invariant from 'tiny-invariant'
-import { z } from 'zod'
-
-import { Check, ChevronsUpDown, PlusIcon, Slash } from 'lucide-react'
-
 import { ColorSchemeSwitcher } from '@/components/ColorSchemeSwitcher'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import {
   Command,
   CommandEmpty,
@@ -20,6 +10,7 @@ import {
   CommandItem,
   CommandList,
 } from '@/components/ui/command'
+import { Form, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import {
@@ -30,9 +21,17 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { calculateSongRating } from '@/lib/rating'
-import { cn } from '@/lib/utils'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { CaretSortIcon } from '@radix-ui/react-icons'
+import clsx from 'clsx'
+import Fuse from 'fuse.js'
+import { Check, PlusIcon, Slash } from 'lucide-react'
+import { createContext, FC, ReactNode, useContext, useEffect, useMemo, useState } from 'react'
+import { useForm } from 'react-hook-form'
 import { useList, useLocalStorage } from 'react-use'
 import { ListActions } from 'react-use/lib/useList'
+import invariant from 'tiny-invariant'
+import { z } from 'zod'
 
 const songs = rawSongs.filter((song) => {
   if (!song.slug) {
@@ -80,7 +79,7 @@ const SearchSongAutocomplete: FC<{
       return songs
     }
     return fuse.search(query).map((result) => result.item)
-  }, [query])
+  }, [query, fuse])
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -94,7 +93,7 @@ const SearchSongAutocomplete: FC<{
           <span className="overflow-hidden text-ellipsis whitespace-nowrap">
             {value ? songs.find((song) => song.slug === value)?.name : 'Select song...'}
           </span>
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          <CaretSortIcon className="ml-2 size-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[300px] max-w-[100vw] p-0">
@@ -107,7 +106,7 @@ const SearchSongAutocomplete: FC<{
           />
           <CommandList>
             <CommandEmpty>No chart found.</CommandEmpty>
-            <CommandGroup>
+            <CommandGroup className="scroll-pb-2">
               {searchResults.map((song) => (
                 <CommandItem
                   key={song.slug}
@@ -116,16 +115,20 @@ const SearchSongAutocomplete: FC<{
                     onValueChange(currentValue)
                     setOpen(false)
                   }}
-                  className="overflow-hidden text-ellipsis whitespace-nowrap"
+                  className={clsx(
+                    'flex items-center overflow-hidden text-ellipsis whitespace-nowrap',
+                    value === song.slug &&
+                      'bg-foreground text-background data-[selected=true]:bg-foreground/80 data-[selected=true]:text-background/80'
+                  )}
                 >
-                  <Check
-                    className={cn(
-                      'mr-2 h-4 w-4',
-                      value === song.slug ? 'opacity-100' : 'opacity-0'
-                    )}
-                  />
+                  {value === song.slug && <Check className="size-4" />}
+
                   <span className="overflow-hidden text-ellipsis whitespace-nowrap">
                     {song.name}
+                  </span>
+
+                  <span className="ml-auto max-w-16 overflow-hidden text-ellipsis whitespace-nowrap text-right text-xs text-muted-foreground">
+                    {song.category}
                   </span>
                 </CommandItem>
               ))}
