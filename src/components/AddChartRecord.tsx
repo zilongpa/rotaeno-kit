@@ -1,3 +1,4 @@
+import { SongJacket } from '@/components/SongJacket'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import {
@@ -134,6 +135,8 @@ const SearchSongAutocomplete: FC<{
                   )}
                 >
                   {value === song.id && <Check className="size-4" />}
+
+                  <SongJacket song={song} className="size-4 rounded-[1px]" />
 
                   <span className="overflow-hidden text-ellipsis whitespace-nowrap">
                     {song.title_localized.default}

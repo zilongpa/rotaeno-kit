@@ -18,7 +18,7 @@ interface Chart {
   jacketDesigner: string
 }
 
-interface Song {
+export interface Song {
   id: string
   artist: string
   releaseVersion: string

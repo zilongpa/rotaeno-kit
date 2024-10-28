@@ -1,5 +1,6 @@
 import invariant from 'tiny-invariant'
 
+import { SongJacket } from '@/components/SongJacket'
 import { Button } from '@/components/ui/button'
 import {
   Table,
@@ -106,7 +107,12 @@ const chartRecordsColumns: ColumnDef<TableRow>[] = [
     cell: ({ row }) => {
       const song = songs.find((song) => song.id === row.original.songSlug)
       invariant(song, 'song not found')
-      return song.title_localized.default
+      return (
+        <div className="flex items-center gap-2">
+          <SongJacket song={song} className="size-8 rounded-sm" />
+          <div>{song.title_localized.default}</div>
+        </div>
+      )
     },
   },
   {
