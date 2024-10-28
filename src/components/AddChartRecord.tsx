@@ -22,6 +22,7 @@ import {
 import {
   AddChartRecordForm,
   addChartRecordFormSchema,
+  isSameChart,
   useChartRecords,
 } from '@/contexts/ChartRecordsContext'
 import { songs } from '@/data/songs'
@@ -150,7 +151,7 @@ const SearchSongAutocomplete: FC<{
 }
 
 export const AddChartRecord: FC = () => {
-  const [, modifyRecords] = useChartRecords()
+  const [records, modifyRecords] = useChartRecords()
 
   const form = useForm<AddChartRecordForm>({
     resolver: zodResolver(addChartRecordFormSchema),
@@ -166,12 +167,19 @@ export const AddChartRecord: FC = () => {
   }, [songSlug])
 
   const onSubmit = (data: AddChartRecordForm) => {
-    modifyRecords.push(data)
+    const existingRecord = records.find((r) => isSameChart(r, data))
+    if (existingRecord && existingRecord.achievementRate < data.achievementRate) {
+      // there exists an existing record that has a lower achievement rate than the new one. Update it.
+      modifyRecords.updateFirst((r) => isSameChart(r, data), data)
+    } else {
+      // no existing record, or the existing record has a higher achievement rate than the new one. Add it.
+      modifyRecords.push(data)
+    }
     form.reset()
   }
 
   return (
-    <Card className="w-full max-w-2xl">
+    <Card className="w-full">
       <Form {...form}>
         <form
           onSubmit={(e) => {
@@ -179,7 +187,7 @@ export const AddChartRecord: FC = () => {
           }}
         >
           <CardHeader>
-            <CardTitle>Add Chart Record</CardTitle>
+            <CardTitle>Add New Record</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex flex-col gap-2">

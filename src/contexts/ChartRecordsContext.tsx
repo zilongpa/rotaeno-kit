@@ -16,6 +16,10 @@ export type AddChartRecordForm = z.infer<typeof addChartRecordFormSchema>
 
 export type ChartRecord = AddChartRecordForm
 
+export const isSameChart = (a: ChartRecord, b: ChartRecord) => {
+  return a.songSlug === b.songSlug && a.difficultyLevel === b.difficultyLevel
+}
+
 const ChartRecordsContext = createContext<Readonly<[ChartRecord[], ListActions<ChartRecord>]>>(
   undefined as never
 )
