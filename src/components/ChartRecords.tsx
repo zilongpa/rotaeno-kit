@@ -1,3 +1,5 @@
+import invariant from 'tiny-invariant'
+
 import {
   Table,
   TableBody,
@@ -7,6 +9,7 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { ChartRecord, useChartRecords } from '@/contexts/ChartRecordsContext'
+import { songs } from '@/data/songs'
 import { ColumnDef, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table'
 import { FC } from 'react'
 
@@ -14,6 +17,11 @@ const chartRecordsColumns: ColumnDef<ChartRecord>[] = [
   {
     accessorKey: 'songSlug',
     header: 'Song',
+    cell: ({ row }) => {
+      const song = songs.find((song) => song.slug === row.original.songSlug)
+      invariant(song, 'song not found')
+      return song.name
+    },
   },
   {
     accessorKey: 'difficultyLevel',
@@ -68,7 +76,7 @@ function ChartRecordsDataTable({ data }: DataTableProps) {
           ) : (
             <TableRow>
               <TableCell colSpan={chartRecordsColumns.length} className="h-24 text-center">
-                No results.
+                No records.
               </TableCell>
             </TableRow>
           )}

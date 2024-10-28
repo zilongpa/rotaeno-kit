@@ -15,6 +15,7 @@ import {
   Select,
   SelectContent,
   SelectItem,
+  SelectItemText,
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
@@ -27,15 +28,25 @@ import { songs } from '@/data/songs'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { CaretSortIcon } from '@radix-ui/react-icons'
 import clsx from 'clsx'
+import { CommandLoading } from 'cmdk'
 import Fuse from 'fuse.js'
 import { Check, PlusIcon } from 'lucide-react'
-import { FC, useMemo, useState } from 'react'
+import { FC, Suspense, useMemo, useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 
 const useFuse = () => {
   return useMemo(() => {
     return new Fuse(songs, {
-      keys: ['name', 'category'],
+      keys: [
+        {
+          name: 'name',
+          weight: 1,
+        },
+        {
+          name: 'category',
+          weight: 0.5,
+        },
+      ],
       shouldSort: true,
       sortFn: (a, b) => {
         // Sort descending
@@ -51,6 +62,7 @@ const SearchSongAutocomplete: FC<{
   onValueChange: (value: string) => void
 }> = ({ value, onValueChange }) => {
   const [open, setOpen] = useState(false)
+  const [isPending, startTransition] = useTransition()
   const [query, setQuery] = useState('')
   const fuse = useFuse()
 
@@ -62,7 +74,18 @@ const SearchSongAutocomplete: FC<{
   }, [query, fuse])
 
   return (
-    <Popover open={open} onOpenChange={setOpen}>
+    <Popover
+      open={open}
+      onOpenChange={(open) => {
+        if (open) {
+          startTransition(() => {
+            setOpen(true)
+          })
+        } else {
+          setOpen(false)
+        }
+      }}
+    >
       <PopoverTrigger asChild>
         <Button
           variant="outline"
@@ -87,31 +110,37 @@ const SearchSongAutocomplete: FC<{
           <CommandList>
             <CommandEmpty>No chart found.</CommandEmpty>
             <CommandGroup className="scroll-pb-2">
-              {searchResults.map((song) => (
-                <CommandItem
-                  key={song.slug}
-                  value={song.slug}
-                  onSelect={(currentValue) => {
-                    onValueChange(currentValue)
-                    setOpen(false)
-                  }}
-                  className={clsx(
-                    'flex items-center overflow-hidden text-ellipsis whitespace-nowrap',
-                    value === song.slug &&
-                      'bg-foreground text-background data-[selected=true]:bg-foreground/80 data-[selected=true]:text-background/80'
-                  )}
-                >
-                  {value === song.slug && <Check className="size-4" />}
+              <Suspense fallback={<CommandLoading />}>
+                {isPending ? (
+                  <CommandLoading />
+                ) : (
+                  searchResults.map((song) => (
+                    <CommandItem
+                      key={song.slug}
+                      value={song.slug}
+                      onSelect={(currentValue) => {
+                        onValueChange(currentValue)
+                        setOpen(false)
+                      }}
+                      className={clsx(
+                        'flex items-center overflow-hidden text-ellipsis whitespace-nowrap',
+                        value === song.slug &&
+                          'bg-foreground text-background data-[selected=true]:bg-foreground/80 data-[selected=true]:text-background/80'
+                      )}
+                    >
+                      {value === song.slug && <Check className="size-4" />}
 
-                  <span className="overflow-hidden text-ellipsis whitespace-nowrap">
-                    {song.name}
-                  </span>
+                      <span className="overflow-hidden text-ellipsis whitespace-nowrap">
+                        {song.name}
+                      </span>
 
-                  <span className="ml-auto max-w-16 overflow-hidden text-ellipsis whitespace-nowrap text-right text-xs text-muted-foreground">
-                    {song.category}
-                  </span>
-                </CommandItem>
-              ))}
+                      <span className="ml-auto max-w-16 overflow-hidden text-ellipsis whitespace-nowrap text-right text-xs text-muted-foreground">
+                        {song.category}
+                      </span>
+                    </CommandItem>
+                  ))
+                )}
+              </Suspense>
             </CommandGroup>
           </CommandList>
         </Command>
@@ -154,7 +183,7 @@ export const AddChartRecord: FC = () => {
           </CardHeader>
           <CardContent>
             <div className="flex flex-col gap-2">
-              <div className="grid grid-cols-1 gap-2 xl:grid-cols-2">
+              <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
                 <FormField
                   control={form.control}
                   name="songSlug"
@@ -178,15 +207,36 @@ export const AddChartRecord: FC = () => {
                   name="difficultyLevel"
                   render={({ field }) => (
                     <FormItem className="flex w-full flex-col">
-                      <FormLabel>Difficulty Level</FormLabel>
+                      <FormLabel>Difficulty</FormLabel>
                       <Select value={field.value} onValueChange={field.onChange} disabled={!song}>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select difficulty level" />
+                          <SelectValue placeholder="Select difficulty...">
+                            {(() => {
+                              const chart = song?.charts.find(
+                                (chart) => chart.difficultyLevel === field.value
+                              )
+                              return `${chart?.difficultyLevel} (${chart?.difficultyDecimal})`
+                            })()}
+                          </SelectValue>
                         </SelectTrigger>
                         <SelectContent>
                           {song?.charts.map((chart) => (
-                            <SelectItem key={chart.defaultIndex} value={chart.difficultyLevel}>
-                              {chart.difficultyLevel} ({chart.difficultyDecimal})
+                            <SelectItem
+                              key={chart.defaultIndex}
+                              value={chart.difficultyLevel}
+                              className="flex w-full flex-1 flex-col items-start"
+                              textValue={chart.difficultyLevel}
+                            >
+                              <SelectItemText className="font-mono text-sm tracking-tight">
+                                {chart.difficultyLevel}
+                              </SelectItemText>
+                              <div className="flex w-full items-center justify-between text-xs tabular-nums text-muted-foreground">
+                                <div>{chart.difficultyDecimal}</div>
+
+                                <div className="text-xs text-muted-foreground">
+                                  Added in {chart.version}
+                                </div>
+                              </div>
                             </SelectItem>
                           ))}
                         </SelectContent>

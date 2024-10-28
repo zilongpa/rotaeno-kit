@@ -1,6 +1,6 @@
-import * as React from 'react'
 import { CaretSortIcon, CheckIcon, ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons'
 import * as SelectPrimitive from '@radix-ui/react-select'
+import * as React from 'react'
 
 import { cn } from '@/lib/utils'
 
@@ -119,10 +119,18 @@ const SelectItem = React.forwardRef<
         <CheckIcon className="h-4 w-4" />
       </SelectPrimitive.ItemIndicator>
     </span>
-    <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
+    {children}
   </SelectPrimitive.Item>
 ))
 SelectItem.displayName = SelectPrimitive.Item.displayName
+
+const SelectItemText = React.forwardRef<
+  React.ElementRef<typeof SelectPrimitive.ItemText>,
+  React.ComponentPropsWithoutRef<typeof SelectPrimitive.ItemText>
+>(({ className, ...props }, ref) => (
+  <SelectPrimitive.ItemText ref={ref} className={cn(className)} {...props} />
+))
+SelectItemText.displayName = SelectPrimitive.ItemText.displayName
 
 const SelectSeparator = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Separator>,
@@ -138,13 +146,14 @@ SelectSeparator.displayName = SelectPrimitive.Separator.displayName
 
 export {
   Select,
-  SelectGroup,
-  SelectValue,
-  SelectTrigger,
   SelectContent,
-  SelectLabel,
+  SelectGroup,
   SelectItem,
-  SelectSeparator,
-  SelectScrollUpButton,
+  SelectItemText,
+  SelectLabel,
   SelectScrollDownButton,
+  SelectScrollUpButton,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
 }
