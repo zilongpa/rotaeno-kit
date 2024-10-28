@@ -4,7 +4,7 @@ import { ListActions } from 'react-use/lib/useList'
 import { z } from 'zod'
 
 export const addChartRecordFormSchema = z.object({
-  chartSlug: z.string().refine((v) => v !== '', {
+  songSlug: z.string().refine((v) => v !== '', {
     message: 'You must select a song.',
   }),
   difficultyLevel: z.string().min(1, {
@@ -14,11 +14,7 @@ export const addChartRecordFormSchema = z.object({
 })
 export type AddChartRecordForm = z.infer<typeof addChartRecordFormSchema>
 
-interface ChartRecord {
-  chartSlug: string
-  difficultyLevel: string
-  achievementRate: number
-}
+export type ChartRecord = AddChartRecordForm
 
 const ChartRecordsContext = createContext<Readonly<[ChartRecord[], ListActions<ChartRecord>]>>(
   undefined as never

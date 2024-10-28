@@ -126,15 +126,15 @@ export const AddChartRecord: FC = () => {
   const form = useForm<AddChartRecordForm>({
     resolver: zodResolver(addChartRecordFormSchema),
     defaultValues: {
-      chartSlug: '',
+      songSlug: '',
       difficultyLevel: '',
     },
   })
 
-  const chartSlug = form.watch('chartSlug')
+  const songSlug = form.watch('songSlug')
   const song = useMemo(() => {
-    return songs.find((song) => song.slug === chartSlug)
-  }, [chartSlug])
+    return songs.find((song) => song.slug === songSlug)
+  }, [songSlug])
 
   const onSubmit = (data: AddChartRecordForm) => {
     modifyRecords.push(data)
@@ -157,7 +157,7 @@ export const AddChartRecord: FC = () => {
               <div className="grid grid-cols-1 gap-2 xl:grid-cols-2">
                 <FormField
                   control={form.control}
-                  name="chartSlug"
+                  name="songSlug"
                   render={({ field }) => (
                     <FormItem className="flex w-full flex-col">
                       <FormLabel>Song</FormLabel>
