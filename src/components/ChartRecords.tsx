@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/table'
 import { ChartRecord, isSameChart, useChartRecords } from '@/contexts/ChartRecordsContext'
 import { songs } from '@/data/songs'
+import { calculateSongRating } from '@/lib/rating'
 import { ColumnDef, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table'
 import { SlashIcon } from 'lucide-react'
 import { FC } from 'react'
@@ -46,6 +47,22 @@ const chartRecordsColumns: ColumnDef<ChartRecord>[] = [
   {
     accessorKey: 'achievementRate',
     header: '%',
+  },
+  {
+    accessorKey: '_chartRating',
+    header: 'Chart Rating',
+    cell: ({ row }) => {
+      const song = songs.find((song) => song.slug === row.original.songSlug)
+      invariant(song, 'song not found')
+      const chart = song.charts.find(
+        (chart) => chart.difficultyLevel === row.original.difficultyLevel
+      )
+      invariant(
+        chart,
+        'chart not found for song ' + row.original.songSlug + ' ' + row.original.difficultyLevel
+      )
+      return calculateSongRating(chart.difficultyDecimal, row.original.achievementRate)
+    },
   },
   {
     accessorKey: '_actions',
@@ -97,7 +114,7 @@ function ChartRecordsDataTable({ data }: DataTableProps) {
               </TableRow>
             ))
           ) : (
-            <TableRow>
+            <TableRow disabled>
               <TableCell
                 colSpan={chartRecordsColumns.length}
                 className="h-48 text-muted-foreground"

@@ -1,6 +1,7 @@
 import { AddChartRecord } from '@/components/AddChartRecord'
 import { ChartRecords } from '@/components/ChartRecords'
 import { ColorSchemeSwitcher } from '@/components/ColorSchemeSwitcher'
+import { Toaster } from '@/components/ui/sonner'
 import { ChartRecordsProvider } from '@/contexts/ChartRecordsContext'
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
 
         <ChartRecords />
       </div>
+
+      <Toaster />
     </ChartRecordsProvider>
   )
 }
