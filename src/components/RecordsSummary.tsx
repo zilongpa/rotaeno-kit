@@ -14,14 +14,14 @@ function calculateHistogram(data: number[]) {
 
   const min = Math.floor(Math.min(...data) * 2) / 2
   const max = Math.ceil(Math.max(...data) * 2) / 2
-  const bucketSize = 0.5
+  const bucketSize = 0.25
   const numBuckets = Math.ceil((max - min) / bucketSize)
 
   const histogram = Array.from({ length: numBuckets }, (_, i) => {
     const bucketStart = min + i * bucketSize
     return {
-      bucketStart: Number(bucketStart.toFixed(1)),
-      bucketEnd: Number((bucketStart + bucketSize).toFixed(1)),
+      bucketStart: Number(bucketStart.toFixed(2)),
+      bucketEnd: Number((bucketStart + bucketSize).toFixed(2)),
       // Center point for the bar positioning
       center: Number((bucketStart + bucketSize / 2).toFixed(2)),
       count: data.filter((d) => d >= bucketStart && d < bucketStart + bucketSize).length,
@@ -106,13 +106,23 @@ export const RecordsSummary = () => {
                 dataKey="center"
                 scale="linear"
                 type="number"
-                domain={[(dataMin: number) => dataMin - 0.25, (dataMax: number) => dataMax + 0.5]}
-                tickFormatter={(value: number) => value.toFixed(1)}
+                domain={[(dataMin: number) => dataMin - 0.25, (dataMax: number) => dataMax + 0.25]}
+                tickFormatter={(value: number) => value.toString()}
                 ticks={ticks}
                 interval={0}
               />
               <YAxis hide />
-              <Bar dataKey="count" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
+              <Bar
+                dataKey="count"
+                fill="hsl(var(--primary))"
+                radius={[4, 4, 0, 0]}
+                label={{
+                  position: 'insideTop',
+                  fill: 'hsl(var(--foreground))',
+                  fontSize: 12,
+                  formatter: (value: number) => (value === 0 ? '' : value),
+                }}
+              />
             </BarChart>
           </ResponsiveContainer>
         </div>
