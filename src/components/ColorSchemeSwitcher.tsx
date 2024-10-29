@@ -1,39 +1,12 @@
 import { Button } from '@/components/ui/button'
-import { useCallback, useEffect, useState } from 'react'
-import { useLocalStorage } from 'react-use'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
+import { useTheme } from '@/contexts/ThemeProvider'
+import { useCallback } from 'react'
 import LineMdLightDark from '~icons/line-md/light-dark'
 import LineMdMoonFilled from '~icons/line-md/moon'
 import LineMdSunnyFilled from '~icons/line-md/sunny-filled'
 
-const useTheme = () => {
-  const [theme, setTheme] = useLocalStorage<'dark' | 'light' | 'system'>(
-    'rotaeno-kit-theme',
-    'system',
-    {
-      raw: true,
-    }
-  )
-  const themes = ['system', 'dark', 'light'] as const
-
-  useEffect(() => {
-    document.documentElement.classList.remove('dark', 'light')
-
-    if (!theme) return
-
-    if (theme !== 'system') {
-      document.documentElement.classList.add(theme)
-    } else {
-      document.documentElement.classList.add(
-        window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-      )
-    }
-  }, [theme])
-
-  return { theme, setTheme, themes }
-}
-
 export function ColorSchemeSwitcher() {
-  const [mounted, setMounted] = useState(false)
   const { theme, setTheme, themes } = useTheme()
 
   const next = useCallback(() => {
@@ -44,23 +17,22 @@ export function ColorSchemeSwitcher() {
     setTheme(next)
   }, [theme, themes, setTheme])
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null
-  }
+  const Icon = {
+    dark: LineMdMoonFilled,
+    light: LineMdSunnyFilled,
+    system: LineMdLightDark,
+  }[theme]
 
   return (
-    <Button onClick={next} size="icon" variant="outline" className="absolute right-4 top-4">
-      {theme === 'dark' ? (
-        <LineMdMoonFilled />
-      ) : theme === 'light' ? (
-        <LineMdSunnyFilled />
-      ) : (
-        <LineMdLightDark />
-      )}
-    </Button>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Button onClick={next} size="icon" variant="outline">
+          <Icon />
+        </Button>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>Theme</p>
+      </TooltipContent>
+    </Tooltip>
   )
 }

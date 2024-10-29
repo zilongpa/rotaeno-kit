@@ -1,0 +1,10 @@
+{
+  "site.description": "Tools for fellow Rotaeno players.",
+
+  "about.title": "About",
+  "about.disclaimer": "This project is not affiliated with Rotaeno or its developers. All rights are reserved to their respective owners.",
+  "about.initial_data": "Initial data comes from \"Rotaeno 次世代Rating分析表for rotaeno ver2.3.0\" by Team Rhythematics. A friend sent me this and I didn't found any public link via Google so there's currently missing link. Feel free to contact me if you have a link that I could attribute to.",
+  "about.rating_calculation": "Rating calculation is based on the work of Kown & Kiei & Eastown with <1>Rotaeno Rating推分参考公式（B30）(in Chinese)</1>.",
+  "about.wiki_data": "Songs and charts data are now automatically fetched from the <1>Rotaeno Wiki (in Chinese)</1>.",
+  "about.open_source": "This project is open source and free to use. Feel free to collaborate on <1>GitHub (GalvinGao/rotaeno-kit)</1>."
+}

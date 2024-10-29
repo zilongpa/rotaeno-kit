@@ -82,7 +82,6 @@ const SortableColumnHeaderCell = ({
   className?: string
   children: ReactNode
 }) => {
-  // const AscIcon = sortStyle === 'numerical' ? ArrowUp01Icon : SortAscIcon
   const AscIcon = {
     alphabetical: ArrowUpAZIcon,
     numerical: ArrowUp01Icon,
