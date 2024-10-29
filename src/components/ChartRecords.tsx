@@ -1,5 +1,3 @@
-import invariant from 'tiny-invariant'
-
 import { SongJacket } from '@/components/SongJacket'
 import { Button } from '@/components/ui/button'
 import {
@@ -16,6 +14,7 @@ import {
   useChartRecords,
 } from '@/contexts/ChartRecordsContext'
 import { songs } from '@/data/songs'
+import { cn } from '@/lib/utils'
 import {
   Column,
   ColumnDef,
@@ -27,7 +26,9 @@ import {
 } from '@tanstack/react-table'
 import {
   ArrowDown10Icon,
+  ArrowDownZaIcon,
   ArrowUp01Icon,
+  ArrowUpAZIcon,
   ArrowUpDownIcon,
   CheckIcon,
   DownloadIcon,
@@ -73,18 +74,32 @@ const PadZeroCell = ({ value, digits }: { value: number; digits: number }) => {
 const SortableColumnHeaderCell = ({
   column,
   sortStyle,
+  className,
   children,
 }: {
   column: Column<TableRow>
-  sortStyle: 'numerical' | 'logical'
+  sortStyle: 'numerical' | 'alphabetical' | 'logical'
+  className?: string
   children: ReactNode
 }) => {
-  const AscIcon = sortStyle === 'numerical' ? ArrowUp01Icon : SortAscIcon
-  const DescIcon = sortStyle === 'numerical' ? ArrowDown10Icon : SortDescIcon
+  // const AscIcon = sortStyle === 'numerical' ? ArrowUp01Icon : SortAscIcon
+  const AscIcon = {
+    alphabetical: ArrowUpAZIcon,
+    numerical: ArrowUp01Icon,
+    logical: SortAscIcon,
+  }[sortStyle]
+  const DescIcon = {
+    alphabetical: ArrowDownZaIcon,
+    numerical: ArrowDown10Icon,
+    logical: SortDescIcon,
+  }[sortStyle]
 
   return (
     <button
-      className="flex h-10 w-full items-center justify-between gap-2 px-2 hover:bg-muted/50"
+      className={cn(
+        'flex h-10 w-full items-center justify-between gap-2 px-2 hover:bg-muted/50',
+        className
+      )}
       onClick={() => column.toggleSorting()}
     >
       {children}
@@ -102,26 +117,36 @@ const SortableColumnHeaderCell = ({
 
 const chartRecordsColumns: ColumnDef<TableRow>[] = [
   {
-    accessorKey: 'songSlug',
-    header: () => <div className="min-w-[250px]">Song</div>,
+    id: 'song',
+    accessorKey: 'song.title_localized.default',
+    sortingFn: 'textCaseSensitive',
+    header: ({ column }) => (
+      <SortableColumnHeaderCell column={column} sortStyle="alphabetical" className="min-w-[250px]">
+        Song
+      </SortableColumnHeaderCell>
+    ),
     cell: ({ row }) => {
-      const song = songs.find((song) => song.id === row.original.songSlug)
-      invariant(song, 'song not found')
       return (
         <div className="flex items-center gap-2">
           <SongJacket
-            song={song}
+            song={row.original.song}
             difficultyLevel={row.original.chart.difficultyLevel}
             pictureClassName="shrink-0 sticky left-2"
           />
-          <div>{song.title_localized.default}</div>
+          <div>{row.original.song.title_localized.default}</div>
         </div>
       )
     },
+    meta: { header: { inset: true } },
   },
   {
     id: 'difficulty',
-    header: 'Difficulty',
+    accessorKey: 'chart.difficultyDecimal',
+    header: ({ column }) => (
+      <SortableColumnHeaderCell column={column} sortStyle="logical">
+        Difficulty
+      </SortableColumnHeaderCell>
+    ),
     cell: ({ row }) => {
       return (
         <div className="flex items-center justify-between gap-0.5">
@@ -132,11 +157,12 @@ const chartRecordsColumns: ColumnDef<TableRow>[] = [
         </div>
       )
     },
+    meta: { header: { inset: true } },
   },
   {
     accessorKey: 'ratingIndex',
-    header: (props) => (
-      <SortableColumnHeaderCell {...props} sortStyle="logical">
+    header: ({ column }) => (
+      <SortableColumnHeaderCell column={column} sortStyle="logical">
         B30?
       </SortableColumnHeaderCell>
     ),
@@ -166,8 +192,8 @@ const chartRecordsColumns: ColumnDef<TableRow>[] = [
   },
   {
     accessorKey: 'achievementRate',
-    header: (props) => (
-      <SortableColumnHeaderCell {...props} sortStyle="numerical">
+    header: ({ column }) => (
+      <SortableColumnHeaderCell column={column} sortStyle="numerical">
         %
       </SortableColumnHeaderCell>
     ),
@@ -176,8 +202,8 @@ const chartRecordsColumns: ColumnDef<TableRow>[] = [
   },
   {
     accessorKey: 'rating',
-    header: (props) => (
-      <SortableColumnHeaderCell {...props} sortStyle="numerical">
+    header: ({ column }) => (
+      <SortableColumnHeaderCell column={column} sortStyle="numerical">
         Rating
       </SortableColumnHeaderCell>
     ),
