@@ -2,6 +2,8 @@ import { useCalculatedChartRecords } from '@/contexts/ChartRecordsContext'
 import { useTranslation } from 'react-i18next'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import NumberFlow from '@number-flow/react'
+import { motion } from 'framer-motion'
 import { ChartPieIcon } from 'lucide-react'
 import { FC, useMemo } from 'react'
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts'
@@ -56,6 +58,7 @@ function calculateHistogram(data: number[]) {
 const RatingDisplay: FC<{
   rating: number
 }> = ({ rating }) => {
+  const { i18n } = useTranslation()
   const ratingBucket = RATINGS.find((r) => rating >= r.ratingLowerBound)
   const icon = ratingBucket
     ? `https://rotaenokit-assets.imgg.dev/images/rating-tiers/${ratingBucket?.icon}`
@@ -63,11 +66,18 @@ const RatingDisplay: FC<{
 
   return (
     <div
-      className="inline-flex items-center gap-2 rounded-lg px-2 py-1 text-5xl font-bold leading-none tracking-tight"
+      className="inline-flex items-center gap-2 rounded-lg px-4 text-5xl font-bold leading-none tracking-tight transition"
       style={{ backgroundColor: ratingBucket ? `${ratingBucket.color}7f` : undefined }}
     >
-      {icon && <img src={icon} alt={ratingBucket?.icon} className="size-8" />}
-      {rating.toFixed(3)}
+      {icon && (
+        <motion.img src={icon} layoutId={icon} alt={ratingBucket?.icon} className="size-8" />
+      )}
+
+      <NumberFlow
+        value={rating}
+        format={{ minimumFractionDigits: 3, maximumFractionDigits: 3 }}
+        locales={i18n.language}
+      />
     </div>
   )
 }
@@ -90,11 +100,13 @@ export const RecordsSummary = () => {
     const better20Rating = better20.reduce((acc, record) => acc + record.rating, 0) / 20
     const rating = best10Rating * 0.7 + better20Rating * 0.3
 
-    const min = b30Entries.length > 0 ? b30Entries[b30Entries.length - 1].rating : 0
-    const max = b30Entries.length > 0 ? b30Entries[0].rating : 0
+    const b30Ratings = b30Entries.map((record) => record.rating)
+
+    const min = b30Ratings.length > 0 ? Math.min(...b30Ratings) : 0
+    const max = b30Ratings.length > 0 ? Math.max(...b30Ratings) : 0
     const avg =
-      b30Entries.length > 0
-        ? b30Entries.reduce((acc, record) => acc + record.rating, 0) / b30Entries.length
+      b30Ratings.length > 0
+        ? b30Ratings.reduce((acc, record) => acc + record, 0) / b30Ratings.length
         : 0
 
     const histogram = calculateHistogram(b30Entries.map((record) => record.rating))

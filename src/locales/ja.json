@@ -14,7 +14,7 @@
   "records.rating.stats.max": "最大",
   "records.rating.stats.avg": "平均",
   "records.rating.distribution": "分布",
-
+  "records.rating.distribution.empty": "記録がありません",
   "addRecord.title": "手動でレコードを追加",
   "addRecord.song.label": "楽曲",
   "addRecord.song.placeholder": "楽曲を選択...",

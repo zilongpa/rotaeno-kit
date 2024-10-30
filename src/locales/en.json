@@ -12,6 +12,7 @@
   "records.rating.stats.max": "Max",
   "records.rating.stats.avg": "Avg",
   "records.rating.distribution": "Distribution",
+  "records.rating.distribution.empty": "No records",
   "addRecord.title": "Add new record manually",
   "addRecord.song.label": "Song",
   "addRecord.song.placeholder": "Select song...",

@@ -14,7 +14,7 @@
   "records.rating.stats.max": "最高",
   "records.rating.stats.avg": "平均",
   "records.rating.distribution": "分布",
-
+  "records.rating.distribution.empty": "暂无记录",
   "addRecord.title": "手动添加记录",
   "addRecord.song.label": "歌曲",
   "addRecord.song.placeholder": "选择歌曲...",
