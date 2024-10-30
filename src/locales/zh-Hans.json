@@ -2,9 +2,9 @@
   "site.description": "Rotaeno Rating 计算器",
 
   "about.title": "关于本站",
-  "about.disclaimer": "该项目与 Rotaeno 及其开发团队无关；所有权利均归属于其各自所有者",
+  "about.disclaimer": "该项目与 Rotaeno 及其开发团队无关；所有权利均归属于其各自所有者。您可在 CC 4.0 BY-NC-SA 的授权下使用本站的任何内容、并可在 MIT 许可下使用本站的任何源代码。",
   "about.initial_data": "第一版数据来自 Team Rhythematics 的 “Rotaeno次世代评级分析表for rotaeno ver2.3.0”",
   "about.rating_calculation": "评级计算基于 Kown & Kiei & Eastown 的 <2>Rotaeno Rating推分参考公式（B30）</2>",
-  "about.wiki_data": "歌曲与谱面数据现从 <2>Rotaeno Wiki</2> 获取",
+  "about.wiki_data": "本站的歌曲、谱面数据与部分资源是由 <2>Rotaeno Wiki</2> 获取的，特别表示感谢",
   "about.open_source": "此项目已于 <2>GitHub (GalvinGao/rotaeno-kit)</2> 开源，欢迎协作"
 }

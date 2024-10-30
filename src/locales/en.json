@@ -2,9 +2,9 @@
   "site.description": "Rotaeno Rating Calculator",
 
   "about.title": "About",
-  "about.disclaimer": "This project is not affiliated with Rotaeno or its developers. All rights are reserved to their respective owners.",
+  "about.disclaimer": "This project is not affiliated with Rotaeno or its developers. All rights are reserved to their respective owners. The content of this project is licensed under CC 4.0 BY-NC-SA, and its source code is licensed under the MIT License.",
   "about.initial_data": "Initial data comes from \"Rotaeno 次世代Rating分析表for rotaeno ver2.3.0\" by Team Rhythematics.",
   "about.rating_calculation": "Rating calculation is based on the work of Kown & Kiei & Eastown with <2>Rotaeno Rating推分参考公式（B30）</2>.",
-  "about.wiki_data": "Songs and charts data are now automatically fetched from the <2>Rotaeno Wiki (in Chinese)</2>.",
+  "about.wiki_data": "Songs, charts data and some resources are from the <2>Rotaeno Wiki (in Chinese)</2>. We appreciate the developers and authors for their hard work on maintaining these resources for the community.",
   "about.open_source": "This project is open source and free to use. Feel free to collaborate on <2>GitHub (GalvinGao/rotaeno-kit)</2>."
 }
