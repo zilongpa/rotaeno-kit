@@ -1,4 +1,5 @@
-import { SongJacket } from '@/components/SongJacket'
+import { SongJacket } from '@/components/entities/SongJacket'
+import { NotIdealState } from '@/components/global/NotIdealState'
 import { Button } from '@/components/ui/button'
 import {
   Table,
@@ -33,7 +34,6 @@ import {
   CheckIcon,
   DownloadIcon,
   MinusIcon,
-  SlashIcon,
   SortAscIcon,
   SortDescIcon,
   TrashIcon,
@@ -321,10 +321,7 @@ export const ChartRecords = () => {
                   colSpan={chartRecordsColumns.length}
                   className="h-48 text-muted-foreground"
                 >
-                  <div className="flex flex-col items-center justify-center gap-2">
-                    <SlashIcon className="size-4" />
-                    <div>{t('chartRecords.table.empty')}</div>
-                  </div>
+                  <NotIdealState>{t('chartRecords.table.empty')}</NotIdealState>
                 </TableCell>
               </TableRow>
             )}

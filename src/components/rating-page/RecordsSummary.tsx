@@ -135,39 +135,46 @@ export const RecordsSummary = () => {
           </div>
         </div>
 
-        <div className="mt-8 font-medium">{t('records.rating.distribution')}</div>
-        <div className="mt-2 h-[200px]">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={summary.histogram}
-              margin={{ left: 0, right: 0 }}
-              barCategoryGap={0}
-              barGap={0}
-            >
-              <XAxis
-                dataKey="center"
-                scale="linear"
-                type="number"
-                domain={[(dataMin: number) => dataMin - 0.25, (dataMax: number) => dataMax + 0.25]}
-                tickFormatter={(value: number) => value.toString()}
-                ticks={ticks}
-                interval={0}
-              />
-              <YAxis hide />
-              <Bar
-                dataKey="count"
-                fill="hsl(var(--primary))"
-                radius={[4, 4, 0, 0]}
-                label={{
-                  position: 'insideTop',
-                  fill: 'hsl(var(--foreground))',
-                  fontSize: 12,
-                  formatter: (value: number) => (value === 0 ? '' : value),
-                }}
-              />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+        {summary.histogram.length > 0 && (
+          <>
+            <div className="mt-8 font-medium">{t('records.rating.distribution')}</div>
+            <div className="mt-2 h-[200px]">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart
+                  data={summary.histogram}
+                  margin={{ left: 0, right: 0 }}
+                  barCategoryGap={0}
+                  barGap={0}
+                >
+                  <XAxis
+                    dataKey="center"
+                    scale="linear"
+                    type="number"
+                    domain={[
+                      (dataMin: number) => dataMin - 0.25,
+                      (dataMax: number) => dataMax + 0.25,
+                    ]}
+                    tickFormatter={(value: number) => value.toString()}
+                    ticks={ticks}
+                    interval={0}
+                  />
+                  <YAxis hide />
+                  <Bar
+                    dataKey="count"
+                    fill="hsl(var(--primary))"
+                    radius={[4, 4, 0, 0]}
+                    label={{
+                      position: 'insideTop',
+                      fill: 'hsl(var(--foreground))',
+                      fontSize: 12,
+                      formatter: (value: number) => (value === 0 ? '' : value),
+                    }}
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          </>
+        )}
       </CardContent>
     </Card>
   )
