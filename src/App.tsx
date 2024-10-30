@@ -81,7 +81,7 @@ function App() {
             </div>
 
             <div className="mt-4 flex w-full flex-col items-start justify-center gap-2 lg:mt-8">
-              <h1 className="text-4xl font-bold">Rotaeno Kit</h1>
+              <h1 className="text-4xl font-bold">RotaenoKit</h1>
               <p className="text-lg text-muted-foreground">{t('site.description')}</p>
 
               <About />
