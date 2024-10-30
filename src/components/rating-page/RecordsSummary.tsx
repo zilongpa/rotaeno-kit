@@ -1,33 +1,11 @@
 import { useCalculatedChartRecords } from '@/contexts/ChartRecordsContext'
 import { useTranslation } from 'react-i18next'
 
+import { RatingDisplay } from '@/components/rating-page/RatingDisplay'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import NumberFlow from '@number-flow/react'
-import { motion } from 'framer-motion'
 import { ChartPieIcon } from 'lucide-react'
-import { FC, useMemo } from 'react'
+import { useMemo } from 'react'
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts'
-
-const RATINGS = [
-  { ratingLowerBound: 0, icon: 'tier1.png', color: '#86ff02' },
-  { ratingLowerBound: 1, icon: 'tier1.png', color: '#86ff02' },
-  { ratingLowerBound: 2, icon: 'tier2.png', color: '#06ff02' },
-  { ratingLowerBound: 3, icon: 'tier2.png', color: '#06ff02' },
-  { ratingLowerBound: 4, icon: 'tier3.png', color: '#09ff68' },
-  { ratingLowerBound: 5, icon: 'tier3.png', color: '#09ff68' },
-  { ratingLowerBound: 6, icon: 'tier3.png', color: '#09ff68' },
-  { ratingLowerBound: 7, icon: 'tier4.png', color: '#02e0ff' },
-  { ratingLowerBound: 8, icon: 'tier5.png', color: '#02e0ff' },
-  { ratingLowerBound: 9, icon: 'tier6.png', color: '#02e0ff' },
-  { ratingLowerBound: 10, icon: 'tier7.png', color: '#fcd906' },
-  { ratingLowerBound: 11, icon: 'tier8.png', color: '#fcd906' },
-  { ratingLowerBound: 12, icon: 'tier9.png', color: '#ff090b' },
-  { ratingLowerBound: 13, icon: 'tier10.png', color: '#fc0fae' },
-  { ratingLowerBound: 14, icon: 'tier11.png', color: '#d90dff' },
-  { ratingLowerBound: 15, icon: 'tier12.png', color: '#fc8301' },
-  { ratingLowerBound: 16, icon: 'tier13.png', color: '#fc8101' },
-]
-RATINGS.reverse()
 
 // data is an array of numbers within 0 and about 16.67.
 // adjust the bucket size as needed since there could be cases like
@@ -53,33 +31,6 @@ function calculateHistogram(data: number[]) {
   })
 
   return histogram
-}
-
-const RatingDisplay: FC<{
-  rating: number
-}> = ({ rating }) => {
-  const { i18n } = useTranslation()
-  const ratingBucket = RATINGS.find((r) => rating >= r.ratingLowerBound)
-  const icon = ratingBucket
-    ? `https://rotaenokit-assets.imgg.dev/images/rating-tiers/${ratingBucket?.icon}`
-    : undefined
-
-  return (
-    <div
-      className="inline-flex items-center gap-2 rounded-lg px-4 text-5xl font-bold leading-none tracking-tight transition"
-      style={{ backgroundColor: ratingBucket ? `${ratingBucket.color}7f` : undefined }}
-    >
-      {icon && (
-        <motion.img src={icon} layoutId={icon} alt={ratingBucket?.icon} className="size-8" />
-      )}
-
-      <NumberFlow
-        value={rating}
-        format={{ minimumFractionDigits: 3, maximumFractionDigits: 3 }}
-        locales={i18n.language}
-      />
-    </div>
-  )
 }
 
 export const RecordsSummary = () => {
