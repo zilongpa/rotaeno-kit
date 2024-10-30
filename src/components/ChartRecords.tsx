@@ -38,7 +38,8 @@ import {
   SortDescIcon,
   TrashIcon,
 } from 'lucide-react'
-import { ReactNode, useState } from 'react'
+import { ReactNode, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 type TableRow = ReturnType<typeof useCalculatedChartRecords>[number]
 
@@ -101,7 +102,7 @@ const SortableColumnHeaderCell = ({
       )}
       onClick={() => column.toggleSorting()}
     >
-      {children}
+      <div className="whitespace-nowrap">{children}</div>
 
       {column.getIsSorted() === 'asc' ? (
         <AscIcon className="size-4" />
@@ -114,114 +115,128 @@ const SortableColumnHeaderCell = ({
   )
 }
 
-const chartRecordsColumns: ColumnDef<TableRow>[] = [
-  {
-    id: 'song',
-    accessorKey: 'song.title_localized.default',
-    sortingFn: 'textCaseSensitive',
-    header: ({ column }) => (
-      <SortableColumnHeaderCell column={column} sortStyle="alphabetical" className="min-w-[250px]">
-        Song
-      </SortableColumnHeaderCell>
-    ),
-    cell: ({ row }) => {
-      return (
-        <div className="flex items-center gap-2">
-          <SongJacket
-            song={row.original.song}
-            difficultyLevel={row.original.chart.difficultyLevel}
-            pictureClassName="shrink-0 sticky left-2"
-          />
-          <div>{row.original.song.title_localized.default}</div>
-        </div>
-      )
-    },
-    meta: { header: { inset: true } },
-  },
-  {
-    id: 'difficulty',
-    accessorKey: 'chart.difficultyDecimal',
-    header: ({ column }) => (
-      <SortableColumnHeaderCell column={column} sortStyle="logical">
-        Difficulty
-      </SortableColumnHeaderCell>
-    ),
-    cell: ({ row }) => {
-      return (
-        <div className="flex items-center justify-between gap-0.5">
-          <div>{row.original.chart.difficultyLevel}</div>
-          <div className="tabular-nums text-muted-foreground">
-            {row.original.chart.difficultyDecimal.toFixed(1)}
-          </div>
-        </div>
-      )
-    },
-    meta: { header: { inset: true } },
-  },
-  {
-    accessorKey: 'ratingIndex',
-    header: ({ column }) => (
-      <SortableColumnHeaderCell column={column} sortStyle="logical">
-        B30?
-      </SortableColumnHeaderCell>
-    ),
-    cell: ({ row }) => {
-      return (
-        <div className="flex items-center justify-start gap-2">
-          {row.original.ratingIndex !== -1 ? (
-            <CheckIcon className="size-4" />
-          ) : (
-            <MinusIcon className="size-4 opacity-20" />
-          )}
-
-          {row.original.ratingIndex !== -1 && (
-            <div className="text-sm tabular-nums leading-none">#{row.original.ratingIndex + 1}</div>
-          )}
-        </div>
-      )
-    },
-    // if sort by descending, it should be 0, 1, 2, ..., 30, -1
-    sortingFn: (a, b) => {
-      if (a.original.ratingIndex === -1) return 1
-      if (b.original.ratingIndex === -1) return -1
-      return a.original.ratingIndex - b.original.ratingIndex
-    },
-    invertSorting: true,
-    meta: { header: { inset: true } },
-  },
-  {
-    accessorKey: 'achievementRate',
-    header: ({ column }) => (
-      <SortableColumnHeaderCell column={column} sortStyle="numerical">
-        %
-      </SortableColumnHeaderCell>
-    ),
-    cell: ({ row }) => <PadZeroCell value={row.original.achievementRate} digits={7} />,
-    meta: { header: { inset: true } },
-  },
-  {
-    accessorKey: 'rating',
-    header: ({ column }) => (
-      <SortableColumnHeaderCell column={column} sortStyle="numerical">
-        Rating
-      </SortableColumnHeaderCell>
-    ),
-    cell: ({ row }) => <PadZeroCell value={row.original.rating} digits={2} />,
-    meta: { header: { inset: true } },
-  },
-  {
-    id: 'actions',
-    header: () => <div className="text-right">Actions</div>,
-    cell: ({ row }) => {
-      return <ChartRecordActions record={row.original} />
-    },
-  },
-]
-
 export const ChartRecords = () => {
+  const { t } = useTranslation()
   const [records, modifyRecords] = useChartRecords()
   const [sorting, setSorting] = useState<SortingState>([])
   const data = useCalculatedChartRecords()
+
+  const chartRecordsColumns: ColumnDef<TableRow>[] = useMemo(
+    () => [
+      {
+        id: 'song',
+        accessorKey: 'song.title_localized.default',
+        sortingFn: 'textCaseSensitive',
+        header: ({ column }) => (
+          <SortableColumnHeaderCell
+            column={column}
+            sortStyle="alphabetical"
+            className="min-w-[250px]"
+          >
+            {t('chartRecords.table.header.song')}
+          </SortableColumnHeaderCell>
+        ),
+        cell: ({ row }) => {
+          return (
+            <div className="flex items-center gap-2">
+              <SongJacket
+                song={row.original.song}
+                difficultyLevel={row.original.chart.difficultyLevel}
+                pictureClassName="shrink-0 sticky left-2"
+              />
+              <div>{row.original.song.title_localized.default}</div>
+            </div>
+          )
+        },
+        meta: { header: { inset: true } },
+      },
+      {
+        id: 'difficulty',
+        accessorKey: 'chart.difficultyDecimal',
+        header: ({ column }) => (
+          <SortableColumnHeaderCell column={column} sortStyle="logical">
+            {t('chartRecords.table.header.difficulty')}
+          </SortableColumnHeaderCell>
+        ),
+        cell: ({ row }) => {
+          return (
+            <div className="flex items-center justify-between gap-0.5">
+              <div>{row.original.chart.difficultyLevel}</div>
+              <div className="tabular-nums text-muted-foreground">
+                {row.original.chart.difficultyDecimal.toFixed(1)}
+              </div>
+            </div>
+          )
+        },
+        meta: { header: { inset: true } },
+      },
+      {
+        accessorKey: 'ratingIndex',
+        header: ({ column }) => (
+          <SortableColumnHeaderCell column={column} sortStyle="logical">
+            {t('chartRecords.table.header.b30')}
+          </SortableColumnHeaderCell>
+        ),
+        cell: ({ row }) => {
+          return (
+            <div className="flex items-center justify-start gap-2">
+              {row.original.ratingIndex !== -1 ? (
+                <CheckIcon className="size-4" />
+              ) : (
+                <MinusIcon className="size-4 opacity-20" />
+              )}
+
+              {row.original.ratingIndex !== -1 && (
+                <div className="text-sm tabular-nums leading-none">
+                  #{row.original.ratingIndex + 1}
+                </div>
+              )}
+            </div>
+          )
+        },
+        // if sort by descending, it should be 0, 1, 2, ..., 30, -1
+        sortingFn: (a, b) => {
+          if (a.original.ratingIndex === -1) return 1
+          if (b.original.ratingIndex === -1) return -1
+          return a.original.ratingIndex - b.original.ratingIndex
+        },
+        invertSorting: true,
+        meta: { header: { inset: true } },
+      },
+      {
+        accessorKey: 'achievementRate',
+        header: ({ column }) => (
+          <SortableColumnHeaderCell column={column} sortStyle="numerical">
+            {t('chartRecords.table.header.achievementRate')}
+          </SortableColumnHeaderCell>
+        ),
+        cell: ({ row }) => <PadZeroCell value={row.original.achievementRate} digits={7} />,
+        meta: { header: { inset: true } },
+      },
+      {
+        accessorKey: 'rating',
+        header: ({ column }) => (
+          <SortableColumnHeaderCell column={column} sortStyle="numerical">
+            {t('chartRecords.table.header.rating')}
+          </SortableColumnHeaderCell>
+        ),
+        cell: ({ row }) => <PadZeroCell value={row.original.rating} digits={2} />,
+        meta: { header: { inset: true } },
+      },
+      {
+        id: 'actions',
+        header: () => (
+          <div className="whitespace-nowrap text-right">
+            {t('chartRecords.table.header.actions')}
+          </div>
+        ),
+        cell: ({ row }) => {
+          return <ChartRecordActions record={row.original} />
+        },
+      },
+    ],
+    [t]
+  )
 
   const table = useReactTable({
     data,
@@ -251,14 +266,14 @@ export const ChartRecords = () => {
   return (
     <div className="flex w-full flex-col gap-2 pb-16">
       <div className="flex items-center justify-center gap-2">
-        <h2 className="text-lg font-semibold">Chart Records</h2>
+        <h2 className="text-lg font-semibold">{t('chartRecords.title')}</h2>
 
         <div className="flex-1" />
 
         {records.length > 0 && (
           <>
             <Button variant="destructive" size="sm" onClick={() => modifyRecords.clear()}>
-              Clear All
+              {t('chartRecords.actions.clearAll')}
             </Button>
 
             <Button variant="outline" size="icon" onClick={handleDownloadCSV}>
@@ -308,7 +323,7 @@ export const ChartRecords = () => {
                 >
                   <div className="flex flex-col items-center justify-center gap-2">
                     <SlashIcon className="size-4" />
-                    <div>No records. Add some from above!</div>
+                    <div>{t('chartRecords.table.empty')}</div>
                   </div>
                 </TableCell>
               </TableRow>

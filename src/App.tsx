@@ -74,7 +74,7 @@ function App() {
     <TooltipProvider delayDuration={0}>
       <ThemeProvider>
         <ChartRecordsProvider>
-          <div className="mx-auto mb-16 flex size-full w-[48rem] max-w-full flex-col items-center gap-8 p-4 md:p-8">
+          <div className="mx-auto mb-16 flex size-full w-[56rem] max-w-full flex-col items-center gap-8 p-4 md:p-8">
             <div className="absolute right-4 top-4 flex items-center gap-2">
               <LocaleSwitcher />
               <ColorSchemeSwitcher />

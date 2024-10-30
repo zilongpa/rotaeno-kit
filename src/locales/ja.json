@@ -8,8 +8,8 @@
   "about.wiki_data": "Songs, charts data and some resources are from the <2>Rotaeno Wiki (in Chinese)</2>. We appreciate the developers and authors for their hard work on maintaining these resources for the community.",
   "about.open_source": "This project is open source and free to use. Feel free to collaborate on <2>GitHub (GalvinGao/rotaeno-kit)</2>.",
 
-  "records.rating.title": "レーティング",
-  "records.rating.current": "現在のレーティング",
+  "records.rating.title": "Rating",
+  "records.rating.current": "現在のRating",
   "records.rating.stats.min": "最小",
   "records.rating.stats.max": "最大",
   "records.rating.stats.avg": "平均",
@@ -23,7 +23,7 @@
   "addRecord.difficulty.label": "難易度",
   "addRecord.difficulty.placeholder": "難易度を選択...",
   "addRecord.difficulty.chartBy": "譜面作者：{designer}",
-  "addRecord.achievementRate.label": "完成率",
+  "addRecord.achievementRate.label": "%",
   "addRecord.achievementRate.placeholder": "0995223",
   "addRecord.button.add": "追加",
   "addRecord.button.reset": "リセット",
@@ -35,5 +35,17 @@
   "addRecord.import.dialog.cancel": "キャンセル",
   "addRecord.import.dialog.confirm": "インポート",
   "addRecord.import.error.noContent": "インポートするコンテンツがありません",
-  "addRecord.import.error.parseFailed": "インポートの解析に失敗：{error}"
+  "addRecord.import.error.parseFailed": "インポートの解析に失敗：{error}",
+
+  "chartRecords.title": "譜面記録",
+  "chartRecords.actions.clearAll": "全て削除",
+  "chartRecords.table.header.song": "曲",
+  "chartRecords.table.header.difficulty": "難易度",
+  "chartRecords.table.header.b30": "B30?",
+  "chartRecords.table.header.achievementRate": "%",
+  "chartRecords.table.header.rating": "Rating",
+  "chartRecords.table.header.actions": "アクション",
+  "chartRecords.table.empty": "記録がありません。上から追加してください！",
+  "localeSwitcher.tooltip": "言語",
+  "colorSchemeSwitcher.tooltip": "テーマ"
 }

@@ -35,5 +35,17 @@
   "addRecord.import.dialog.cancel": "取消",
   "addRecord.import.dialog.confirm": "导入",
   "addRecord.import.error.noContent": "没有要导入的内容",
-  "addRecord.import.error.parseFailed": "导入解析失败：{error}"
+  "addRecord.import.error.parseFailed": "导入解析失败：{error}",
+
+  "chartRecords.title": "谱面记录",
+  "chartRecords.actions.clearAll": "清除全部",
+  "chartRecords.table.header.song": "歌曲",
+  "chartRecords.table.header.difficulty": "难度",
+  "chartRecords.table.header.b30": "B30?",
+  "chartRecords.table.header.achievementRate": "%",
+  "chartRecords.table.header.rating": "音律值",
+  "chartRecords.table.header.actions": "操作",
+  "chartRecords.table.empty": "暂无记录；在上方加入第一条记录吧！",
+  "localeSwitcher.tooltip": "语言",
+  "colorSchemeSwitcher.tooltip": "主题"
 }

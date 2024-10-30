@@ -1,20 +1,17 @@
 {
   "site.description": "Rotaeno Rating Calculator",
-
   "about.title": "About",
   "about.disclaimer": "This project is not affiliated with Rotaeno or its developers. All rights are reserved to their respective owners. The content of this project is licensed under CC 4.0 BY-NC-SA, and its source code is licensed under the MIT License.",
   "about.initial_data": "Initial data comes from \"Rotaeno 次世代Rating分析表for rotaeno ver2.3.0\" by Team Rhythematics.",
   "about.rating_calculation": "Rating calculation is based on the work of Kown & Kiei & Eastown with <2>Rotaeno Rating推分参考公式（B30）</2>.",
   "about.wiki_data": "Songs, charts data and some resources are from the <2>Rotaeno Wiki (in Chinese)</2>. We appreciate the developers and authors for their hard work on maintaining these resources for the community.",
   "about.open_source": "This project is open source and free to use. Feel free to collaborate on <2>GitHub (GalvinGao/rotaeno-kit)</2>.",
-
   "records.rating.title": "Rating",
   "records.rating.current": "Current rating",
   "records.rating.stats.min": "Min",
   "records.rating.stats.max": "Max",
   "records.rating.stats.avg": "Avg",
   "records.rating.distribution": "Distribution",
-
   "addRecord.title": "Add new record manually",
   "addRecord.song.label": "Song",
   "addRecord.song.placeholder": "Select song...",
@@ -35,5 +32,16 @@
   "addRecord.import.dialog.cancel": "Cancel",
   "addRecord.import.dialog.confirm": "Import",
   "addRecord.import.error.noContent": "No content to import",
-  "addRecord.import.error.parseFailed": "Failed to parse import: {error}"
+  "addRecord.import.error.parseFailed": "Failed to parse import: {error}",
+  "chartRecords.title": "Chart Records",
+  "chartRecords.actions.clearAll": "Clear All",
+  "chartRecords.table.header.song": "Song",
+  "chartRecords.table.header.difficulty": "Difficulty",
+  "chartRecords.table.header.b30": "B30?",
+  "chartRecords.table.header.achievementRate": "%",
+  "chartRecords.table.header.rating": "Rating",
+  "chartRecords.table.header.actions": "Actions",
+  "chartRecords.table.empty": "No records. Add some from above!",
+  "localeSwitcher.tooltip": "Locale",
+  "colorSchemeSwitcher.tooltip": "Theme"
 }

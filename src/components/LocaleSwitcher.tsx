@@ -12,7 +12,7 @@ import { CheckIcon, LanguagesIcon } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
 export function LocaleSwitcher() {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   return (
     <DropdownMenu>
@@ -24,7 +24,7 @@ export function LocaleSwitcher() {
             </Button>
           </TooltipTrigger>
           <TooltipContent>
-            <p>Locale</p>
+            <p>{t('localeSwitcher.tooltip')}</p>
           </TooltipContent>
         </Tooltip>
       </DropdownMenuTrigger>
