@@ -13,5 +13,27 @@
   "records.rating.stats.min": "Min",
   "records.rating.stats.max": "Max",
   "records.rating.stats.avg": "Avg",
-  "records.rating.distribution": "Distribution"
+  "records.rating.distribution": "Distribution",
+
+  "addRecord.title": "Add new record manually",
+  "addRecord.song.label": "Song",
+  "addRecord.song.placeholder": "Select song...",
+  "addRecord.song.empty": "No chart found.",
+  "addRecord.song.searchPlaceholder": "Search song...",
+  "addRecord.difficulty.label": "Difficulty",
+  "addRecord.difficulty.placeholder": "Select difficulty...",
+  "addRecord.difficulty.chartBy": "Chart by {designer}",
+  "addRecord.achievementRate.label": "Achievement Rate",
+  "addRecord.achievementRate.placeholder": "0995223",
+  "addRecord.button.add": "Add",
+  "addRecord.button.reset": "Reset",
+  "addRecord.import.title": "Import from HTTP capture (advanced)",
+  "addRecord.import.button": "Import",
+  "addRecord.import.dialog.title": "Import from HTTP capture",
+  "addRecord.import.dialog.description": "Paste the JSON content of <code>CloudSave</code> or <code>GetAllFolloweeSocialData</code> (currently only will import the data of your first friend) API response here. Your current records will be overwritten.",
+  "addRecord.import.dialog.placeholder": "{\n  ...\n}",
+  "addRecord.import.dialog.cancel": "Cancel",
+  "addRecord.import.dialog.confirm": "Import",
+  "addRecord.import.error.noContent": "No content to import",
+  "addRecord.import.error.parseFailed": "Failed to parse import: {error}"
 }

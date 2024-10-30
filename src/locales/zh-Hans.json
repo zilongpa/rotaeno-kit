@@ -13,5 +13,27 @@
   "records.rating.stats.min": "最低",
   "records.rating.stats.max": "最高",
   "records.rating.stats.avg": "平均",
-  "records.rating.distribution": "分布"
+  "records.rating.distribution": "分布",
+
+  "addRecord.title": "手动添加记录",
+  "addRecord.song.label": "歌曲",
+  "addRecord.song.placeholder": "选择歌曲...",
+  "addRecord.song.empty": "未找到谱面",
+  "addRecord.song.searchPlaceholder": "搜索歌曲...",
+  "addRecord.difficulty.label": "难度",
+  "addRecord.difficulty.placeholder": "选择难度...",
+  "addRecord.difficulty.chartBy": "谱面作者：{designer}",
+  "addRecord.achievementRate.label": "完成率",
+  "addRecord.achievementRate.placeholder": "0995223",
+  "addRecord.button.add": "添加",
+  "addRecord.button.reset": "重置",
+  "addRecord.import.title": "从 HTTP 抓包导入（高级）",
+  "addRecord.import.button": "导入",
+  "addRecord.import.dialog.title": "从 HTTP 抓包导入",
+  "addRecord.import.dialog.description": "在此粘贴 <code>CloudSave</code> 或 <code>GetAllFolloweeSocialData</code>（目前仅会导入第一位好友的数据）API 响应的 JSON 内容。您当前的记录将被覆盖。",
+  "addRecord.import.dialog.placeholder": "{\n  ...\n}",
+  "addRecord.import.dialog.cancel": "取消",
+  "addRecord.import.dialog.confirm": "导入",
+  "addRecord.import.error.noContent": "没有要导入的内容",
+  "addRecord.import.error.parseFailed": "导入解析失败：{error}"
 }

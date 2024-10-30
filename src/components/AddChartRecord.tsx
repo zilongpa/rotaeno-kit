@@ -44,6 +44,7 @@ import Fuse from 'fuse.js'
 import { Check, PlusIcon } from 'lucide-react'
 import { FC, useMemo, useRef, useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
+import { Trans, useTranslation } from 'react-i18next'
 import { toast } from 'sonner'
 
 const useFuse = () => {
@@ -69,6 +70,7 @@ const SearchSongAutocomplete: FC<{
   value: string
   onValueChange: (value: string) => void
 }> = ({ value, onValueChange }) => {
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   const [, startTransition] = useTransition()
   const [query, setQuery] = useState('')
@@ -104,7 +106,7 @@ const SearchSongAutocomplete: FC<{
           <span className="overflow-hidden text-ellipsis whitespace-nowrap">
             {value
               ? songs.find((song) => song.id === value)?.title_localized.default
-              : 'Select song...'}
+              : t('addRecord.song.placeholder')}
           </span>
           <CaretSortIcon className="ml-2 size-4 shrink-0 opacity-50" />
         </Button>
@@ -112,13 +114,13 @@ const SearchSongAutocomplete: FC<{
       <PopoverContent className="w-[300px] max-w-[100vw] p-0">
         <Command shouldFilter={false}>
           <CommandInput
-            placeholder="Search song..."
+            placeholder={t('addRecord.song.searchPlaceholder')}
             onValueChange={(value) => {
               setQuery(value)
             }}
           />
           <CommandList>
-            <CommandEmpty>No chart found.</CommandEmpty>
+            <CommandEmpty>{t('addRecord.song.empty')}</CommandEmpty>
             <CommandGroup>
               {searchResults.map((song) => (
                 <CommandItem
@@ -156,6 +158,7 @@ const SearchSongAutocomplete: FC<{
 }
 
 export const AddChartRecord: FC = () => {
+  const { t } = useTranslation()
   const [records, modifyRecords] = useChartRecords()
 
   const form = useForm<AddChartRecordForm>({
@@ -193,7 +196,7 @@ export const AddChartRecord: FC = () => {
             }}
           >
             <CardHeader>
-              <CardTitle>Add new record manually</CardTitle>
+              <CardTitle>{t('addRecord.title')}</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex flex-col gap-2">
@@ -203,7 +206,7 @@ export const AddChartRecord: FC = () => {
                     name="songSlug"
                     render={({ field }) => (
                       <FormItem className="flex w-full flex-col">
-                        <FormLabel>Song</FormLabel>
+                        <FormLabel>{t('addRecord.song.label')}</FormLabel>
                         <SearchSongAutocomplete
                           value={field.value}
                           onValueChange={(v) => {
@@ -221,10 +224,10 @@ export const AddChartRecord: FC = () => {
                     name="difficultyLevel"
                     render={({ field }) => (
                       <FormItem className="flex w-full flex-col">
-                        <FormLabel>Difficulty</FormLabel>
+                        <FormLabel>{t('addRecord.difficulty.label')}</FormLabel>
                         <Select value={field.value} onValueChange={field.onChange} disabled={!song}>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select difficulty...">
+                            <SelectValue placeholder={t('addRecord.difficulty.placeholder')}>
                               {(() => {
                                 const chart = song?.charts.find(
                                   (chart) => chart.difficultyLevel === field.value
@@ -248,9 +251,10 @@ export const AddChartRecord: FC = () => {
                                 </SelectItemText>
                                 <div className="flex w-full items-center justify-between text-xs tabular-nums text-muted-foreground">
                                   <div>{chart.difficultyDecimal.toFixed(1)}</div>
-
                                   <div className="text-xs text-muted-foreground">
-                                    Chart by {chart.chartDesigner}
+                                    {t('addRecord.difficulty.chartBy', {
+                                      designer: chart.chartDesigner,
+                                    })}
                                   </div>
                                 </div>
                               </SelectItem>
@@ -268,14 +272,14 @@ export const AddChartRecord: FC = () => {
                   name="achievementRate"
                   render={({ field }) => (
                     <FormItem className="flex w-full flex-col">
-                      <FormLabel>Achievement Rate</FormLabel>
+                      <FormLabel>{t('addRecord.achievementRate.label')}</FormLabel>
                       <Input
                         type="number"
                         className="font-mono"
                         {...field}
                         min={0}
                         max={1010000}
-                        placeholder="0995223"
+                        placeholder={t('addRecord.achievementRate.placeholder')}
                         onChange={(e) => {
                           field.onChange(Number(e.target.value))
                         }}
@@ -290,10 +294,10 @@ export const AddChartRecord: FC = () => {
             <CardFooter className="flex flex-row gap-2">
               <Button type="submit">
                 <PlusIcon className="-ml-1 size-4" />
-                Add
+                {t('addRecord.button.add')}
               </Button>
               <Button variant="ghost" type="reset" onClick={() => form.reset()}>
-                Reset
+                {t('addRecord.button.reset')}
               </Button>
             </CardFooter>
           </form>
@@ -306,6 +310,7 @@ export const AddChartRecord: FC = () => {
 }
 
 const ChartRecordImportForm: FC = () => {
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   const [, modifyRecords] = useChartRecords()
   const textareaRef = useRef<HTMLTextAreaElement>(null)
@@ -313,13 +318,13 @@ const ChartRecordImportForm: FC = () => {
   const onImport = () => {
     const content = textareaRef.current?.value
     if (!content) {
-      toast.error('No content to import')
+      toast.error(t('addRecord.import.error.noContent'))
       return
     }
 
     const parsed = safeParseImport(content)
     if (parsed.isErr()) {
-      toast.error(`Failed to parse import: ${parsed.error}`)
+      toast.error(t('addRecord.import.error.parseFailed', { error: parsed.error }))
       return
     }
 
@@ -336,11 +341,18 @@ const ChartRecordImportForm: FC = () => {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Import from HTTP capture</DialogTitle>
+            <DialogTitle>{t('addRecord.import.dialog.title')}</DialogTitle>
             <DialogDescription>
-              Paste the JSON content of <code>CloudSave</code> or{' '}
-              <code>GetAllFolloweeSocialData</code> (currently only will import the data of your
-              first friend) api response here. Your current records will be overwritten.
+              <Trans
+                i18nKey="addRecord.import.dialog.description"
+                components={{
+                  code: <code />,
+                }}
+              >
+                Paste the JSON content of <code>CloudSave</code> or{' '}
+                <code>GetAllFolloweeSocialData</code> (currently only will import the data of your
+                first friend) api response here. Your current records will be overwritten.
+              </Trans>
             </DialogDescription>
           </DialogHeader>
 
@@ -352,24 +364,24 @@ const ChartRecordImportForm: FC = () => {
             autoCorrect="off"
             autoCapitalize="off"
             spellCheck={false}
-            placeholder={`{\n  ...\n}`}
+            placeholder={t('addRecord.import.dialog.placeholder')}
           />
 
           <DialogFooter>
             <Button variant="outline" onClick={() => setOpen(false)}>
-              Cancel
+              {t('addRecord.import.dialog.cancel')}
             </Button>
-            <Button onClick={onImport}>Import</Button>
+            <Button onClick={onImport}>{t('addRecord.import.dialog.confirm')}</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
 
       <Card className="w-full rounded-b-lg rounded-t-none border-t-0">
         <CardHeader className="flex flex-row items-center justify-between space-y-0">
-          <CardTitle>Import from HTTP capture (advanced)</CardTitle>
+          <CardTitle>{t('addRecord.import.title')}</CardTitle>
 
           <Button variant="outline" onClick={() => setOpen(true)}>
-            Import
+            {t('addRecord.import.button')}
           </Button>
         </CardHeader>
       </Card>
