@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 
 import NumberFlow from '@number-flow/react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { usePrevious } from 'react-use'
 
 const RATINGS = [
@@ -32,17 +32,29 @@ export const RatingDisplay: FC<{
   rating: number
 }> = ({ rating }) => {
   const { i18n } = useTranslation()
-  const ratingBucket = RATINGS.find((r) => rating >= r.ratingLowerBound)
+  const ratingBucketIdx = RATINGS.findIndex((r) => rating >= r.ratingLowerBound)
+  const ratingBucket = ratingBucketIdx !== -1 ? RATINGS[ratingBucketIdx] : undefined
   const icon = ratingBucket
     ? `https://rotaenokit-assets.imgg.dev/images/rating-tiers/${ratingBucket?.icon}`
     : undefined
 
   const previousRating = usePrevious(rating) ?? rating
 
+  useEffect(() => {
+    // preload the next (the bucket with a higher lower bound) icon
+    const next = ratingBucketIdx - 1
+    if (next >= 0) {
+      const nextIcon = RATINGS[next].icon
+      const img = new Image()
+      img.fetchPriority = 'low'
+      img.src = `https://rotaenokit-assets.imgg.dev/images/rating-tiers/${nextIcon}`
+    }
+  }, [ratingBucketIdx])
+
   return (
     <motion.div
       layout
-      className="inline-flex items-center gap-2 rounded-lg px-4 text-5xl font-bold leading-none tracking-tight"
+      className="inline-flex select-none items-center gap-2 rounded-lg px-4 text-5xl font-bold leading-none tracking-tight"
       animate={{ backgroundColor: ratingBucket ? `${ratingBucket.color}7f` : undefined }}
       transition={{ layout: { duration: 0.9, bounce: 0, type: 'spring' } }}
     >
@@ -52,7 +64,7 @@ export const RatingDisplay: FC<{
           key={icon}
           src={icon}
           alt={ratingBucket?.icon}
-          className="size-8"
+          className="size-8 object-contain"
           initial={{ opacity: 0, y: previousRating > rating ? -5 : 5 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95 }}
