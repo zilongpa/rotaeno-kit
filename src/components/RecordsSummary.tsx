@@ -1,4 +1,5 @@
 import { useCalculatedChartRecords } from '@/contexts/ChartRecordsContext'
+import { useTranslation } from 'react-i18next'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ChartPieIcon } from 'lucide-react'
@@ -72,6 +73,8 @@ const RatingDisplay: FC<{
 }
 
 export const RecordsSummary = () => {
+  const { t } = useTranslation()
+
   const data = useCalculatedChartRecords()
 
   const summary = useMemo(() => {
@@ -110,29 +113,29 @@ export const RecordsSummary = () => {
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-        <CardTitle className="text-2xl font-bold">Rating</CardTitle>
+        <CardTitle className="text-2xl font-bold">{t('records.rating.title')}</CardTitle>
         <ChartPieIcon className="h-4 w-4 text-muted-foreground" />
       </CardHeader>
       <CardContent>
         <RatingDisplay rating={summary.rating} />
 
-        <p className="text-xs text-muted-foreground">Current rating</p>
+        <p className="text-xs text-muted-foreground">{t('records.rating.current')}</p>
         <div className="mt-4 grid grid-cols-3 gap-4 text-sm">
           <div className="flex flex-col">
-            <span className="font-bold">Min</span>
+            <span className="font-bold">{t('records.rating.stats.min')}</span>
             <span className="tabular-nums tracking-tight">{summary.min.toFixed(3)}</span>
           </div>
           <div className="flex flex-col">
-            <span className="font-bold">Max</span>
+            <span className="font-bold">{t('records.rating.stats.max')}</span>
             <span className="tabular-nums tracking-tight">{summary.max.toFixed(3)}</span>
           </div>
           <div className="flex flex-col">
-            <span className="font-bold">Avg</span>
+            <span className="font-bold">{t('records.rating.stats.avg')}</span>
             <span className="tabular-nums tracking-tight">{summary.avg.toFixed(3)}</span>
           </div>
         </div>
 
-        <div className="mt-8 font-medium">Distribution</div>
+        <div className="mt-8 font-medium">{t('records.rating.distribution')}</div>
         <div className="mt-2 h-[200px]">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
