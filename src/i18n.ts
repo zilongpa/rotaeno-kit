@@ -3,16 +3,20 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
 
 import enResources from '@/locales/en.json'
+import jaResources from '@/locales/ja.json'
 import zhHansResources from '@/locales/zh-Hans.json'
-
 export const SUPPORTED_LANGUAGES = [
+  {
+    value: 'zh-Hans',
+    label: '简体中文',
+  },
   {
     value: 'en',
     label: 'English',
   },
   {
-    value: 'zh-Hans',
-    label: '简体中文',
+    value: 'ja',
+    label: '日本語',
   },
 ] as const
 
@@ -22,6 +26,9 @@ const resources = {
   },
   'zh-Hans': {
     translation: zhHansResources,
+  },
+  ja: {
+    translation: jaResources,
   },
 }
 
