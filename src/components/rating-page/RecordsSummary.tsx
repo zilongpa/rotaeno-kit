@@ -109,7 +109,7 @@ export const RecordsSummary = () => {
         ? b30Ratings.reduce((acc, record) => acc + record, 0) / b30Ratings.length
         : 0
 
-    const histogram = calculateHistogram(b30Entries.map((record) => record.rating))
+    const histogram = calculateHistogram(b30Ratings)
 
     return {
       rating,
@@ -132,24 +132,24 @@ export const RecordsSummary = () => {
         <RatingDisplay rating={summary.rating} />
 
         <p className="text-xs text-muted-foreground">{t('records.rating.current')}</p>
-        <div className="mt-4 grid grid-cols-3 gap-4 text-sm">
-          <div className="flex flex-col">
-            <span className="font-bold">{t('records.rating.stats.min')}</span>
-            <span className="tabular-nums tracking-tight">{summary.min.toFixed(3)}</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-bold">{t('records.rating.stats.max')}</span>
-            <span className="tabular-nums tracking-tight">{summary.max.toFixed(3)}</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-bold">{t('records.rating.stats.avg')}</span>
-            <span className="tabular-nums tracking-tight">{summary.avg.toFixed(3)}</span>
-          </div>
-        </div>
 
         {summary.histogram.length > 0 && (
           <>
             <div className="mt-8 font-medium">{t('records.rating.distribution')}</div>
+            <div className="mt-4 grid grid-cols-3 gap-4 text-sm">
+              <div className="flex flex-col">
+                <span className="font-bold">{t('records.rating.stats.min')}</span>
+                <span className="tabular-nums tracking-tight">{summary.min.toFixed(3)}</span>
+              </div>
+              <div className="flex flex-col text-center">
+                <span className="font-bold">{t('records.rating.stats.avg')}</span>
+                <span className="tabular-nums tracking-tight">{summary.avg.toFixed(3)}</span>
+              </div>
+              <div className="flex flex-col text-right">
+                <span className="font-bold">{t('records.rating.stats.max')}</span>
+                <span className="tabular-nums tracking-tight">{summary.max.toFixed(3)}</span>
+              </div>
+            </div>
             <div className="mt-2 h-[200px]">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
