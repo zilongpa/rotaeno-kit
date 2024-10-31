@@ -118,7 +118,7 @@ const SortableColumnHeaderCell = ({
 export const ChartRecords = () => {
   const { t } = useTranslation()
   const [records, modifyRecords] = useChartRecords()
-  const [sorting, setSorting] = useState<SortingState>([])
+  const [sorting, setSorting] = useState<SortingState>(() => [{ id: 'rating', desc: true }])
   const data = useCalculatedChartRecords()
 
   const chartRecordsColumns: ColumnDef<TableRow>[] = useMemo(
