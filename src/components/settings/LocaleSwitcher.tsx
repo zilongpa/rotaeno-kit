@@ -9,10 +9,15 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 import { SUPPORTED_LANGUAGES } from '@/i18n'
 import clsx from 'clsx'
 import { CheckIcon, LanguagesIcon } from 'lucide-react'
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
 export function LocaleSwitcher() {
   const { t, i18n } = useTranslation()
+
+  useEffect(() => {
+    document.documentElement.setAttribute('lang', i18n.language)
+  }, [i18n.language])
 
   return (
     <DropdownMenu>
