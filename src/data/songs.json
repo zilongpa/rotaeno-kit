@@ -7967,5 +7967,326 @@
         "jacketDesigner": "皇皇"
       }
     ]
+  },
+  {
+    "id": "shattered-sky-after-rain",
+    "artist": "Lorph & Elexia",
+    "releaseVersion": "2.4.0",
+    "title_localized": {
+      "default": "Shattered Sky After Rain"
+    },
+    "source_localized": {
+      "default": "vivid/stasis"
+    },
+    "charts": [
+      {
+        "difficultyLevel": "I",
+        "difficultyDecimal": 1,
+        "chartDesigner": "lino",
+        "jacketDesigner": "stelli [vivid/stasis]"
+      },
+      {
+        "difficultyLevel": "II",
+        "difficultyDecimal": 4,
+        "chartDesigner": "lino",
+        "jacketDesigner": "stelli [vivid/stasis]"
+      },
+      {
+        "difficultyLevel": "III",
+        "difficultyDecimal": 8.3,
+        "chartDesigner": "lino",
+        "jacketDesigner": "stelli [vivid/stasis]"
+      },
+      {
+        "difficultyLevel": "IV",
+        "difficultyDecimal": 12.4,
+        "chartDesigner": "lino",
+        "jacketDesigner": "stelli [vivid/stasis]"
+      }
+    ]
+  },
+  {
+    "id": "cosmogyral",
+    "artist": "Altermis & Darren",
+    "releaseVersion": "2.4.0",
+    "title_localized": {
+      "default": "Cosmogyral"
+    },
+    "source_localized": {
+      "default": "vivid/stasis"
+    },
+    "charts": [
+      {
+        "difficultyLevel": "I",
+        "difficultyDecimal": 3,
+        "chartDesigner": "Yntotr HP",
+        "jacketDesigner": "57_dayo [vivid/stasis]"
+      },
+      {
+        "difficultyLevel": "II",
+        "difficultyDecimal": 7.5,
+        "chartDesigner": "Yntotr HP",
+        "jacketDesigner": "57_dayo [vivid/stasis]"
+      },
+      {
+        "difficultyLevel": "III",
+        "difficultyDecimal": 9.5,
+        "chartDesigner": "Yntotr HP",
+        "jacketDesigner": "57_dayo [vivid/stasis]"
+      },
+      {
+        "difficultyLevel": "IV",
+        "difficultyDecimal": 12.4,
+        "chartDesigner": "Yntotr HP",
+        "jacketDesigner": "57_dayo [vivid/stasis]"
+      }
+    ]
+  },
+  {
+    "id": "one-way-street",
+    "artist": "siqlo",
+    "releaseVersion": "2.4.0",
+    "title_localized": {
+      "default": "One Way Street"
+    },
+    "source_localized": {
+      "default": "BOFU2017"
+    },
+    "charts": [
+      {
+        "difficultyLevel": "I",
+        "difficultyDecimal": 2,
+        "chartDesigner": "Jakasy",
+        "jacketDesigner": "Karekitsune"
+      },
+      {
+        "difficultyLevel": "II",
+        "difficultyDecimal": 4,
+        "chartDesigner": "Jakasy",
+        "jacketDesigner": "Karekitsune"
+      },
+      {
+        "difficultyLevel": "III",
+        "difficultyDecimal": 9.3,
+        "chartDesigner": "Jakasy",
+        "jacketDesigner": "Karekitsune"
+      },
+      {
+        "difficultyLevel": "IV",
+        "difficultyDecimal": 12.4,
+        "chartDesigner": "Jakasy",
+        "jacketDesigner": "Karekitsune"
+      }
+    ]
+  },
+  {
+    "id": "hypersynthetic",
+    "artist": "Akira Complex",
+    "releaseVersion": "2.4.0",
+    "title_localized": {
+      "default": "HYPERSYNTHETIC"
+    },
+    "charts": [
+      {
+        "difficultyLevel": "I",
+        "difficultyDecimal": 2,
+        "chartDesigner": "Roteamo -Memoir-",
+        "jacketDesigner": "HU，Longjue"
+      },
+      {
+        "difficultyLevel": "II",
+        "difficultyDecimal": 5,
+        "chartDesigner": "Roteamo -Memoir-",
+        "jacketDesigner": "HU，Longjue"
+      },
+      {
+        "difficultyLevel": "III",
+        "difficultyDecimal": 8.5,
+        "chartDesigner": "Roteamo -Memoir-",
+        "jacketDesigner": "HU，Longjue"
+      },
+      {
+        "difficultyLevel": "IV",
+        "difficultyDecimal": 11.6,
+        "chartDesigner": "Roteamo -Memoir-",
+        "jacketDesigner": "HU，Longjue"
+      }
+    ]
+  },
+  {
+    "id": "blackhole",
+    "artist": "litmus*",
+    "releaseVersion": "2.4.0",
+    "title_localized": {
+      "default": "Blackhole"
+    },
+    "charts": [
+      {
+        "difficultyLevel": "I",
+        "difficultyDecimal": 2,
+        "chartDesigner": "Jakasy",
+        "jacketDesigner": "桌桌子"
+      },
+      {
+        "difficultyLevel": "II",
+        "difficultyDecimal": 5,
+        "chartDesigner": "Jakasy",
+        "jacketDesigner": "桌桌子"
+      },
+      {
+        "difficultyLevel": "III",
+        "difficultyDecimal": 8.1,
+        "chartDesigner": "Jakasy",
+        "jacketDesigner": "桌桌子"
+      },
+      {
+        "difficultyLevel": "IV",
+        "difficultyDecimal": 12.1,
+        "chartDesigner": "Jakasy",
+        "jacketDesigner": "桌桌子"
+      }
+    ]
+  },
+  {
+    "id": "hold-your-fire",
+    "artist": "Yooh",
+    "releaseVersion": "2.4.0",
+    "title_localized": {
+      "default": "Hold Your Fire (Radio Edit)"
+    },
+    "charts": [
+      {
+        "difficultyLevel": "I",
+        "difficultyDecimal": 2,
+        "chartDesigner": "尼西特nsida",
+        "jacketDesigner": "炎獵"
+      },
+      {
+        "difficultyLevel": "II",
+        "difficultyDecimal": 5,
+        "chartDesigner": "尼西特nsida",
+        "jacketDesigner": "炎獵"
+      },
+      {
+        "difficultyLevel": "III",
+        "difficultyDecimal": 8.4,
+        "chartDesigner": "尼西特nsida",
+        "jacketDesigner": "炎獵"
+      },
+      {
+        "difficultyLevel": "IV",
+        "difficultyDecimal": 12.4,
+        "chartDesigner": "尼西特nsida",
+        "jacketDesigner": "炎獵"
+      }
+    ]
+  },
+  {
+    "id": "infection",
+    "artist": "ARForest",
+    "releaseVersion": "2.4.0",
+    "title_localized": {
+      "default": "Infection"
+    },
+    "charts": [
+      {
+        "difficultyLevel": "I",
+        "difficultyDecimal": 3,
+        "chartDesigner": "MF-",
+        "jacketDesigner": "炎獵"
+      },
+      {
+        "difficultyLevel": "II",
+        "difficultyDecimal": 5,
+        "chartDesigner": "MF-",
+        "jacketDesigner": "炎獵"
+      },
+      {
+        "difficultyLevel": "III",
+        "difficultyDecimal": 8.6,
+        "chartDesigner": "MF-",
+        "jacketDesigner": "炎獵"
+      },
+      {
+        "difficultyLevel": "IV",
+        "difficultyDecimal": 12.4,
+        "chartDesigner": "TangScend",
+        "jacketDesigner": "炎獵"
+      }
+    ]
+  },
+  {
+    "id": "feeling-blue",
+    "artist": "RiraN",
+    "releaseVersion": "2.4.0",
+    "title_localized": {
+      "default": "Feeling Blue"
+    },
+    "source_localized": {
+      "default": "Rotaeno Sound Collection"
+    },
+    "charts": [
+      {
+        "difficultyLevel": "I",
+        "difficultyDecimal": 4,
+        "chartDesigner": "尾号",
+        "jacketDesigner": "炎獵"
+      },
+      {
+        "difficultyLevel": "II",
+        "difficultyDecimal": 6,
+        "chartDesigner": "尾号",
+        "jacketDesigner": "炎獵"
+      },
+      {
+        "difficultyLevel": "III",
+        "difficultyDecimal": 9.4,
+        "chartDesigner": "尾号",
+        "jacketDesigner": "炎獵"
+      },
+      {
+        "difficultyLevel": "IV",
+        "difficultyDecimal": 12.9,
+        "chartDesigner": "尾号 x Adashi",
+        "jacketDesigner": "炎獵"
+      }
+    ]
+  },
+  {
+    "id": "deus-judicium",
+    "artist": "黒皇帝 vs Mlssionary",
+    "releaseVersion": "2.4.0",
+    "title_localized": {
+      "default": "Deus Judicium"
+    },
+    "source_localized": {
+      "default": "Rotaeno Sound Collection"
+    },
+    "charts": [
+      {
+        "difficultyLevel": "I",
+        "difficultyDecimal": 3,
+        "chartDesigner": "植物",
+        "jacketDesigner": "胡聖"
+      },
+      {
+        "difficultyLevel": "II",
+        "difficultyDecimal": 7,
+        "chartDesigner": "植物",
+        "jacketDesigner": "胡聖"
+      },
+      {
+        "difficultyLevel": "III",
+        "difficultyDecimal": 12.2,
+        "chartDesigner": "動物",
+        "jacketDesigner": "胡聖"
+      },
+      {
+        "difficultyLevel": "IV",
+        "difficultyDecimal": 13.2,
+        "chartDesigner": "植物 vs. 動物",
+        "jacketDesigner": "胡聖"
+      }
+    ]
   }
 ]
