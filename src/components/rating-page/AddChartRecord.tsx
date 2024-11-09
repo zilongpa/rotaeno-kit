@@ -9,9 +9,10 @@ import {
   CommandItem,
   CommandList,
 } from '@/components/ui/command'
-import { CredenzaBody } from '@/components/ui/Credenza'
+
 import {
   Credenza,
+  CredenzaBody,
   CredenzaContent,
   CredenzaDescription,
   CredenzaFooter,
