@@ -37,7 +37,6 @@
     "i18next-browser-languagedetector": "^8.0.0",
     "lucide-react": "^0.453.0",
     "neverthrow": "^8.1.1",
-    "next-themes": "^0.3.0",
     "posthog-js": "^1.177.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
