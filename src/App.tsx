@@ -6,11 +6,14 @@ import { LocaleSwitcher } from '@/components/settings/LocaleSwitcher'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Toaster } from '@/components/ui/sonner'
 import { TooltipProvider } from '@/components/ui/tooltip'
-import { ChartRecordsProvider } from '@/contexts/ChartRecordsContext'
+import { ChartRecordsProvider, useChartRecords } from '@/contexts/ChartRecordsContext'
 import { ThemeProvider } from '@/contexts/ThemeProvider'
+import { safeParseImport } from '@/lib/import'
 import { InfoIcon } from 'lucide-react'
+import { useEffect } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-
+import { toast } from 'sonner'
+import useSWR from 'swr'
 const About = () => {
   const { t } = useTranslation()
   return (
@@ -68,12 +71,47 @@ const About = () => {
   )
 }
 
+const AutoImport = () => {
+  const { t } = useTranslation()
+  const [, modifyRecords] = useChartRecords()
+  const { data } = useSWR(
+    'https://localreflect.rotaeno.imgg.dev/v0/CloudSave',
+    async (url) => {
+      try {
+        const res = await fetch(url)
+        return res.text()
+      } catch {
+        return null
+      }
+    },
+    {
+      dedupingInterval: 60 * 1e3,
+      refreshInterval: 60 * 1e3,
+      errorRetryCount: 0,
+    }
+  )
+
+  useEffect(() => {
+    if (data) {
+      const parsed = safeParseImport(data)
+      if (parsed.isOk()) {
+        modifyRecords.set(parsed.value.filter((record) => record.achievementRate !== 0))
+        toast.success(t('autoImport.success'))
+      }
+    }
+  }, [data])
+
+  return null
+}
+
 function App() {
   const { t } = useTranslation()
   return (
     <TooltipProvider delayDuration={0}>
       <ThemeProvider>
         <ChartRecordsProvider>
+          <AutoImport />
+
           {/* eslint-disable-next-line react/no-unknown-property */}
           <div id="app" vaul-drawer-wrapper="">
             <div className="mx-auto flex size-full w-[56rem] max-w-full flex-col items-center gap-8 bg-background p-4 md:p-8">

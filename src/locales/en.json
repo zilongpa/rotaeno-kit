@@ -46,5 +46,6 @@
   "localeSwitcher.tooltip": "Locale",
   "colorSchemeSwitcher.tooltip": "Theme",
   "addRecord.import.dialog.localReflect": "Import from Surge Local Reflect",
-  "addRecord.import.error.fetchFailed": "Failed to fetch content from local reflection. Have you installed Surge and the Local Reflect module?"
+  "addRecord.import.error.fetchFailed": "Failed to fetch content from local reflection. Have you installed Surge and the Local Reflect module?",
+  "autoImport.success": "Successfully updated from Local Reflect"
 }
