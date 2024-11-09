@@ -1,13 +1,11 @@
 {
   "site.description": "Rotaeno 查分器",
-
   "about.title": "关于本站",
   "about.disclaimer": "该项目与 Rotaeno 及其开发团队无关；所有权利均归属于其各自所有者。您可在 CC 4.0 BY-NC-SA 的授权下使用本站的任何内容、并可在 MIT 许可下使用本站的任何源代码。",
   "about.initial_data": "第一版数据来自 Team Rhythematics 的 “Rotaeno次世代评级分析表for rotaeno ver2.3.0”",
   "about.rating_calculation": "评级计算基于 Kown & Kiei & Eastown 的 <2>Rotaeno Rating推分参考公式（B30）</2>",
   "about.wiki_data": "本站的歌曲、谱面数据与部分资源是由 <2>Rotaeno Wiki</2> 获取的，特别表示感谢",
   "about.open_source": "此项目已于 <2>GitHub (GalvinGao/rotaeno-kit)</2> 开源，欢迎协作",
-
   "records.rating.title": "音律值",
   "records.rating.current": "当前音律值",
   "records.rating.stats.min": "最低",
@@ -22,7 +20,7 @@
   "addRecord.song.searchPlaceholder": "搜索歌曲...",
   "addRecord.difficulty.label": "难度",
   "addRecord.difficulty.placeholder": "选择难度...",
-  "addRecord.difficulty.chartBy": "谱面作者：{designer}",
+  "addRecord.difficulty.chartBy": "谱面作者：{{designer}}",
   "addRecord.achievementRate.label": "完成率",
   "addRecord.achievementRate.placeholder": "0995223",
   "addRecord.button.add": "添加",
@@ -30,13 +28,12 @@
   "addRecord.import.title": "从 HTTP 抓包导入（高级）",
   "addRecord.import.button": "导入",
   "addRecord.import.dialog.title": "从 HTTP 抓包导入",
-  "addRecord.import.dialog.description": "在此粘贴 <code>CloudSave</code> 或 <code>GetAllFolloweeSocialData</code>（目前仅会导入第一位好友的数据）API 响应的 JSON 内容。您当前的记录将被覆盖。",
+  "addRecord.import.dialog.description": "将 <code>CloudSave</code> 或 <code>GetAllFolloweeSocialData</code>（目前只会导入您第一个好友的数据）API 响应的 JSON 内容粘贴到此处。\n您当前的记录将被覆盖。\n您还可以使用 Surge Local Reflect Module 来捕获数据。",
   "addRecord.import.dialog.placeholder": "{\n  ...\n}",
   "addRecord.import.dialog.cancel": "取消",
   "addRecord.import.dialog.confirm": "导入",
   "addRecord.import.error.noContent": "没有要导入的内容",
   "addRecord.import.error.parseFailed": "导入解析失败：{error}",
-
   "chartRecords.title": "谱面记录",
   "chartRecords.actions.clearAll": "清除全部",
   "chartRecords.table.header.song": "歌曲",
@@ -47,5 +44,7 @@
   "chartRecords.table.header.actions": "操作",
   "chartRecords.table.empty": "暂无记录；在上方加入第一条记录吧！",
   "localeSwitcher.tooltip": "语言",
-  "colorSchemeSwitcher.tooltip": "主题"
+  "colorSchemeSwitcher.tooltip": "主题",
+  "addRecord.import.dialog.localReflect": "通过 Surge 本地反射进行导入",
+  "addRecord.import.error.fetchFailed": "从 Local Reflect 获取内容时出现了问题，请确保您已安装了 Surge 和 Local Reflect 模块"
 }

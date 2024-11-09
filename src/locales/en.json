@@ -20,7 +20,7 @@
   "addRecord.song.searchPlaceholder": "Search song...",
   "addRecord.difficulty.label": "Difficulty",
   "addRecord.difficulty.placeholder": "Select difficulty...",
-  "addRecord.difficulty.chartBy": "Chart by {designer}",
+  "addRecord.difficulty.chartBy": "Chart by {{designer}}",
   "addRecord.achievementRate.label": "Achievement Rate",
   "addRecord.achievementRate.placeholder": "0995223",
   "addRecord.button.add": "Add",
@@ -28,7 +28,7 @@
   "addRecord.import.title": "Import from HTTP capture (advanced)",
   "addRecord.import.button": "Import",
   "addRecord.import.dialog.title": "Import from HTTP capture",
-  "addRecord.import.dialog.description": "Paste the JSON content of <code>CloudSave</code> or <code>GetAllFolloweeSocialData</code> (currently only will import the data of your first friend) API response here. Your current records will be overwritten.",
+  "addRecord.import.dialog.description": "Paste the JSON content of <code>CloudSave</code> or <code>GetAllFolloweeSocialData</code> (currently only will import the data of your first friend) API response here. Your current records will be overwritten. You may also use the Surge Local Reflect Module to capture the data.",
   "addRecord.import.dialog.placeholder": "{\n  ...\n}",
   "addRecord.import.dialog.cancel": "Cancel",
   "addRecord.import.dialog.confirm": "Import",
@@ -44,5 +44,7 @@
   "chartRecords.table.header.actions": "Actions",
   "chartRecords.table.empty": "No records. Add some from above!",
   "localeSwitcher.tooltip": "Locale",
-  "colorSchemeSwitcher.tooltip": "Theme"
+  "colorSchemeSwitcher.tooltip": "Theme",
+  "addRecord.import.dialog.localReflect": "Import from Surge Local Reflect",
+  "addRecord.import.error.fetchFailed": "Failed to fetch content from local reflection. Have you installed Surge and the Local Reflect module?"
 }

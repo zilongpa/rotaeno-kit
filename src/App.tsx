@@ -74,24 +74,27 @@ function App() {
     <TooltipProvider delayDuration={0}>
       <ThemeProvider>
         <ChartRecordsProvider>
-          <div className="mx-auto mb-16 flex size-full w-[56rem] max-w-full flex-col items-center gap-8 p-4 md:p-8">
-            <div className="absolute right-4 top-4 flex items-center gap-2">
-              <LocaleSwitcher />
-              <ColorSchemeSwitcher />
+          {/* eslint-disable-next-line react/no-unknown-property */}
+          <div id="app" vaul-drawer-wrapper="">
+            <div className="mx-auto flex size-full w-[56rem] max-w-full flex-col items-center gap-8 bg-background p-4 md:p-8">
+              <div className="absolute right-4 top-4 flex items-center gap-2">
+                <LocaleSwitcher />
+                <ColorSchemeSwitcher />
+              </div>
+
+              <div className="mt-4 flex w-full flex-col items-start justify-center gap-2 lg:mt-8">
+                <h1 className="text-4xl font-bold">RotaenoKit</h1>
+                <p className="text-lg text-muted-foreground">{t('site.description')}</p>
+
+                <About />
+              </div>
+
+              <RecordsSummary />
+
+              <AddChartRecord />
+
+              <ChartRecords />
             </div>
-
-            <div className="mt-4 flex w-full flex-col items-start justify-center gap-2 lg:mt-8">
-              <h1 className="text-4xl font-bold">RotaenoKit</h1>
-              <p className="text-lg text-muted-foreground">{t('site.description')}</p>
-
-              <About />
-            </div>
-
-            <RecordsSummary />
-
-            <AddChartRecord />
-
-            <ChartRecords />
           </div>
 
           <Toaster />

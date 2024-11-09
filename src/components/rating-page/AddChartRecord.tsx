@@ -9,14 +9,15 @@ import {
   CommandItem,
   CommandList,
 } from '@/components/ui/command'
+import { CredenzaBody } from '@/components/ui/Credenza'
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog'
+  Credenza,
+  CredenzaContent,
+  CredenzaDescription,
+  CredenzaFooter,
+  CredenzaHeader,
+  CredenzaTitle,
+} from '@/components/ui/credenza'
 import { Form, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
@@ -42,7 +43,7 @@ import { CaretSortIcon } from '@radix-ui/react-icons'
 import clsx from 'clsx'
 import Fuse from 'fuse.js'
 import { Check, PlusIcon } from 'lucide-react'
-import { FC, useMemo, useRef, useState, useTransition } from 'react'
+import { FC, useEffect, useMemo, useRef, useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import { Trans, useTranslation } from 'react-i18next'
 import { toast } from 'sonner'
@@ -70,6 +71,7 @@ const SearchSongAutocomplete: FC<{
   value: string
   onValueChange: (value: string) => void
 }> = ({ value, onValueChange }) => {
+  const listRef = useRef<HTMLDivElement>(null)
   const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   const [, startTransition] = useTransition()
@@ -82,6 +84,14 @@ const SearchSongAutocomplete: FC<{
     }
     return fuse.search(query).map((result) => result.item)
   }, [query, fuse])
+
+  useEffect(() => {
+    const list = listRef.current
+    if (!list) {
+      return
+    }
+    list.scrollTo({ top: 0 })
+  }, [searchResults])
 
   return (
     <Popover
@@ -119,7 +129,7 @@ const SearchSongAutocomplete: FC<{
               setQuery(value)
             }}
           />
-          <CommandList>
+          <CommandList ref={listRef}>
             <CommandEmpty>{t('addRecord.song.empty')}</CommandEmpty>
             <CommandGroup>
               {searchResults.map((song) => (
@@ -314,6 +324,7 @@ const ChartRecordImportForm: FC = () => {
   const [open, setOpen] = useState(false)
   const [, modifyRecords] = useChartRecords()
   const textareaRef = useRef<HTMLTextAreaElement>(null)
+  const [fetching, setFetching] = useState(false)
 
   const onImport = () => {
     const content = textareaRef.current?.value
@@ -338,11 +349,11 @@ const ChartRecordImportForm: FC = () => {
 
   return (
     <>
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>{t('addRecord.import.dialog.title')}</DialogTitle>
-            <DialogDescription>
+      <Credenza open={open} onOpenChange={setOpen}>
+        <CredenzaContent>
+          <CredenzaHeader>
+            <CredenzaTitle>{t('addRecord.import.dialog.title')}</CredenzaTitle>
+            <CredenzaDescription>
               <Trans
                 i18nKey="addRecord.import.dialog.description"
                 components={{
@@ -351,30 +362,72 @@ const ChartRecordImportForm: FC = () => {
               >
                 Paste the JSON content of <code>CloudSave</code> or{' '}
                 <code>GetAllFolloweeSocialData</code> (currently only will import the data of your
-                first friend) api response here. Your current records will be overwritten.
+                first friend) API response here. Your current records will be overwritten. You may
+                also use &quot;Surge Local Reflect&quot; module to capture the data.
               </Trans>
-            </DialogDescription>
-          </DialogHeader>
 
-          <Textarea
-            ref={textareaRef}
-            className="scroll-pb-2 font-mono text-xs"
-            rows={15}
-            autoComplete="off"
-            autoCorrect="off"
-            autoCapitalize="off"
-            spellCheck={false}
-            placeholder={t('addRecord.import.dialog.placeholder')}
-          />
+              <div className="mt-2 flex flex-wrap items-center justify-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  disabled={fetching}
+                  onClick={() => {
+                    setFetching(true)
+                    fetch('https://localreflect.rotaeno.imgg.dev/v0/CloudSave')
+                      .then((res) => res.json())
+                      .then((data) => {
+                        if (textareaRef.current) {
+                          textareaRef.current.value = JSON.stringify(data)
+                          onImport()
+                        }
+                      })
+                      .catch(() => {
+                        toast.error(t('addRecord.import.error.fetchFailed'))
+                      })
+                      .finally(() => {
+                        setFetching(false)
+                      })
+                  }}
+                >
+                  {t('addRecord.import.dialog.localReflect')}
+                </Button>
 
-          <DialogFooter>
+                <Button variant="link" size="sm" asChild>
+                  <a
+                    href="surge:///install-module?url=https%3A%2F%2Fraw.githubusercontent.com%2FGalvinGao%2Fsgmodule%2Frefs%2Fheads%2Fmain%2Frotaenolocalreflect.sgmodule"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Install Surge Local Reflect Module
+                  </a>
+                </Button>
+              </div>
+            </CredenzaDescription>
+          </CredenzaHeader>
+
+          <CredenzaBody>
+            <Textarea
+              ref={textareaRef}
+              className="scroll-pb-2 font-mono text-xs"
+              rows={15}
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck={false}
+              placeholder={t('addRecord.import.dialog.placeholder')}
+            />
+          </CredenzaBody>
+
+          <CredenzaFooter>
             <Button variant="outline" onClick={() => setOpen(false)}>
               {t('addRecord.import.dialog.cancel')}
             </Button>
-            <Button onClick={onImport}>{t('addRecord.import.dialog.confirm')}</Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+            <Button onClick={onImport} disabled={fetching}>
+              {t('addRecord.import.dialog.confirm')}
+            </Button>
+          </CredenzaFooter>
+        </CredenzaContent>
+      </Credenza>
 
       <Card className="w-full rounded-b-lg rounded-t-none border-t-0">
         <CardHeader className="flex flex-row items-center justify-between space-y-0">

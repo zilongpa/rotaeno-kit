@@ -21,18 +21,18 @@ export function LocaleSwitcher() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
-        <Tooltip>
+      <Tooltip>
+        <DropdownMenuTrigger asChild>
           <TooltipTrigger asChild>
             <Button variant="outline" size="icon">
               <LanguagesIcon className="h-5 w-5" />
             </Button>
           </TooltipTrigger>
-          <TooltipContent>
-            <p>{t('localeSwitcher.tooltip')}</p>
-          </TooltipContent>
-        </Tooltip>
-      </DropdownMenuTrigger>
+        </DropdownMenuTrigger>
+        <TooltipContent>
+          <p>{t('localeSwitcher.tooltip')}</p>
+        </TooltipContent>
+      </Tooltip>
       <DropdownMenuContent>
         {SUPPORTED_LANGUAGES.map((lang) => (
           <DropdownMenuItem
