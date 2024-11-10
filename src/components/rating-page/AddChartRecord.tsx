@@ -1,4 +1,5 @@
 import { SongJacket } from '@/components/entities/SongJacket'
+import { BufferedInput } from '@/components/ui/buffered-input'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import {
@@ -20,7 +21,6 @@ import {
   CredenzaTitle,
 } from '@/components/ui/credenza'
 import { Form, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import {
   Select,
@@ -39,6 +39,7 @@ import {
 } from '@/contexts/ChartRecordsContext'
 import { songs } from '@/data/songs'
 import { safeParseImport } from '@/lib/import'
+import { clamp, coerceToNumber } from '@/lib/number'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { CaretSortIcon } from '@radix-ui/react-icons'
 import clsx from 'clsx'
@@ -112,7 +113,7 @@ const SearchSongAutocomplete: FC<{
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-full shrink justify-between"
+          className="w-full shrink justify-between px-3"
         >
           <span className="overflow-hidden text-ellipsis whitespace-nowrap">
             {value
@@ -177,6 +178,7 @@ export const AddChartRecord: FC = () => {
     defaultValues: {
       songSlug: '',
       difficultyLevel: '',
+      achievementRate: 0,
     },
   })
 
@@ -284,16 +286,15 @@ export const AddChartRecord: FC = () => {
                   render={({ field }) => (
                     <FormItem className="flex w-full flex-col">
                       <FormLabel>{t('addRecord.achievementRate.label')}</FormLabel>
-                      <Input
-                        type="number"
+                      <BufferedInput<number>
                         className="font-mono"
-                        {...field}
-                        min={0}
-                        max={1010000}
+                        ref={field.ref}
                         placeholder={t('addRecord.achievementRate.placeholder')}
-                        onChange={(e) => {
-                          field.onChange(Number(e.target.value))
-                        }}
+                        transformFromT={(v) => v.toFixed(0)}
+                        transformToT={(v) => clamp(coerceToNumber(v), 0, 1010000)}
+                        value={field.value}
+                        onValueChange={field.onChange}
+                        onBlur={field.onBlur}
                       />
                       <FormMessage />
                     </FormItem>
@@ -303,11 +304,16 @@ export const AddChartRecord: FC = () => {
             </CardContent>
 
             <CardFooter className="flex flex-row gap-2">
-              <Button type="submit">
+              <Button type="submit" disabled={!form.formState.isValid}>
                 <PlusIcon className="-ml-1 size-4" />
                 {t('addRecord.button.add')}
               </Button>
-              <Button variant="ghost" type="reset" onClick={() => form.reset()}>
+              <Button
+                variant="ghost"
+                type="reset"
+                onClick={() => form.reset()}
+                disabled={!form.formState.isDirty}
+              >
                 {t('addRecord.button.reset')}
               </Button>
             </CardFooter>

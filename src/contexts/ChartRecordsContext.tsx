@@ -13,7 +13,14 @@ export const addChartRecordFormSchema = z.object({
   difficultyLevel: z.string().min(1, {
     message: 'You must select a difficulty level.',
   }),
-  achievementRate: z.number().min(0).max(1010000),
+  achievementRate: z
+    .number()
+    .min(1, {
+      message: 'Achievement rate must be greater than 0.',
+    })
+    .max(1010000, {
+      message: 'Achievement rate must be less than 1010000.',
+    }),
 })
 export type AddChartRecordForm = z.infer<typeof addChartRecordFormSchema>
 

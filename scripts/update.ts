@@ -38,17 +38,6 @@ interface WikiTemplateEndpoint {
   query: { pages: Record<string, { revisions: { slots: { main: { '*': string } } }[] }> }
 }
 
-const fetchWikiTemplate = async () => {
-  const response = await fetch(WIKI_TEMPLATE_ENDPOINT)
-  const data = (await response.json()) as WikiTemplateEndpoint
-
-  const content = data.query.pages[Object.keys(data.query.pages)[0]].revisions[0].slots.main['*']
-
-  const songList = SongSchema.parse(JSON.parse(content))
-
-  return songList
-}
-
 const RATING_CLASS_TO_DIFFICULTY_LEVEL = {
   0: 'I',
   1: 'II',
@@ -60,6 +49,17 @@ const RATING_CLASS_TO_DIFFICULTY_LEVEL = {
 const IV_JACKET_ID_OVERRIDE: Record<string, string> = {
   'rush-e': 'rush-e_IV',
   epitaxy: 'epitaxy_IV',
+}
+
+const fetchWikiTemplate = async () => {
+  const response = await fetch(WIKI_TEMPLATE_ENDPOINT)
+  const data = (await response.json()) as WikiTemplateEndpoint
+
+  const content = data.query.pages[Object.keys(data.query.pages)[0]].revisions[0].slots.main['*']
+
+  const songList = SongSchema.parse(JSON.parse(content))
+
+  return songList
 }
 
 const mappedSongs = (await fetchWikiTemplate()).songs.map((song) => {
