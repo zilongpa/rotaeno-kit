@@ -61,9 +61,17 @@ export const useCalculatedChartRecords = () => {
   return useMemo(() => {
     const enriched = records.map((record) => {
       const song = songs.find((song) => song.id === record.songSlug)
-      invariant(song, `song not found: ${record.songSlug}`)
+      if (!song) {
+        console.error(`song not found: ${record.songSlug}`)
+        return null
+      }
+      // invariant(song, `song not found: ${record.songSlug}`)
       const chart = song.charts.find((chart) => chart.difficultyLevel === record.difficultyLevel)
-      invariant(chart, `chart not found: ${record.songSlug} ${record.difficultyLevel}`)
+      if (!chart) {
+        console.error(`chart not found: ${record.songSlug} ${record.difficultyLevel}`)
+        return null
+      }
+      // invariant(chart, `chart not found: ${record.songSlug} ${record.difficultyLevel}`)
       return {
         ...record,
         song,
@@ -71,7 +79,7 @@ export const useCalculatedChartRecords = () => {
         rating: calculateSongRating(chart.difficultyDecimal, record.achievementRate),
         ratingIndex: false,
       }
-    })
+    }).filter(Boolean)
 
     const sorted = enriched.slice().sort((a, b) => {
       return b.rating - a.rating
